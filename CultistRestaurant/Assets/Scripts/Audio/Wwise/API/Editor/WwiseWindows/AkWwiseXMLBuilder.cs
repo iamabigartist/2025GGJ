@@ -21,7 +21,7 @@ public class AkWwiseXMLBuilder : UnityEditor.AssetPostprocessor
 {
 	private static readonly System.DateTime s_LastParsed = System.DateTime.MinValue;
 
-	static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
+	/*static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
 	{
 		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
 		{
@@ -33,7 +33,7 @@ public class AkWwiseXMLBuilder : UnityEditor.AssetPostprocessor
 		{
 			UnityEditor.EditorApplication.playModeStateChanged += PlayModeChanged;
 		}
-	}
+	}*/
 
 	private static void PlayModeChanged(UnityEditor.PlayModeStateChange mode)
 	{

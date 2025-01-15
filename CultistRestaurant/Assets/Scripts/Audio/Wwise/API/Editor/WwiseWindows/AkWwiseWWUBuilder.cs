@@ -35,7 +35,7 @@ public class AkWwiseWWUBuilder : UnityEditor.AssetPostprocessor
 	private int m_currentWwuCnt;
 	private int m_totWwuCnt = 1;
 
-	static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
+	/*static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
 	{
 		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
 		{
@@ -45,7 +45,7 @@ public class AkWwiseWWUBuilder : UnityEditor.AssetPostprocessor
 		if (didDomainReload)
 		{
 			// This method gets called from InitializeOnLoad and uses the AkWwiseProjectInfo later on so it needs to check if it can run right now
-			// InitializeWwiseProjectData();
+			InitializeWwiseProjectData();
 		}
 	}
 	
@@ -58,7 +58,7 @@ public class AkWwiseWWUBuilder : UnityEditor.AssetPostprocessor
 				RestartWWUWatcher();
 			}
 		};
-	}
+	}*/
 
 	private static void Tick()
 	{
