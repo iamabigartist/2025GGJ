@@ -14,6 +14,11 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="TestSpeech" ID="{D0A6F2C8-1DA7-40A2-8CF2-BC47070342F5}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0141955835962145"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0112381703470031"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>TestSpeech.wav</AudioFile>
 							<MediaIDList>
