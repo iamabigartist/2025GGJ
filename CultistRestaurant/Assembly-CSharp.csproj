@@ -203,6 +203,7 @@
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkRoomManager.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkRoomPortal.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Generated\Common\Ak3DPositionType.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\Timeline\Runtime\AkEventTrack.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Handwritten\WAAPI\Wamp.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Handwritten\Common\AkCallbackManager.cs" />
@@ -251,6 +252,7 @@
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkTriggerCollisionExit.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Generated\Common\AkMIDIEventTypes.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Generated\Common\AkCallbackType.cs" />
+    <Compile Include="Assets\Scripts\Audio\PlaySound.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkAmbientLargeModePositioner.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkTriggerHandler.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkRoomPortalObstruction.cs" />
@@ -266,8 +268,6 @@
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Generated\Common\AkEventCallbackInfo.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkInitializer.cs" />
     <None Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\package.json" />
-    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\Main.txt" />
-    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\Init.txt" />
     <None Include="Assets\Scripts\Audio\Wwise\API\package.json" />
     <None Include="Assets\WwiseSettings.xml" />
     <None Include="Assets\Scripts\Audio\Wwise\Timeline\package.json" />

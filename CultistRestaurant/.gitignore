@@ -8,4 +8,5 @@
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
-.idea*
+/UserSettings/
+/.idea/
