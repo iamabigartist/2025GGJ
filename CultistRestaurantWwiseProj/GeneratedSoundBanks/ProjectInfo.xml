@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="CultistRestaurantWwiseProj" GUID="{C45E005B-07CC-4663-88A9-4FAC69AD015C}" Generator="2023.1.9.8628"/>
+	<CacheRoot>../.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Windows" GUID="{49013C00-ED91-4C56-9AFC-55EFF34FCD4D}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../CultistRestaurant/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{203866B2-5646-4AB3-B543-C71D67FDACBE}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{409B40F7-C30A-B61B-876E-CF05774EFEFA}</FileHash>
+</ProjectInfo>
