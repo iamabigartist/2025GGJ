@@ -1,7 +1,11 @@
+using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using UnityEngine;
 namespace Projects.Demo0.Core
 {
-public class DishCardDoc
+[CreateAssetMenu]
+public class DishCardDoc : SerializedScriptableObject
 {
-	
+	public List<DishClueDoc> ClueList = new();
 }
 }

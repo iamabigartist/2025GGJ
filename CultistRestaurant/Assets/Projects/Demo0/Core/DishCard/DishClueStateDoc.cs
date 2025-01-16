@@ -12,6 +12,7 @@ public struct DishClueState : IEquatable<DishClueState>
 }
 public class DishClueStateDoc
 {
-	
+	public DishClueState State;
+	public Cmd InteractCmd;
 }
 }
