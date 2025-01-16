@@ -252,7 +252,6 @@
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkTriggerCollisionExit.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Generated\Common\AkMIDIEventTypes.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\API\Runtime\Generated\Common\AkCallbackType.cs" />
-    <Compile Include="Assets\Scripts\Audio\PlaySound.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkAmbientLargeModePositioner.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkTriggerHandler.cs" />
     <Compile Include="Assets\Scripts\Audio\Wwise\MonoBehaviour\Runtime\AkRoomPortalObstruction.cs" />

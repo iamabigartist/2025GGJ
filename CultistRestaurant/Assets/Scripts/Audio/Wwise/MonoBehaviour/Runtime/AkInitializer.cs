@@ -103,7 +103,7 @@ public class AkInitializer : UnityEngine.MonoBehaviour
 	#endif
 #endif
 
-		DontDestroyOnLoad(this);
+		// DontDestroyOnLoad(this);
 	}
 
 	private bool IsInstance()
