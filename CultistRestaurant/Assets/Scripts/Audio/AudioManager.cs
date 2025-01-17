@@ -15,6 +15,7 @@ namespace Audio
                 {
                     Debug.LogError("AudioManager Instance Not Found!");
                 }
+
                 return _instance;
             }
         }
@@ -34,7 +35,7 @@ namespace Audio
             {
                 Destroy(gameObject);
             }
-            
+
             Init();
         }
 
@@ -67,6 +68,16 @@ namespace Audio
             uint uuid = AkSoundEngine.PostEvent(eventId, go);
             Debug.Log($"Post event complete, event name is: {eventName}, uuid is: {uuid}");
             return uuid;
+        }
+
+        public void SetStateValue(string group, string val)
+        {
+            AkSoundEngine.SetState(group, val);
+        }
+
+        public void SetGlobalRtpcValue(string key, float val)
+        {
+            AkSoundEngine.SetRTPCValue(key, val);
         }
     }
 }
