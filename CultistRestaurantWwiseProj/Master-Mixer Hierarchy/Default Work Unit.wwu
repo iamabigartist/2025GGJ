@@ -9,6 +9,18 @@
 							<ObjectRef Name="System" ID="{5558835E-1509-4A92-B770-AC6E85A83F9E}" WorkUnitID="{D913FEFC-03AD-4F8A-8225-04BCC61264B5}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}">
+							<ChildrenList>
+								<Bus Name="UI" ID="{5CB33003-6875-4434-9327-A900BCF2E37A}"/>
+								<Bus Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}"/>
+								<Bus Name="Foods" ID="{95A0D2E4-AC86-479C-9F5E-AA4123D35F5F}"/>
+								<Bus Name="Amb" ID="{BF1600CB-D790-4329-9713-4E2976CF7459}"/>
+								<Bus Name="VO" ID="{ADA665FC-A800-4860-9414-C34F05805F2B}"/>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="Music" ID="{8217B7AA-B662-4629-BA1C-5103439DEA85}"/>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

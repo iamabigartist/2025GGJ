@@ -14,6 +14,26 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Folder Name="Amb" ID="{51F15C10-D6FB-410F-AFEA-75975CD33C52}" ShortID="779135117">
+					<ChildrenList>
+						<Event Name="Play_RestaurantBase" ID="{221CDEFF-A412-4BE5-9C02-162D80422A88}">
+							<ChildrenList>
+								<Action Name="" ID="{B6C1EF7E-3AD5-4638-9AB2-031036E9BB4C}" ShortID="950687956">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Foley" ID="{224D3793-E818-46FC-8672-44C348A248AD}" ShortID="732879166"/>
+				<Folder Name="Foods" ID="{F0B187F3-0EAE-438D-A9A2-74352606BC2F}" ShortID="474239102"/>
+				<Folder Name="UI" ID="{BAC38F92-CB9D-4985-B593-67C70858CCB1}" ShortID="720084559"/>
+				<Folder Name="VO" ID="{3757040D-166B-4E84-9FDF-13D5D08865C6}" ShortID="187241560"/>
+				<Folder Name="Music" ID="{8ABE2E46-4513-4A91-9DFB-A97D2AE71942}" ShortID="970680306"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
