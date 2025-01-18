@@ -15,7 +15,12 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 9214266043390248798, guid: 7150d1ab949477e4198a6ee7c6d97b97, type: 3}
+    - {fileID: 4429986623883968680, guid: 505b3c9186697e24983f654c02404ec7, type: 3}
+    - {fileID: 372107309650307268, guid: 52f089ddf95219548ad1854eb5f80a1c, type: 3}
+    - {fileID: 5434690241284447461, guid: b647c4a99223d25489d3fdbbff07594b, type: 3}
+    - {fileID: 1701121650936596674, guid: 8c7529435be4c184488ebf31a157a73b, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -31,9 +36,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
-    - Name: CluePrefab
-      Entry: 6
-      Data: 
     - Name: StateDoc
       Entry: 7
       Data: 2|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
@@ -56,6 +58,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: CluePrefab
+      Entry: 10
+      Data: 0
     - Name: InteractCmdList
       Entry: 7
       Data: 4|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
@@ -168,6 +173,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: CluePrefab
+      Entry: 10
+      Data: 1
     - Name: InteractCmdList
       Entry: 7
       Data: 11|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
@@ -270,6 +278,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: CluePrefab
+      Entry: 10
+      Data: 2
     - Name: InteractCmdList
       Entry: 7
       Data: 17|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
@@ -369,9 +380,6 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 22|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
-    - Name: CluePrefab
-      Entry: 6
-      Data: 
     - Name: StateDoc
       Entry: 7
       Data: 23|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
@@ -394,6 +402,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: CluePrefab
+      Entry: 10
+      Data: 3
     - Name: InteractCmdList
       Entry: 7
       Data: 25|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -496,6 +507,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: CluePrefab
+      Entry: 10
+      Data: 4
     - Name: InteractCmdList
       Entry: 7
       Data: 31|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -598,6 +612,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: CluePrefab
+      Entry: 10
+      Data: 3
     - Name: InteractCmdList
       Entry: 7
       Data: 37|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -700,4 +717,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  RecipeDesc: 
   Priority: 1
