@@ -9,6 +9,7 @@ public class DishCardDoc : SerializedScriptableObject
 	[MultiLineProperty(Lines = 8)]
 	public string RecipeDesc;
 	public int Priority;
+	public GameObject DishContainerPrefab;
 	public List<DishClueDoc> ClueList = new();
 }
 }

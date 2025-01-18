@@ -23,5 +23,7 @@ public class GameGlobalConfig : SerializedScriptableObject
 
 	[Title("StoryEnd")]
 	public float GoodEnd_AcceptPolluteRatioRequired = 0.5f;
+	public EndTextDesc GoodEnd_Desc;
+	public EndTextDesc BadEnd_Desc;
 }
 }
