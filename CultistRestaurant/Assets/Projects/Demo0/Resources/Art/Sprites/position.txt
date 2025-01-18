@@ -29,4 +29,10 @@ Group,Layer,CenterX(Relative),CenterY(Relative)
 2_sauce,2_sauce00,260,130
 3_snail,3_snail10,244,91
 3_snail,3_snail01,244,91
-3_snail,3_snail00,251,87
+3_snail,3_snail00,251,871_soupDish,1_soupPlate,249,147
+2_soup,2_soup10,249,104
+2_soup,2_soup00,249,110
+2_soup,2_soup11,249,104
+3_mushroom,3_mushroom10,267,111
+3_mushroom,3_mushroom11,249,85
+3_mushroom,3_mushroom00,267,107
