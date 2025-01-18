@@ -6,7 +6,7 @@ namespace Projects.Demo0.Core.Utils.RndUtils
 public static class RndSelect
 {
 	/// <summary>
-	/// 给定数量的元素中随机选择其中n个，并且均匀分布
+	///     给定数量的元素中随机选择其中n个，并且均匀分布
 	/// </summary>
 	public static List<int> UniformSelect(int total, int selectCount)
 	{
@@ -22,6 +22,7 @@ public static class RndSelect
 	/// <summary>
 	///     对于容器中元素随机进行位置互换，位置越接近的元素互换概率越大
 	/// </summary>
+	/// <returns>原列表的副本</returns>
 	public static List<int> LocalLikeShuffleSwap(List<int> itemList, int swapNum)
 	{
 		var result = new List<int>(itemList);

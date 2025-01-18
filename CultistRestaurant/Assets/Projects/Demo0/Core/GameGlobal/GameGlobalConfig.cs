@@ -8,7 +8,8 @@ namespace Projects.Demo0.Core.GameGlobal
 public class GameGlobalConfig : SerializedScriptableObject
 {
 	[Title("Deck")]
-	public List<DishClueDoc> DishDeck = new();
+	public GameObject DishCardPrefab;
+	public List<DishCardDoc> DishDeck = new();
 	public int ShuffleSwapCount = 10;
 
 	[Title("HP")]

@@ -22,5 +22,9 @@ public class DishClueObject : MonoBehaviour
 	public DishClueDoc m_Doc;
 	void OnMouseDown() => StartCoroutine(m_StateDoc.InteractCmdList.ExecuteCmdList(new() { TargetGameObj = gameObject }));
 	void OnDestroy() => StopAllCoroutines();
+
+	public bool WrongClue => m_StateDoc.State is { Correct    : false };
+	public bool PollutedClue => m_StateDoc.State is { Polluted: true };
+	public bool PerfectClue => m_StateDoc.State is { Correct  : true, Polluted: false };
 }
 }
