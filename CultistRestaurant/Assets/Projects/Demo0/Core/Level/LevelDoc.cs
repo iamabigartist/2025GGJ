@@ -6,7 +6,7 @@ namespace Projects.Demo0.Core.Level
 public class LevelDoc : SerializedScriptableObject
 {
 	[Title("Difficulty")]
-	public int CardCount = 5;
+	public int CardCount = 7;
 	public float ClueWrongProb = 0.5f;
 	public float CluePollutedProb = 0f;
 
