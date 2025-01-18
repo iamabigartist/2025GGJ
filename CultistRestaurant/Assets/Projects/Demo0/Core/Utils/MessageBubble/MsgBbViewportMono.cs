@@ -5,6 +5,8 @@ namespace Projects.Demo0.Core.Utils.MessageBubble
 {
 public class MsgBbViewportMono : MonoBehaviour
 {
+	public static void CurViewportAppendMsgBb(string msg) => FindAnyObjectByType<MsgBbViewportMono>().AppendBb(msg);
+
 	public RectTransform MsgBbParent;
 	public GameObject MsgBbPrefab;
 	public AnimationCurve ScrollSpeedCurve = new();
@@ -23,7 +25,7 @@ public class MsgBbViewportMono : MonoBehaviour
 		}
 	}
 	public void AppendBb(string msg) => AppendBb_Impl(msg);
-	public void AppendBb_Impl(string msg)
+	void AppendBb_Impl(string msg)
 	{
 		var msgBb = Instantiate(MsgBbPrefab, MsgBbParent);
 		var textMono = msgBb.GetComponentInChildren<Text>();
