@@ -376,7 +376,85 @@
 									</ChildrenList>
 								</RandomSequenceContainer>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="GameLevel" ID="{C1398117-3E5C-4AD9-8321-5F12E8A68062}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
+										<CustomState Name="" ID="{F5D04E2D-1C64-4095-9A42-CB7095B0FAC9}" ShortID="93509829"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="FinishMenu" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}"/>
+										<CustomState Name="" ID="{073F17C2-142C-4A27-A1FE-B0A1BD451F99}" ShortID="193193167"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="StartMenu" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}"/>
+										<CustomState Name="" ID="{3EE335E8-EB88-4790-8B43-85C64473B522}" ShortID="765462907"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
+										<CustomState Name="" ID="{66DB5BD6-A8F3-4901-A39C-F0EDA27B114A}" ShortID="833510396">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16" Value="65"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level02" ID="{81CAC907-04EB-4EED-92C8-C33919A2C76B}"/>
+										<CustomState Name="" ID="{A2F1F0B7-889E-4E85-9623-CE2B641A15CC}" ShortID="809497671"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Level01" ID="{881EDAF1-A5C3-4F79-93DB-1FC47B4D2527}"/>
+										<CustomState Name="" ID="{7B1E3CE5-1596-431C-8DCB-2DBF5F3F6083}" ShortID="779230605"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</RandomSequenceContainer>
+						<Sound Name="Underwater" ID="{BA8C9D05-2CF7-4DDC-A7AA-0BC0C67D4E40}" ShortID="524589791">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="IsStreamingEnabled" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="amb_underwater_loop_01" ID="{B203CA74-B5DD-430E-BB2B-4656379B9F27}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="2000"/>
+										<Property Name="LoopBegin" Type="Real64" Value="3"/>
+										<Property Name="LoopEnd" Type="Real64" Value="25"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>amb_underwater_loop_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="721021587"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="amb_underwater_loop_01" ID="{B203CA74-B5DD-430E-BB2B-4656379B9F27}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{7D0DCC80-D4F5-41B8-88C0-74608EDE1A86}" ShortID="790333677">

@@ -1110,6 +1110,43 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="GameLevel" ID="{C1398117-3E5C-4AD9-8321-5F12E8A68062}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
+								<CustomState Name="" ID="{2B38CBEB-D132-4884-B08D-1F64D06C3411}" ShortID="110707271"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="FinishMenu" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}"/>
+								<CustomState Name="" ID="{312B9AA7-830A-4C76-AB1B-D5CB14D28B26}" ShortID="77412188"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="StartMenu" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}"/>
+								<CustomState Name="" ID="{469C1305-9BEC-4391-AB7A-D4DB3D6272EE}" ShortID="1050489644"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
+								<CustomState Name="" ID="{D14A9A6F-4ED1-4421-B51B-B014168F9BF8}" ShortID="309380740">
+									<PropertyList>
+										<Property Name="Lowpass" Type="int16" Value="65"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Level02" ID="{81CAC907-04EB-4EED-92C8-C33919A2C76B}"/>
+								<CustomState Name="" ID="{EB5C29FD-E487-440F-906C-C32D445A33EC}" ShortID="497250686"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="Level01" ID="{881EDAF1-A5C3-4F79-93DB-1FC47B4D2527}"/>
+								<CustomState Name="" ID="{742AD5AC-984D-4600-B418-510E244C6388}" ShortID="383227188"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
 					<ObjectLists>
 						<ObjectList Name="Arguments">
 							<Reference>

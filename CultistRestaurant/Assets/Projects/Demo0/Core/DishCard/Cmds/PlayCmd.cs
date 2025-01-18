@@ -1,3 +1,5 @@
+using Audio;
+
 namespace Projects.Demo0.Core
 {
 public class PlayCmd : Cmd
@@ -8,6 +10,7 @@ public class PlayCmd : Cmd
 	{
 		ctx.TargetGameObj.SendMessage(AnimationEvent);
 		// 然后播放音频API
+		AudioManager.Instance.PostEvent(AudioEvent, AudioManager.Instance.globalInitializer);
 	}
 }
 }
