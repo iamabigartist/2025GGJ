@@ -30,43 +30,41 @@
 						<ActiveSource Name="TestSpeech" ID="{D0A6F2C8-1DA7-40A2-8CF2-BC47070342F5}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<ActorMixer Name="Amb" ID="{2BD42FB7-6627-4DC3-9344-7E5BF2488010}" ShortID="87830883">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Amb" ID="{BF1600CB-D790-4329-9713-4E2976CF7459}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Ambience" ID="{22ED541D-BC08-4120-A5CF-5A6412A73DBB}" ShortID="341459080">
 					<ChildrenList>
-						<ActorMixer Name="Restaurant" ID="{9FCADE89-BFA8-4BE1-AA6B-145F7D5132B3}" ShortID="81253947">
+						<RandomSequenceContainer Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" ShortID="130182929">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{94E86898-605E-4095-BFDF-ED1766A5DEDF}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" ShortID="130182929">
+								<RandomSequenceContainer Name="RestaurantBasePart_01" ID="{BB196029-9D8F-4586-AB4D-AC807B9E39E4}" ShortID="1041877418">
 									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>-5</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{94E86898-605E-4095-BFDF-ED1766A5DEDF}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
@@ -78,13 +76,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<RandomSequenceContainer Name="RestaurantBasePart_01" ID="{BB196029-9D8F-4586-AB4D-AC807B9E39E4}" ShortID="1041877418">
-											<PropertyList>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-											</PropertyList>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-002" ID="{B6218878-79FB-4F9E-BFE9-906A4413C363}" ShortID="688682899">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -94,81 +86,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-002" ID="{B6218878-79FB-4F9E-BFE9-906A4413C363}" ShortID="688682899">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-002" ID="{717158D4-4325-425A-A12A-F4C676F0B1CE}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-002.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="817380666"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-002" ID="{717158D4-4325-425A-A12A-F4C676F0B1CE}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-003" ID="{65ABB473-273C-404F-93D6-B3B276737624}" ShortID="926382684">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-003" ID="{5C86F2A5-86A1-4226-A34B-4DE47AB51EAD}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-003.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="402144406"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-003" ID="{5C86F2A5-86A1-4226-A34B-4DE47AB51EAD}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-001" ID="{B0C41490-45B7-42E4-9E4E-34762E5C17BC}" ShortID="263238421">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-001" ID="{DC8EF0F3-3A60-404E-8798-DD117E4068F2}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-001.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="1036089657"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-001" ID="{DC8EF0F3-3A60-404E-8798-DD117E4068F2}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-002" ID="{717158D4-4325-425A-A12A-F4C676F0B1CE}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-002.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="817380666"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="RestaurantBasePart_02" ID="{B2F2D048-F520-42F2-BFC3-B17CCCBE13DC}" ShortID="1016965322">
-											<PropertyList>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-											</PropertyList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-002" ID="{717158D4-4325-425A-A12A-F4C676F0B1CE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-003" ID="{65ABB473-273C-404F-93D6-B3B276737624}" ShortID="926382684">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -178,81 +108,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-004" ID="{74E7FC6E-DAF2-46A3-9808-BE2397C68A6C}" ShortID="75219559">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-004" ID="{C67F901A-24B1-4D69-A4D1-5720ECFB33AD}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-004.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="520454725"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-004" ID="{C67F901A-24B1-4D69-A4D1-5720ECFB33AD}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-006" ID="{0B88D243-368E-4B7B-91AC-E76362CB9ACA}" ShortID="283860233">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-006" ID="{F4A8E63F-C881-4AE3-9AC2-CFCD05E0A315}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-006.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="933546529"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-006" ID="{F4A8E63F-C881-4AE3-9AC2-CFCD05E0A315}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-005" ID="{1D63AACF-407D-4B15-98D6-854AABD4D5EE}" ShortID="877294931">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-005" ID="{9761409B-C3CE-47F0-89BC-52A6AA464391}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-005.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="863588063"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-005" ID="{9761409B-C3CE-47F0-89BC-52A6AA464391}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-003" ID="{5C86F2A5-86A1-4226-A34B-4DE47AB51EAD}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-003.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="402144406"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="RestaurantBasePart_03" ID="{53B7BD64-9C63-4962-9EE8-46B7183293B9}" ShortID="604777629">
-											<PropertyList>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-											</PropertyList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-003" ID="{5C86F2A5-86A1-4226-A34B-4DE47AB51EAD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-001" ID="{B0C41490-45B7-42E4-9E4E-34762E5C17BC}" ShortID="263238421">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -262,90 +130,458 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-008" ID="{62F78906-952B-4015-A9F6-7CE12346791C}" ShortID="512150369">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-008" ID="{2FCBFE84-8DC1-4074-B000-703D8B1E4FCF}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-008.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="577202029"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-008" ID="{2FCBFE84-8DC1-4074-B000-703D8B1E4FCF}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-009" ID="{727AF7F5-62B5-4566-8BCD-8166979D172A}" ShortID="444826676">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-009" ID="{92C9D0EB-1E5C-4B4D-8153-0FE29FE2674C}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-009.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="212168154"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-009" ID="{92C9D0EB-1E5C-4B4D-8153-0FE29FE2674C}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Cooking_Game_Ambience_Restaurant-007" ID="{F1565201-4DE1-490D-92F9-CFD93CC457FD}" ShortID="806180610">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-007" ID="{75AFE4CB-05B0-4B23-A8A2-7E138C4763EF}">
-															<Language>SFX</Language>
-															<AudioFile>Cooking_Game_Ambience_Restaurant-007.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="225018024"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Cooking_Game_Ambience_Restaurant-007" ID="{75AFE4CB-05B0-4B23-A8A2-7E138C4763EF}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-001" ID="{DC8EF0F3-3A60-404E-8798-DD117E4068F2}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-001.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1036089657"/>
+													</MediaIDList>
+												</AudioFileSource>
 											</ChildrenList>
-										</RandomSequenceContainer>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-001" ID="{DC8EF0F3-3A60-404E-8798-DD117E4068F2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RestaurantBasePart_02" ID="{B2F2D048-F520-42F2-BFC3-B17CCCBE13DC}" ShortID="1016965322">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-004" ID="{74E7FC6E-DAF2-46A3-9808-BE2397C68A6C}" ShortID="75219559">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-004" ID="{C67F901A-24B1-4D69-A4D1-5720ECFB33AD}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-004.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="520454725"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-004" ID="{C67F901A-24B1-4D69-A4D1-5720ECFB33AD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-006" ID="{0B88D243-368E-4B7B-91AC-E76362CB9ACA}" ShortID="283860233">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-006" ID="{F4A8E63F-C881-4AE3-9AC2-CFCD05E0A315}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-006.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="933546529"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-006" ID="{F4A8E63F-C881-4AE3-9AC2-CFCD05E0A315}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-005" ID="{1D63AACF-407D-4B15-98D6-854AABD4D5EE}" ShortID="877294931">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-005" ID="{9761409B-C3CE-47F0-89BC-52A6AA464391}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-005.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="863588063"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-005" ID="{9761409B-C3CE-47F0-89BC-52A6AA464391}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="RestaurantBasePart_03" ID="{53B7BD64-9C63-4962-9EE8-46B7183293B9}" ShortID="604777629">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-008" ID="{62F78906-952B-4015-A9F6-7CE12346791C}" ShortID="512150369">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-008" ID="{2FCBFE84-8DC1-4074-B000-703D8B1E4FCF}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-008.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="577202029"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-008" ID="{2FCBFE84-8DC1-4074-B000-703D8B1E4FCF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-009" ID="{727AF7F5-62B5-4566-8BCD-8166979D172A}" ShortID="444826676">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-009" ID="{92C9D0EB-1E5C-4B4D-8153-0FE29FE2674C}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-009.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="212168154"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-009" ID="{92C9D0EB-1E5C-4B4D-8153-0FE29FE2674C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cooking_Game_Ambience_Restaurant-007" ID="{F1565201-4DE1-490D-92F9-CFD93CC457FD}" ShortID="806180610">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cooking_Game_Ambience_Restaurant-007" ID="{75AFE4CB-05B0-4B23-A8A2-7E138C4763EF}">
+													<Language>SFX</Language>
+													<AudioFile>Cooking_Game_Ambience_Restaurant-007.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="225018024"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cooking_Game_Ambience_Restaurant-007" ID="{75AFE4CB-05B0-4B23-A8A2-7E138C4763EF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
 							</ChildrenList>
-						</ActorMixer>
+						</RandomSequenceContainer>
 					</ChildrenList>
-				</ActorMixer>
-				<ActorMixer Name="UI" ID="{99D87152-F879-41F9-A589-2A82D5E09BA5}" ShortID="779386204">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="UI" ID="{5CB33003-6875-4434-9327-A900BCF2E37A}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-						</Reference>
-					</ReferenceList>
+				</Folder>
+				<Folder Name="Foley" ID="{7D0DCC80-D4F5-41B8-88C0-74608EDE1A86}" ShortID="790333677">
 					<ChildrenList>
+						<RandomSequenceContainer Name="DoorOpen" ID="{EE675E47-8539-47D2-A95C-ED33E20C58E5}" ShortID="221884095">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="open_door_01" ID="{5F80EEE4-1551-4375-BD5C-5E3F4EFE0C7B}" ShortID="844516248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="open_door_01" ID="{F85CDECF-9417-4EC1-A0D4-8DC978869D3E}">
+											<Language>SFX</Language>
+											<AudioFile>open_door_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="509523933"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="open_door_01" ID="{F85CDECF-9417-4EC1-A0D4-8DC978869D3E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="open_door_02" ID="{1DDD258C-EEE5-4319-A1EB-7F23886DD93A}" ShortID="44210839">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="open_door_02" ID="{3545ACD3-242A-49CB-AC39-7608227D98F1}">
+											<Language>SFX</Language>
+											<AudioFile>open_door_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="7472567"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="open_door_02" ID="{3545ACD3-242A-49CB-AC39-7608227D98F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="DoorClose" ID="{4276F4E9-52E9-46D5-B618-FB9D337174DA}" ShortID="60186483">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="close_door_01" ID="{9205291B-ED2C-4023-BF18-F78F44228387}" ShortID="414463634">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="close_door_01" ID="{8D7273CE-FEC1-4EBD-975F-5733B2D731BC}">
+											<Language>SFX</Language>
+											<AudioFile>close_door_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="745052999"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="close_door_01" ID="{8D7273CE-FEC1-4EBD-975F-5733B2D731BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="close_door_02" ID="{22370EA0-C59A-4D72-A5A5-C7EE1E1820C0}" ShortID="911206918">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="close_door_02" ID="{74079531-CA0A-42E2-8553-32D3DBF6003E}">
+											<Language>SFX</Language>
+											<AudioFile>close_door_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1062200065"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="close_door_02" ID="{74079531-CA0A-42E2-8553-32D3DBF6003E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{D0374855-52F4-4849-A7D5-C5143C70DB8C}" ShortID="224691252">
+					<ChildrenList>
+						<RandomSequenceContainer Name="UI_BookClose" ID="{BE13B201-3109-43A8-9228-B930CA28DB30}" ShortID="202264259">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="BookClose-001" ID="{798F375F-82FA-4D2B-B348-C9DE8D8317C1}" ShortID="785786911">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BookClose-001" ID="{40C11DA3-0C34-4F79-9EF6-9FFC05B1833A}">
+											<Language>SFX</Language>
+											<AudioFile>BookClose-001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="494975362"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BookClose-001" ID="{40C11DA3-0C34-4F79-9EF6-9FFC05B1833A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BookClose-002" ID="{256AFCD4-8B0C-4104-9CEB-F187A98BF7CC}" ShortID="119212463">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BookClose-002" ID="{D901EC97-5CB7-4F1A-BAA1-A91845DC8FE5}">
+											<Language>SFX</Language>
+											<AudioFile>BookClose-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="847278043"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BookClose-002" ID="{D901EC97-5CB7-4F1A-BAA1-A91845DC8FE5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BookClose-003" ID="{2E7F6493-B67F-479E-8A9C-87D860E9B016}" ShortID="363720169">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BookClose-003" ID="{5DD0B0F2-D603-49B6-BA3D-6D0F80C04A78}">
+											<Language>SFX</Language>
+											<AudioFile>BookClose-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="915825016"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BookClose-003" ID="{5DD0B0F2-D603-49B6-BA3D-6D0F80C04A78}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BookClose-004" ID="{927B8E48-4F51-410F-8FA7-F66EC74D793F}" ShortID="378767607">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BookClose-004" ID="{11F675AD-40E3-4FA8-902F-95117C5D0805}">
+											<Language>SFX</Language>
+											<AudioFile>BookClose-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="173002258"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BookClose-004" ID="{11F675AD-40E3-4FA8-902F-95117C5D0805}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BookClose-005" ID="{5ABFB5C9-E181-46B2-8CBD-C68F2A509745}" ShortID="588074249">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BookClose-005" ID="{52C18F17-B404-47D7-810C-DD312CF17FC0}">
+											<Language>SFX</Language>
+											<AudioFile>BookClose-005.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="69769568"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BookClose-005" ID="{52C18F17-B404-47D7-810C-DD312CF17FC0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{8DCEC437-3120-44A2-8452-B7DF416D48B7}" ShortID="425675609">
+												<ReferenceList>
+													<Reference Name="Effect">
+														<Custom>
+															<Effect Name="Parametric EQ (Custom)" ID="{D7AEFCC9-86E9-4F83-B57D-5B82C3C64BD9}" ShortID="556308347" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																<PropertyList>
+																	<Property Name="FrequencyBand3" Type="Real32" Value="3000"/>
+																	<Property Name="GainBand3" Type="Real32" Value="-5"/>
+																</PropertyList>
+															</Effect>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="UI_CallBell" ID="{A34DCB6D-847A-45C0-B30E-64E0D927A833}" ShortID="305511448">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
@@ -383,7 +619,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -654,7 +890,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -899,154 +1135,6 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="UI_BookClose" ID="{BE13B201-3109-43A8-9228-B930CA28DB30}" ShortID="202264259">
-							<PropertyList>
-								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-								<Property Name="OverrideEffect" Type="bool" Value="True"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="BookClose-001" ID="{798F375F-82FA-4D2B-B348-C9DE8D8317C1}" ShortID="785786911">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="BookClose-001" ID="{40C11DA3-0C34-4F79-9EF6-9FFC05B1833A}">
-											<Language>SFX</Language>
-											<AudioFile>BookClose-001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="494975362"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="BookClose-001" ID="{40C11DA3-0C34-4F79-9EF6-9FFC05B1833A}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="BookClose-002" ID="{256AFCD4-8B0C-4104-9CEB-F187A98BF7CC}" ShortID="119212463">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="BookClose-002" ID="{D901EC97-5CB7-4F1A-BAA1-A91845DC8FE5}">
-											<Language>SFX</Language>
-											<AudioFile>BookClose-002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="847278043"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="BookClose-002" ID="{D901EC97-5CB7-4F1A-BAA1-A91845DC8FE5}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="BookClose-003" ID="{2E7F6493-B67F-479E-8A9C-87D860E9B016}" ShortID="363720169">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="BookClose-003" ID="{5DD0B0F2-D603-49B6-BA3D-6D0F80C04A78}">
-											<Language>SFX</Language>
-											<AudioFile>BookClose-003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="915825016"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="BookClose-003" ID="{5DD0B0F2-D603-49B6-BA3D-6D0F80C04A78}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="BookClose-004" ID="{927B8E48-4F51-410F-8FA7-F66EC74D793F}" ShortID="378767607">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="BookClose-004" ID="{11F675AD-40E3-4FA8-902F-95117C5D0805}">
-											<Language>SFX</Language>
-											<AudioFile>BookClose-004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="173002258"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="BookClose-004" ID="{11F675AD-40E3-4FA8-902F-95117C5D0805}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="BookClose-005" ID="{5ABFB5C9-E181-46B2-8CBD-C68F2A509745}" ShortID="588074249">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="BookClose-005" ID="{52C18F17-B404-47D7-810C-DD312CF17FC0}">
-											<Language>SFX</Language>
-											<AudioFile>BookClose-005.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="69769568"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="BookClose-005" ID="{52C18F17-B404-47D7-810C-DD312CF17FC0}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="Effects">
-									<Reference>
-										<Local>
-											<EffectSlot Name="" ID="{8DCEC437-3120-44A2-8452-B7DF416D48B7}" ShortID="425675609">
-												<ReferenceList>
-													<Reference Name="Effect">
-														<Custom>
-															<Effect Name="Parametric EQ (Custom)" ID="{D7AEFCC9-86E9-4F83-B57D-5B82C3C64BD9}" ShortID="556308347" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
-																<PropertyList>
-																	<Property Name="FrequencyBand3" Type="Real32" Value="3000"/>
-																	<Property Name="GainBand3" Type="Real32" Value="-5"/>
-																</PropertyList>
-															</Effect>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</EffectSlot>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="UI_PaperOpen" ID="{D75CFABD-5A2A-41F7-B82C-3396C59EE1AF}" ShortID="65731139">
 							<PropertyList>
 								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
@@ -1056,7 +1144,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1115,7 +1203,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1165,17 +1253,25 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<ActorMixer Name="Common" ID="{DBE3E544-E967-4F47-A7B0-E26EBAD332FB}" ShortID="780138765">
+						<RandomSequenceContainer Name="UI_CommonButton" ID="{4C2ACAE1-6741-4715-AAEC-1A6B0478F82B}" ShortID="392463814">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>40</Value>
+									</ValueList>
+								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="UI_CommonButton_Forward" ID="{3C4771D0-D5B3-4407-BC6E-95E4683294EF}" ShortID="215028149">
+								<Sound Name="App Menu Button 6" ID="{36B3F811-810C-46AD-AB31-FCE9F0A31F35}" ShortID="984918413">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -1185,27 +1281,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Cool Interface Sound" ID="{7D837B30-BF57-4EA8-B3A3-D0C87CE15E0B}">
+										<AudioFileSource Name="App Menu Button 6" ID="{290AAD4A-8C00-42D6-AEDF-47067EEB02F9}">
 											<Language>SFX</Language>
-											<AudioFile>Cool Interface Sound.wav</AudioFile>
+											<AudioFile>App Menu Button 6.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="649091450"/>
+												<MediaID ID="681150199"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Cool Interface Sound" ID="{7D837B30-BF57-4EA8-B3A3-D0C87CE15E0B}" Platform="Linked"/>
+										<ActiveSource Name="App Menu Button 6" ID="{290AAD4A-8C00-42D6-AEDF-47067EEB02F9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<RandomSequenceContainer Name="UI_CommonButton" ID="{4C2ACAE1-6741-4715-AAEC-1A6B0478F82B}" ShortID="392463814">
-									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>40</Value>
-											</ValueList>
-										</Property>
-										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-									</PropertyList>
+								<Sound Name="App Menu Button 6v2" ID="{A788E4C1-1EC4-427F-B5B7-5F36608D153C}" ShortID="398962800">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -1215,221 +1303,67 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="App Menu Button 6" ID="{36B3F811-810C-46AD-AB31-FCE9F0A31F35}" ShortID="984918413">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="App Menu Button 6" ID="{290AAD4A-8C00-42D6-AEDF-47067EEB02F9}">
-													<Language>SFX</Language>
-													<AudioFile>App Menu Button 6.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="681150199"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="App Menu Button 6" ID="{290AAD4A-8C00-42D6-AEDF-47067EEB02F9}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="App Menu Button 6v2" ID="{A788E4C1-1EC4-427F-B5B7-5F36608D153C}" ShortID="398962800">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="App Menu Button 6v2" ID="{FB0E9696-3835-4597-BDC8-702848FB909A}">
-													<Language>SFX</Language>
-													<AudioFile>App Menu Button 6v2.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="877447198"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="App Menu Button 6v2" ID="{FB0E9696-3835-4597-BDC8-702848FB909A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
-								<Sound Name="UI_CommonButton_Backward" ID="{A8BD8142-C42F-4A1A-A107-EA919FBB0289}" ShortID="613967003">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Modern UI Sound" ID="{6FF80737-50EE-478A-A911-6FBD13C6164D}">
+										<AudioFileSource Name="App Menu Button 6v2" ID="{FB0E9696-3835-4597-BDC8-702848FB909A}">
 											<Language>SFX</Language>
-											<AudioFile>Modern UI Sound.wav</AudioFile>
+											<AudioFile>App Menu Button 6v2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="330428545"/>
+												<MediaID ID="877447198"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Modern UI Sound" ID="{6FF80737-50EE-478A-A911-6FBD13C6164D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-						</ActorMixer>
-					</ChildrenList>
-				</ActorMixer>
-				<ActorMixer Name="Foley" ID="{DC88B433-52DA-4205-BA83-61FA652E9321}" ShortID="167855619">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<RandomSequenceContainer Name="DoorOpen" ID="{EE675E47-8539-47D2-A95C-ED33E20C58E5}" ShortID="221884095">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="open_door_01" ID="{5F80EEE4-1551-4375-BD5C-5E3F4EFE0C7B}" ShortID="844516248">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="open_door_01" ID="{F85CDECF-9417-4EC1-A0D4-8DC978869D3E}">
-											<Language>SFX</Language>
-											<AudioFile>open_door_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="509523933"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="open_door_01" ID="{F85CDECF-9417-4EC1-A0D4-8DC978869D3E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="open_door_02" ID="{1DDD258C-EEE5-4319-A1EB-7F23886DD93A}" ShortID="44210839">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="open_door_02" ID="{3545ACD3-242A-49CB-AC39-7608227D98F1}">
-											<Language>SFX</Language>
-											<AudioFile>open_door_02.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="7472567"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="open_door_02" ID="{3545ACD3-242A-49CB-AC39-7608227D98F1}" Platform="Linked"/>
+										<ActiveSource Name="App Menu Button 6v2" ID="{FB0E9696-3835-4597-BDC8-702848FB909A}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="DoorClose" ID="{4276F4E9-52E9-46D5-B618-FB9D337174DA}" ShortID="60186483">
+						<Sound Name="UI_CommonButton_Backward" ID="{A8BD8142-C42F-4A1A-A107-EA919FBB0289}" ShortID="613967003">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="close_door_01" ID="{9205291B-ED2C-4023-BF18-F78F44228387}" ShortID="414463634">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="close_door_01" ID="{8D7273CE-FEC1-4EBD-975F-5733B2D731BC}">
-											<Language>SFX</Language>
-											<AudioFile>close_door_01.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="745052999"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="close_door_01" ID="{8D7273CE-FEC1-4EBD-975F-5733B2D731BC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="close_door_02" ID="{22370EA0-C59A-4D72-A5A5-C7EE1E1820C0}" ShortID="911206918">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="close_door_02" ID="{74079531-CA0A-42E2-8553-32D3DBF6003E}">
-											<Language>SFX</Language>
-											<AudioFile>close_door_02.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1062200065"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="close_door_02" ID="{74079531-CA0A-42E2-8553-32D3DBF6003E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								<AudioFileSource Name="Modern UI Sound" ID="{6FF80737-50EE-478A-A911-6FBD13C6164D}">
+									<Language>SFX</Language>
+									<AudioFile>Modern UI Sound.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="330428545"/>
+									</MediaIDList>
+								</AudioFileSource>
 							</ChildrenList>
-						</RandomSequenceContainer>
+							<ActiveSourceList>
+								<ActiveSource Name="Modern UI Sound" ID="{6FF80737-50EE-478A-A911-6FBD13C6164D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="UI_CommonButton_Forward" ID="{3C4771D0-D5B3-4407-BC6E-95E4683294EF}" ShortID="215028149">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cool Interface Sound" ID="{7D837B30-BF57-4EA8-B3A3-D0C87CE15E0B}">
+									<Language>SFX</Language>
+									<AudioFile>Cool Interface Sound.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="649091450"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cool Interface Sound" ID="{7D837B30-BF57-4EA8-B3A3-D0C87CE15E0B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-				</ActorMixer>
-				<ActorMixer Name="Foods" ID="{37B2253D-C181-43C6-A023-2EA38917A765}" ShortID="594979113">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Foods" ID="{95A0D2E4-AC86-479C-9F5E-AA4123D35F5F}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-						</Reference>
-					</ReferenceList>
-				</ActorMixer>
-				<ActorMixer Name="VO" ID="{9C12309B-9336-44FA-B885-E5A3D8309008}" ShortID="466604819">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="VO" ID="{ADA665FC-A800-4860-9414-C34F05805F2B}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-						</Reference>
-					</ReferenceList>
+				</Folder>
+				<Folder Name="VO" ID="{791F82F7-E7E1-4BE2-A216-EA2127BB3BFD}" ShortID="1060972252">
 					<ChildrenList>
 						<RandomSequenceContainer Name="VO_Dislike" ID="{B01DDE0E-3819-4606-A084-001CC8BF61A3}" ShortID="853226752">
 							<PropertyList>
@@ -1440,7 +1374,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -3022,7 +2956,7 @@
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+									<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -4849,7 +4783,7 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
-				</ActorMixer>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

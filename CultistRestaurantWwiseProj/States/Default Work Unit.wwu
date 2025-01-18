@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="GameLevel" ID="{C1398117-3E5C-4AD9-8321-5F12E8A68062}">
+					<ChildrenList>
+						<State Name="None" ID="{3D4BEBAE-C387-4F02-A36A-2FFC9411C1CB}"/>
+						<State Name="FinishMenu" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}"/>
+						<State Name="StartMenu" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}"/>
+						<State Name="Level01" ID="{881EDAF1-A5C3-4F79-93DB-1FC47B4D2527}"/>
+						<State Name="Level02" ID="{81CAC907-04EB-4EED-92C8-C33919A2C76B}"/>
+						<State Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
+						<State Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
