@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 using static UnityEngine.Mathf;
 using Random = UnityEngine.Random;
 namespace Projects.Demo0.Core.Utils.RndUtils
@@ -25,6 +26,7 @@ public static class RndSelect
 	/// <returns>原列表的副本</returns>
 	public static List<int> LocalLikeShuffleSwap(List<int> itemList, int swapNum)
 	{
+		Debug.Log($"LocalLikeShuffleSwap: {itemList.Count} {swapNum}");
 		var result = new List<int>(itemList);
 		for (var i = 0; i < swapNum; i++)
 		{

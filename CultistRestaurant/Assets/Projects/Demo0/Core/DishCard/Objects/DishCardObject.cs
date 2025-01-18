@@ -47,7 +47,7 @@ public class DishCardObject : MonoBehaviour
 	public List<DishClueObject> m_ClueObjList;
 	public List<DishClueObject> m_SpriteList;
 	public event Action OnStartCheck;
-	public event Action<int> OnServeOut;
+	public event Action<(int hpChange, bool acceptPolluted)> OnServeOut;
 	public Animation m_Animation;
 	public float m_SpriteAlpha;
 	float m_SpriteAlpha_Cached;
@@ -91,26 +91,27 @@ public class DishCardObject : MonoBehaviour
 		m_Animation.Play("DishOffTable");
 		yield return new WaitUntil(() => !m_Animation.isPlaying);
 		gameObject.SetActive(false);
-		var hpChange = GetHPChange(accept);
-		OnServeOut?.Invoke(hpChange);
+		OnServeOut?.Invoke(GetDishRes(accept));
 	}
 
 	/// <summary>
 	///     计算菜品在结算时的HP变化
 	/// </summary>
-	int GetHPChange(bool accept)
+	(int hpChange, bool acceptPolluted) GetDishRes(bool accept)
 	{
 		var gameConfig = GameDocMgr.Instance.m_GameGlobalConfig;
+		var dishPolluted = m_ClueObjList.Exists(clue => clue.PollutedClue);
 		if (accept)
 		{
-			if (m_ClueObjList.Exists(clue => !clue.WrongClue)) { return gameConfig.AcceptWrongDish_HPChange; }
-			if (m_ClueObjList.Exists(clue => clue.PollutedClue)) { return gameConfig.AcceptPollutedCorrectDish_HPChange; }
+			if (m_ClueObjList.Exists(clue => !clue.WrongClue)) { return (gameConfig.AcceptWrongDish_HPChange, dishPolluted); }
+			if (dishPolluted) { return (gameConfig.AcceptPollutedCorrectDish_HPChange, true); }
 		}
 		else
 		{
-			if (m_ClueObjList.All(clue => clue.PerfectClue)) { return gameConfig.RefusePerfectDish_HPChange; }
+			if (m_ClueObjList.All(clue => clue.PerfectClue)) { return (gameConfig.RefusePerfectDish_HPChange, false); }
 		}
-		return 0;
+
+		return (0, false);
 	}
 
 }
