@@ -41,8 +41,20 @@ TagManager:
   - name: bg
     uniqueID: 1819907077
     locked: 0
+  - name: sceneObj
+    uniqueID: 2508210849
+    locked: 0
+  - name: plate
+    uniqueID: 1607699325
+    locked: 0
+  - name: elements
+    uniqueID: 1277768495
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 4045441331
     locked: 0
   m_RenderingLayers:
   - Default
