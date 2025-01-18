@@ -23,3 +23,10 @@ Group,Layer,CenterX(Relative),CenterY(Relative)
 4_UI,4_out,840,-424
 4_UI,5_quit,-243,-427
 4_UI,6_menuBg,814,-34
+1_snaildish,1_firstPlate,314,156
+2_sauce,2_sauce10,251,111
+2_sauce,2_sauce01,245,105
+2_sauce,2_sauce00,260,130
+3_snail,3_snail10,244,91
+3_snail,3_snail01,244,91
+3_snail,3_snail00,251,87
