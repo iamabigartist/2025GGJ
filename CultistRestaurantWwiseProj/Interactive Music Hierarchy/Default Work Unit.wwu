@@ -1185,12 +1185,16 @@
 								<CustomState Name="" ID="{2B38CBEB-D132-4884-B08D-1F64D06C3411}" ShortID="110707271"/>
 							</CustomState>
 							<CustomState>
-								<StateRef Name="FinishMenu" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}"/>
+								<StateRef Name="FinishView" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}"/>
 								<CustomState Name="" ID="{312B9AA7-830A-4C76-AB1B-D5CB14D28B26}" ShortID="77412188"/>
 							</CustomState>
 							<CustomState>
-								<StateRef Name="StartMenu" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}"/>
+								<StateRef Name="StartView" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}"/>
 								<CustomState Name="" ID="{469C1305-9BEC-4391-AB7A-D4DB3D6272EE}" ShortID="1050489644"/>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="IntroView" ID="{99AD2C5C-F404-4EB0-8FA3-332F1B3F0DA4}"/>
+								<CustomState Name="" ID="{FE970297-9E46-4122-9D93-56E909D259CF}" ShortID="379348204"/>
 							</CustomState>
 							<CustomState>
 								<StateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
@@ -1228,7 +1232,7 @@
 										<ObjectLists>
 											<ObjectList Name="EntryPath">
 												<Reference>
-													<ObjectRef Name="StartMenu" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
+													<ObjectRef Name="StartView" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>
@@ -1300,7 +1304,7 @@
 										<ObjectLists>
 											<ObjectList Name="EntryPath">
 												<Reference>
-													<ObjectRef Name="FinishMenu" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
+													<ObjectRef Name="FinishView" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>
@@ -1319,6 +1323,24 @@
 											<ObjectList Name="EntryPath">
 												<Reference>
 													<ObjectRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{304B6FA6-91F9-4F41-81CE-24C09FD25B57}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Noise" ID="{269D381C-4CE9-4FA9-A969-3536E5E53E96}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="IntroView" ID="{99AD2C5C-F404-4EB0-8FA3-332F1B3F0DA4}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>
