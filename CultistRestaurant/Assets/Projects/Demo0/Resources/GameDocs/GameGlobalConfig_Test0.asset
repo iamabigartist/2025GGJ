@@ -39,5 +39,6 @@ MonoBehaviour:
   AcceptWrongDish_HPChange: -2
   RefusePerfectDish_HPChange: -1
   AcceptPollutedCorrectDish_HPChange: 1
-  LevelList: []
+  LevelList:
+  - {fileID: 11400000, guid: f225106d93ceb4146985d59c18c9ec8d, type: 2}
   GoodEnd_AcceptPolluteRatioRequired: 0.5
