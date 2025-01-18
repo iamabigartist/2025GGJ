@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D9B11CCC-16F8-4671-9B8D-072FACE430D8}" SchemaVersion="119">
 	<Queries>
-		<WorkUnit Name="Default Work Unit" ID="{D9B11CCC-16F8-4671-9B8D-072FACE430D8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D9B11CCC-16F8-4671-9B8D-072FACE430D8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Query Name="AutoStream" ID="{9C8E6496-0A73-46F2-84EF-CF5FC74BF28F}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Queries>
 </WwiseDocument>

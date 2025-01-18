@@ -77,6 +77,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-002" ID="{B6218878-79FB-4F9E-BFE9-906A4413C363}" ShortID="688682899">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -99,6 +106,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-003" ID="{65ABB473-273C-404F-93D6-B3B276737624}" ShortID="926382684">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -121,6 +135,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-001" ID="{B0C41490-45B7-42E4-9E4E-34762E5C17BC}" ShortID="263238421">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -161,6 +182,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-004" ID="{74E7FC6E-DAF2-46A3-9808-BE2397C68A6C}" ShortID="75219559">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -183,6 +211,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-006" ID="{0B88D243-368E-4B7B-91AC-E76362CB9ACA}" ShortID="283860233">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -205,6 +240,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-005" ID="{1D63AACF-407D-4B15-98D6-854AABD4D5EE}" ShortID="877294931">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -245,6 +287,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-008" ID="{62F78906-952B-4015-A9F6-7CE12346791C}" ShortID="512150369">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -267,6 +316,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-009" ID="{727AF7F5-62B5-4566-8BCD-8166979D172A}" ShortID="444826676">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -289,6 +345,13 @@
 											</ActiveSourceList>
 										</Sound>
 										<Sound Name="Cooking_Game_Ambience_Restaurant-007" ID="{F1565201-4DE1-490D-92F9-CFD93CC457FD}" ShortID="806180610">
+											<PropertyList>
+												<Property Name="IsStreamingEnabled" Type="bool">
+													<ValueList>
+														<Value>True</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>

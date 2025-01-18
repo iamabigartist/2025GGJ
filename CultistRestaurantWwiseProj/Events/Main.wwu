@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5C488041-6DEB-47A6-BAD0-0D68800734C0}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Main" ID="{5C488041-6DEB-47A6-BAD0-0D68800734C0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="UI" ID="{BAC38F92-CB9D-4985-B593-67C70858CCB1}" ShortID="720084559">
+					<ChildrenList>
+						<Event Name="Play_UI_BookClose" ID="{A05D98E2-A816-42FE-B08D-2F74831BABCF}">
+							<ChildrenList>
+								<Action Name="" ID="{4A265809-D70B-41F4-9B5F-B7E9A916CB24}" ShortID="928395143">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_BookClose" ID="{BE13B201-3109-43A8-9228-B930CA28DB30}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_CallBell" ID="{9AC117A8-0130-45F1-AAEC-DFB8AA9E8D0A}">
+							<ChildrenList>
+								<Action Name="" ID="{39651BE1-E4AE-4A2E-BE70-E5F8B348EA4F}" ShortID="930560761">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_CallBell" ID="{A34DCB6D-847A-45C0-B30E-64E0D927A833}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_BookOpen" ID="{B4F24287-64F1-4C25-B254-960A9C473B07}">
+							<ChildrenList>
+								<Action Name="" ID="{1360C701-4738-4E1A-8FEA-61D5920F9C81}" ShortID="743616950">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_BookOpen" ID="{F224482F-93BE-49EC-B2C1-EEBBD5488DD1}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_PaperClose" ID="{C1319109-1455-4DAA-B98D-5C375D955522}">
+							<ChildrenList>
+								<Action Name="" ID="{21342F78-5A3B-45B9-94F3-64F13B6BA659}" ShortID="261405519">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_PaperClose" ID="{6DB7BA77-7C70-402D-9771-A9044AB5F6CC}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_UI_PaperOpen" ID="{F4B74778-989E-4821-8862-400633F8C15E}">
+							<ChildrenList>
+								<Action Name="" ID="{B2D47FE7-139C-4463-A352-C711B7496B13}" ShortID="441382227">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_PaperOpen" ID="{D75CFABD-5A2A-41F7-B82C-3396C59EE1AF}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="VO" ID="{3757040D-166B-4E84-9FDF-13D5D08865C6}" ShortID="187241560">
+					<ChildrenList>
+						<Event Name="Play_VO_Like" ID="{58C733AA-8755-4B7C-A52A-A979075551C0}">
+							<ChildrenList>
+								<Action Name="" ID="{79766A65-EAE1-4B0B-9EF7-17447FDAA911}" ShortID="665750769">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VO_Like" ID="{4C7C696B-F46A-49F5-B5D1-4507D546D9B4}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_VO_Dislike" ID="{7B727959-518A-4546-8D20-19B219F587CD}">
+							<ChildrenList>
+								<Action Name="" ID="{D9EC41B2-D9D4-49E3-9D3A-980607B8DDAF}" ShortID="114541139">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VO_Dislike" ID="{B01DDE0E-3819-4606-A084-001CC8BF61A3}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Foods" ID="{F0B187F3-0EAE-438D-A9A2-74352606BC2F}" ShortID="474239102"/>
+				<Folder Name="Amb" ID="{51F15C10-D6FB-410F-AFEA-75975CD33C52}" ShortID="779135117">
+					<ChildrenList>
+						<Event Name="Play_RestaurantBase" ID="{221CDEFF-A412-4BE5-9C02-162D80422A88}">
+							<ChildrenList>
+								<Action Name="" ID="{B6C1EF7E-3AD5-4638-9AB2-031036E9BB4C}" ShortID="950687956">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{8ABE2E46-4513-4A91-9DFB-A97D2AE71942}" ShortID="970680306">
+					<ChildrenList>
+						<Event Name="Play_Music" ID="{67C2563D-4632-4F0C-A3B4-E10943510306}">
+							<ChildrenList>
+								<Action Name="" ID="{42A29584-8D22-41B7-8116-2C29A3B0D743}" ShortID="764645941">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{84A336CF-211E-4D01-BE9D-2EBFEF6B1243}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Foley" ID="{224D3793-E818-46FC-8672-44C348A248AD}" ShortID="732879166">
+					<ChildrenList>
+						<Event Name="Play_DoorOpen" ID="{80142FCA-E7D2-4C18-B89C-CDF6B86539A7}">
+							<ChildrenList>
+								<Action Name="" ID="{239C4656-9733-4BFF-BB4B-11EB129E9DF0}" ShortID="857638383">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DoorOpen" ID="{EE675E47-8539-47D2-A95C-ED33E20C58E5}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_DoorClose" ID="{953E7B85-74D8-4A65-A0F7-C41DBFCA5396}">
+							<ChildrenList>
+								<Action Name="" ID="{E6DD3CC9-B845-4BDF-8F27-BB7F5A5B4797}" ShortID="600553216">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="DoorClose" ID="{4276F4E9-52E9-46D5-B618-FB9D337174DA}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_TestSpeech" ID="{1B976355-D58F-43C6-BEAE-2BEDBB40731E}">
+					<ChildrenList>
+						<Action Name="" ID="{DF69DE7B-4A5E-4EC2-ACC9-A322DC27605B}" ShortID="832053410">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TestSpeech" ID="{874FE8C9-F3EB-41C4-9EE6-5AF0D09C5266}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

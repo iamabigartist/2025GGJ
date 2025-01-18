@@ -5,9 +5,16 @@ namespace Audio
 {
     public class TestPlaySound : MonoBehaviour
     {
+        public string eventName;
+        public uint uuid;
         private void OnEnable()
         {
-            AudioManager.Instance.PostEvent("Play_TestSpeech", gameObject);
+            uuid = AudioManager.Instance.PostEvent(eventName, gameObject);
+        }
+        
+        private void OnDisable()
+        {
+            AudioManager.Instance.ExecuteActionOnPlayingID(uuid);
         }
     }
 }

@@ -69,6 +69,11 @@ namespace Audio
             Debug.Log($"Post event complete, event name is: {eventName}, uuid is: {uuid}");
             return uuid;
         }
+        
+        public void ExecuteActionOnPlayingID(uint uuid)
+        {
+            AkSoundEngine.ExecuteActionOnPlayingID(AkActionOnEventType.AkActionOnEventType_Stop, uuid, 100, AkCurveInterpolation.AkCurveInterpolation_Linear);
+        }
 
         public void SetStateValue(string group, string val)
         {
