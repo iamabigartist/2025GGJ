@@ -1,21 +1,21 @@
+using Projects.Demo0.Core.Mgr;
 using UnityEngine;
 namespace Projects.Demo0.Core.DishCard.Objects
 {
 [RequireComponent(typeof(SpriteRenderer), typeof(PolygonCollider2D))]
 public class DishClueObject : MonoBehaviour
 {
-	public static (DishClueObject clueObj, GameObject gameObj) Create(DishClueDoc clueDoc, DishClueState state, ClueAnimationDoc animationDoc)
+	public static (DishClueObject clueObj, GameObject gameObj) Create(DishClueDoc clueDoc, DishClueStateDoc stateDoc)
 	{
-		var curStateDoc = clueDoc.StateDoc.Find(doc => doc.State.Equals(state));
-		var prefab = curStateDoc.CluePrefab;
+		var prefab = stateDoc.CluePrefab;
 		var gameObj = Instantiate(prefab);
 		gameObj.name = $"Clue_{prefab.name}";
 		var collider = gameObj.AddComponent<PolygonCollider2D>();
 		var clueObj = gameObj.AddComponent<DishClueObject>();
 		clueObj.m_Doc = clueDoc;
-		clueObj.m_StateDoc = curStateDoc;
+		clueObj.m_StateDoc = stateDoc;
 		var animation = gameObj.GetComponent<Animation>();
-		foreach (var clip in animationDoc.Clips) { animation.AddClip(clip, clip.name); }
+		foreach (var clip in GameDocMgr.Instance.m_ClueAnimationDoc.Clips) { animation.AddClip(clip, clip.name); }
 		return (clueObj, gameObj);
 	}
 	public DishClueStateDoc m_StateDoc;

@@ -6,6 +6,8 @@ namespace Projects.Demo0.Core
 [CreateAssetMenu]
 public class DishCardDoc : SerializedScriptableObject
 {
+	[MultiLineProperty(Lines = 8)]
+	public string RecipeDesc;
 	public int Priority;
 	public List<DishClueDoc> ClueList = new();
 }
