@@ -5,6 +5,9 @@ namespace Projects.Demo0.Core.Utils.RndUtils
 {
 public static class RndSelect
 {
+	/// <summary>
+	/// 给定数量的元素中随机选择其中n个，并且均匀分布
+	/// </summary>
 	public static List<int> UniformSelect(int total, int selectCount)
 	{
 		var result = new List<int>();
