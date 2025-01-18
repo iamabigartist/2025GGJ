@@ -4,5 +4,10 @@ public class PlayCmd : Cmd
 {
 	public string AudioEvent;
 	public string AnimationEvent;
+	public override void Execute(CmdContext ctx)
+	{
+		ctx.TargetGameObj.SendMessage(AnimationEvent);
+		// 然后播放音频API
+	}
 }
 }
