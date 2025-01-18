@@ -10,3 +10,6 @@
 /[Ll]ogs/
 /UserSettings/
 /.idea/
+*.csproj
+*.sln
+.vsconfig
