@@ -1,85 +1,86 @@
 using System.Collections;
 using System.Collections.Generic;
+using Projects.Demo0.Core.Localization;
+using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
-public class PPTController : MonoBehaviour
+using UnityEngine.UI;
+public class PPTController : SerializedMonoBehaviour
 {
-    [Header("°´Å¥ºÍÄÚÈİ¿ØÖÆ")]
-    public Image displayImage;                // Í¼Æ¬×é¼ş
-    public Text displayText;                  // ÎÄ±¾¿ò×é¼ş
-    public List<Sprite> images;               // Í¼Æ¬Êı×é£¬±©Â¶Îª List ¹©ĞŞ¸Ä
-    public List<string> texts;                // ÎÄ±¾Êı×é£¬±©Â¶Îª List ¹©ĞŞ¸Ä
+	[Header("æŒ‰é’®å’Œå†…å®¹æ§åˆ¶")]
+	public Image displayImage; // å›¾ç‰‡ç»„ä»¶
+	public Text displayText; // æ–‡æœ¬æ¡†ç»„ä»¶
+	public List<Sprite> images; // å›¾ç‰‡æ•°ç»„ï¼Œæš´éœ²ä¸º List ä¾›ä¿®æ”¹
+	public List<MultiLangStr> texts = new(); // æ–‡æœ¬æ•°ç»„ï¼Œæš´éœ²ä¸º List ä¾›ä¿®æ”¹
 
-    [Header("½»»¥¿ØÖÆ")]
-    public float clickCooldown = 2f;          // µã»÷ºó½ûÓÃµÄÀäÈ´Ê±¼ä£¨Ãë£©
-    public string sceneToLoad;                // ×îºóÒ»»÷ºó¼ÓÔØµÄ³¡¾°Ãû³Æ
+	[Header("äº¤äº’æ§åˆ¶")]
+	public float clickCooldown = 2f; // ç‚¹å‡»åç¦ç”¨çš„å†·å´æ—¶é—´ï¼ˆç§’ï¼‰
+	public string sceneToLoad; // æœ€åä¸€å‡»ååŠ è½½çš„åœºæ™¯åç§°
 
-    [Header("Òş²ØÑ¡Ïî")]
-    public bool hideThisButton = true;        // ÊÇ·ñÒş²Øµ±Ç°°´Å¥ (A °´Å¥)
-    public bool hideTextBox = false;          // ÊÇ·ñÒş²ØÎÄ±¾¿ò
+	[Header("éšè—é€‰é¡¹")]
+	public bool hideThisButton = true; // æ˜¯å¦éšè—å½“å‰æŒ‰é’® (A æŒ‰é’®)
+	public bool hideTextBox = false; // æ˜¯å¦éšè—æ–‡æœ¬æ¡†
 
-    private int currentIndex = 0;             // µ±Ç°ÇĞ»»Ë÷Òı
-    private int maxClicks;                    // ×î´óµã»÷´ÎÊı
-    private bool isCooldown = false;          // ÀäÈ´×´Ì¬
+	int currentIndex = 0; // å½“å‰åˆ‡æ¢ç´¢å¼•
+	int maxClicks; // æœ€å¤§ç‚¹å‡»æ¬¡æ•°
+	bool isCooldown = false; // å†·å´çŠ¶æ€
 
-    void Start()
-    {
-        maxClicks = Mathf.Min(images.Count, texts.Count); // È·¶¨×î´óµã»÷´ÎÊı
-        GetComponent<Button>().onClick.AddListener(OnButtonClick); // °ó¶¨°´Å¥µã»÷ÊÂ¼ş
-        UpdateContent();                                  // ³õÊ¼»¯ÏÔÊ¾
-    }
+	void Start()
+	{
+		maxClicks = Mathf.Min(images.Count, texts.Count); // ç¡®å®šæœ€å¤§ç‚¹å‡»æ¬¡æ•°
+		GetComponent<Button>().onClick.AddListener(OnButtonClick); // ç»‘å®šæŒ‰é’®ç‚¹å‡»äº‹ä»¶
+		UpdateContent(); // åˆå§‹åŒ–æ˜¾ç¤º
+	}
 
-    void OnButtonClick()
-    {
-        if (isCooldown) return;  // Èç¹û°´Å¥ÕıÔÚÀäÈ´£¬Ö±½Ó·µ»Ø
+	void OnButtonClick()
+	{
+		if (isCooldown) return; // å¦‚æœæŒ‰é’®æ­£åœ¨å†·å´ï¼Œç›´æ¥è¿”å›
 
-        StartCoroutine(ButtonCooldown()); // ¿ªÊ¼°´Å¥ÀäÈ´
-        currentIndex++;                   // ¸üĞÂµã»÷´ÎÊı
+		StartCoroutine(ButtonCooldown()); // å¼€å§‹æŒ‰é’®å†·å´
+		currentIndex++; // æ›´æ–°ç‚¹å‡»æ¬¡æ•°
 
-        if (currentIndex < maxClicks)
-        {
-            UpdateContent();              // ¸üĞÂÍ¼Æ¬ºÍÎÄ×ÖÄÚÈİ
-        }
-        else
-        {
-            // ×îºóÒ»´Îµã»÷Ê±¼ÓÔØ³¡¾°
-            if (!string.IsNullOrEmpty(sceneToLoad))
-            {
-                SceneManager.LoadScene(sceneToLoad); // ¼ÓÔØÖ¸¶¨³¡¾°
-            }
+		if (currentIndex < maxClicks)
+		{
+			UpdateContent(); // æ›´æ–°å›¾ç‰‡å’Œæ–‡å­—å†…å®¹
+		}
+		else
+		{
+			// æœ€åä¸€æ¬¡ç‚¹å‡»æ—¶åŠ è½½åœºæ™¯
+			if (!string.IsNullOrEmpty(sceneToLoad))
+			{
+				SceneManager.LoadScene(sceneToLoad); // åŠ è½½æŒ‡å®šåœºæ™¯
+			}
 
-            // Òş²ØÆäËû×é¼ş£¨Èç¹û¹´Ñ¡ÁË¶ÔÓ¦Ñ¡Ïî£©
-            if (hideThisButton)
-                gameObject.SetActive(false); // Òş²Øµ±Ç°°´Å¥
+			// éšè—å…¶ä»–ç»„ä»¶ï¼ˆå¦‚æœå‹¾é€‰äº†å¯¹åº”é€‰é¡¹ï¼‰
+			if (hideThisButton)
+				gameObject.SetActive(false); // éšè—å½“å‰æŒ‰é’®
 
-            if (hideTextBox && displayText != null)
-                displayText.gameObject.SetActive(false); // Òş²ØÎÄ±¾¿ò
-        }
-    }
+			if (hideTextBox && displayText != null)
+				displayText.gameObject.SetActive(false); // éšè—æ–‡æœ¬æ¡†
+		}
+	}
 
-    void UpdateContent()
-    {
-        if (currentIndex < images.Count && displayImage != null)
-        {
-            displayImage.sprite = images[currentIndex];  // ¸üĞÂÍ¼Æ¬
-        }
+	void UpdateContent()
+	{
+		if (currentIndex < images.Count && displayImage != null)
+		{
+			displayImage.sprite = images[currentIndex]; // æ›´æ–°å›¾ç‰‡
+		}
 
-        if (currentIndex < texts.Count && displayText != null)
-        {
-            displayText.text = texts[currentIndex];      // ¸üĞÂÎÄ×Ö
-        }
-    }
+		if (currentIndex < texts.Count && displayText != null)
+		{
+			displayText.text = texts[currentIndex].ToString(); // æ›´æ–°æ–‡å­—
+		}
+	}
 
-    IEnumerator ButtonCooldown()
-    {
-        isCooldown = true; // ±ê¼Ç°´Å¥½øÈëÀäÈ´×´Ì¬
-        GetComponent<Button>().interactable = false; // ½ûÓÃ°´Å¥½»»¥
+	IEnumerator ButtonCooldown()
+	{
+		isCooldown = true; // æ ‡è®°æŒ‰é’®è¿›å…¥å†·å´çŠ¶æ€
+		GetComponent<Button>().interactable = false; // ç¦ç”¨æŒ‰é’®äº¤äº’
 
-        yield return new WaitForSeconds(clickCooldown); // µÈ´ıÀäÈ´Ê±¼ä
+		yield return new WaitForSeconds(clickCooldown); // ç­‰å¾…å†·å´æ—¶é—´
 
-        GetComponent<Button>().interactable = true; // »Ö¸´°´Å¥½»»¥
-        isCooldown = false; // ÀäÈ´½áÊø
-    }
+		GetComponent<Button>().interactable = true; // æ¢å¤æŒ‰é’®äº¤äº’
+		isCooldown = false; // å†·å´ç»“æŸ
+	}
 }
