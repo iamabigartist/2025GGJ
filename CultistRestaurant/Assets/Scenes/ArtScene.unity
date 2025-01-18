@@ -3300,9 +3300,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348655457}
-  - component: {fileID: 1348655458}
-  - component: {fileID: 1348655459}
-  - component: {fileID: 1348655460}
   m_Layer: 0
   m_Name: Scene1
   m_TagString: Untagged
@@ -3331,62 +3328,6 @@ Transform:
   - {fileID: 377659868}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1348655458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348655455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14615148ccc215a4cbcdc4b8c91df501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
-  _isOpen: 0
-  sceneRoot: {fileID: 825324198}
-  openSprites:
-  - {fileID: 944555161}
-  - {fileID: 1266653385}
-  closeSprites:
-  - {fileID: 636999456}
-  - {fileID: 1598071930}
---- !u!114 &1348655459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348655455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7ad24cc42ce6144ab9ecf756d75cf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/
---- !u!114 &1348655460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348655455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1 &1360598011
 GameObject:
   m_ObjectHideFlags: 0
