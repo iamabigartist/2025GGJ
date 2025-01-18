@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 namespace Projects.Demo0.Core
 {
 public struct DishClueState : IEquatable<DishClueState>
@@ -13,6 +14,6 @@ public struct DishClueState : IEquatable<DishClueState>
 public class DishClueStateDoc
 {
 	public DishClueState State;
-	public Cmd InteractCmd;
+	public List<Cmd> InteractCmdList = new();
 }
 }
