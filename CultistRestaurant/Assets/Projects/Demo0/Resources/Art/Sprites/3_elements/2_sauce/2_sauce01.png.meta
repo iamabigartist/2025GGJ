@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 3_sauce01_0
+      name: 2_sauce01_4
       rect:
         serializedVersion: 2
-        x: 988
-        y: 208
-        width: 449
-        height: 396
+        x: 236
+        y: 0
+        width: 22
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddc96cee70e6e0a469fd5cda267bf689
-      internalID: 1927402514
+      spriteID: 12a5f1c517cd5844ba458cc25ec98584
+      internalID: -36144834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2_sauce01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 412
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d842493aae068634f8f6afe965f91079
+      internalID: 1295528990
       vertices: []
       indices: 
       edges: []
@@ -132,11 +154,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      3_sauce01_0: 1927402514
-      3_sauce01_1: 1322062284
-      3_sauce01_2: 279426573
-      3_sauce01_3: 1722871363
-      3_sauce01_4: 594853769
+      2_sauce01_0: 1295528990
+      2_sauce01_1: -958650622
+      2_sauce01_2: 1016183168
+      2_sauce01_3: 1202396033
+      2_sauce01_4: -36144834
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

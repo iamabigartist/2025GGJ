@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 2_sauce10_0
+      name: 2_sauce00_0
       rect:
         serializedVersion: 2
-        x: 1012
-        y: 308
+        x: 0
+        y: 0
         width: 385
-        height: 254
+        height: 255
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82c54161285f7b849a91553a4347c785
-      internalID: 2115325211
+      spriteID: 0b5f88504f1082142890549368876a3a
+      internalID: -34462280
       vertices: []
       indices: 
       edges: []
@@ -132,6 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      2_sauce00_0: -34462280
       2_sauce10_0: 2115325211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
