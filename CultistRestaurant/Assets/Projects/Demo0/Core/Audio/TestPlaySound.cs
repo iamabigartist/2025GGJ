@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Audio
@@ -6,7 +6,7 @@ namespace Audio
     public class TestPlaySound : MonoBehaviour
     {
         public string eventName;
-        public uint uuid;
+        [ReadOnly] public uint uuid;
         private void OnEnable()
         {
             uuid = AudioManager.Instance.PostEvent(eventName, gameObject);

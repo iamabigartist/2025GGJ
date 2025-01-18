@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 6684257541078481341}
   - component: {fileID: 2165440793840456759}
   - component: {fileID: 1514057533771442370}
+  - component: {fileID: 6173470651414107034}
   m_Layer: 0
   m_Name: 3_BspOrder
   m_TagString: Untagged
@@ -483,6 +484,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6173470651414107034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5571098110363652959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b752a9b0077a43a1a1706637639c0242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: Play_UI_PaperOpen
+  uuid: 0
 --- !u!1 &6455389769031897096
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +632,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 7431183857715430203}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -913,6 +928,7 @@ GameObject:
   - component: {fileID: 8156033126413863992}
   - component: {fileID: 1034637646464324966}
   - component: {fileID: 6730237427194043024}
+  - component: {fileID: 2497404294632784032}
   m_Layer: 0
   m_Name: 2_BmenuBtn
   m_TagString: Untagged
@@ -1033,6 +1049,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2497404294632784032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6925982920304297072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b752a9b0077a43a1a1706637639c0242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: Play_UI_BookOpen
+  uuid: 0
 --- !u!1 &7678278688625699075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,6 +1075,7 @@ GameObject:
   - component: {fileID: 3243902649970239575}
   - component: {fileID: 276604930089697236}
   - component: {fileID: 7012355525193680479}
+  - component: {fileID: 2844564464061068986}
   m_Layer: 0
   m_Name: 4_Bout
   m_TagString: Untagged
@@ -1165,6 +1196,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2844564464061068986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7678278688625699075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b752a9b0077a43a1a1706637639c0242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: Play_UI_CallBell
+  uuid: 0
 --- !u!1 &9213466276829199632
 GameObject:
   m_ObjectHideFlags: 0
