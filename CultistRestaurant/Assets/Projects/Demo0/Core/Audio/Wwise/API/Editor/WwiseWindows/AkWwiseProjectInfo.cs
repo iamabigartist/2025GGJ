@@ -25,7 +25,7 @@ public static class AkWwiseProjectInfo
 	private static string s_wwiseEditorDirectory = System.IO.Path.Combine("Wwise", "Editor").Replace('\\','/');
 	private static string s_dataRelativeDirectory = System.IO.Path.Combine(s_wwiseEditorDirectory, "ProjectData").Replace('\\','/');
 	private static string s_dataRelativePath = System.IO.Path.Combine(s_dataRelativeDirectory, _dataFileName).Replace('\\','/');
-	private static string s_dataAssetPath = System.IO.Path.Combine("Assets/Scripts/Audio", s_dataRelativePath).Replace('\\','/');
+	private static string s_dataAssetPath = System.IO.Path.Combine("Assets/Projects/Demo0/Core/Audio", s_dataRelativePath).Replace('\\','/');
 
 	public static AkWwiseProjectData ProjectData;
 	private static AkWwiseTreeWAAPIDataSource _waapiPickerData = new AkWwiseTreeWAAPIDataSource();

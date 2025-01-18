@@ -52,6 +52,11 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" ShortID="130182929">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -345,7 +350,7 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>25</Value>
+										<Value>30</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
@@ -663,7 +668,13 @@
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{B50226B0-EB99-46A5-B12B-F3F115F6CB0F}"/>
+													<Modifier Name="" ID="{B50226B0-EB99-46A5-B12B-F3F115F6CB0F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="200"/>
+															<Property Name="Min" Type="Real64" Value="-200"/>
+														</PropertyList>
+													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
@@ -683,13 +694,7 @@
 												<Property Name="Pitch" Type="int32">
 													<ModifierList>
 														<ModifierInfo>
-															<Modifier Name="" ID="{17868AD8-8A09-457E-801E-755BBFFE8385}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="200"/>
-																	<Property Name="Min" Type="Real64" Value="-200"/>
-																</PropertyList>
-															</Modifier>
+															<Modifier Name="" ID="{17868AD8-8A09-457E-801E-755BBFFE8385}"/>
 														</ModifierInfo>
 													</ModifierList>
 												</Property>
@@ -706,6 +711,7 @@
 												<AudioFileSource Name="Household_Book_Medium_Close_Mono_04" ID="{D4601587-7057-456C-AE88-ECBB32D5BE9C}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.015"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.0507585431654676"/>
 													</PropertyList>
@@ -724,14 +730,15 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="BookOpen" ID="{7702EB9E-6296-4127-8277-DBF073E1E510}" ShortID="41656455">
 									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{5F9A64B3-2519-4149-8445-9480C1B288E3}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="50"/>
-															<Property Name="Min" Type="Real64" Value="-50"/>
+															<Property Name="Max" Type="Real64" Value="75"/>
+															<Property Name="Min" Type="Real64" Value="-75"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
@@ -747,7 +754,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Household_Book_Medium_Open_Mono_02" ID="{4EC416BA-30A6-448E-ACD5-DE33CA6E234B}" ShortID="483256356">
+										<Sound Name="book_open-001" ID="{405C4248-CA73-4B89-BD45-D1F89850A524}" ShortID="93232654">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -757,24 +764,24 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Medium_Open_Mono_02" ID="{3855FF60-A879-407F-9419-41CC93039FD2}">
+												<AudioFileSource Name="book_open-001" ID="{161087A8-9041-4691-8B0D-6FCF1B2DF9E7}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
-														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.3"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Household_Book_Medium_Open_Mono_02.wav</AudioFile>
+													<AudioFile>book_open-001.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="555282428"/>
+														<MediaID ID="1049620343"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Medium_Open_Mono_02" ID="{3855FF60-A879-407F-9419-41CC93039FD2}" Platform="Linked"/>
+												<ActiveSource Name="book_open-001" ID="{161087A8-9041-4691-8B0D-6FCF1B2DF9E7}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Household_Book_Medium_Open_Mono_03" ID="{CFDF955C-79D8-4885-9AA3-33BDE467DAE2}" ShortID="556107221">
+										<Sound Name="book_open-003" ID="{9F26891F-0DC6-441B-AAAC-34E37B9F04C1}" ShortID="705518301">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -784,22 +791,23 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Medium_Open_Mono_03" ID="{60444315-296C-4B2E-8301-FAB77CEA7ED8}">
+												<AudioFileSource Name="book_open-003" ID="{A2BEDA57-9434-4383-BCE7-94965E1AB051}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.3"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Household_Book_Medium_Open_Mono_03.wav</AudioFile>
+													<AudioFile>book_open-003.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="224477780"/>
+														<MediaID ID="424366544"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Medium_Open_Mono_03" ID="{60444315-296C-4B2E-8301-FAB77CEA7ED8}" Platform="Linked"/>
+												<ActiveSource Name="book_open-003" ID="{A2BEDA57-9434-4383-BCE7-94965E1AB051}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Household_Book_Medium_Open_Mono_04" ID="{CD01382D-E2EA-49C0-BAF6-E690D58A2395}" ShortID="437263630">
+										<Sound Name="book_open-005" ID="{0E09F69C-C8F7-4E1B-B2A4-D0BE2EA13938}" ShortID="620331396">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -809,22 +817,23 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Medium_Open_Mono_04" ID="{F1300DD7-A3C6-49B9-AD7C-D0FBAAEB5E8F}">
+												<AudioFileSource Name="book_open-005" ID="{94B9C8B4-8731-4141-BD50-24823428B10E}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.3"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Household_Book_Medium_Open_Mono_04.wav</AudioFile>
+													<AudioFile>book_open-005.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="126963550"/>
+														<MediaID ID="59143809"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Medium_Open_Mono_04" ID="{F1300DD7-A3C6-49B9-AD7C-D0FBAAEB5E8F}" Platform="Linked"/>
+												<ActiveSource Name="book_open-005" ID="{94B9C8B4-8731-4141-BD50-24823428B10E}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Household_Book_Medium_Open_Mono_05" ID="{AD997227-2CA7-4DE2-A42B-DCC6013B9AD5}" ShortID="209458822">
+										<Sound Name="book_open-006" ID="{D6D019F8-0B04-447B-9180-FC7B925E17AE}" ShortID="762981574">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -834,22 +843,23 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Medium_Open_Mono_05" ID="{20DD957C-047C-43BB-8763-AA5F9E0338D4}">
+												<AudioFileSource Name="book_open-006" ID="{37B4FB61-2EBA-4657-837A-20D109B3FDDD}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.3"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Household_Book_Medium_Open_Mono_05.wav</AudioFile>
+													<AudioFile>book_open-006.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="1016787985"/>
+														<MediaID ID="854333479"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Medium_Open_Mono_05" ID="{20DD957C-047C-43BB-8763-AA5F9E0338D4}" Platform="Linked"/>
+												<ActiveSource Name="book_open-006" ID="{37B4FB61-2EBA-4657-837A-20D109B3FDDD}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="Household_Book_Small_Open_Mono_01" ID="{2C8F1020-EEE5-4767-9FF9-14BF082A1BF1}" ShortID="1012463977">
+										<Sound Name="book_open-008" ID="{126B0604-8C39-4778-B4BA-29E4CEC5DAF9}" ShortID="559298761">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -859,119 +869,20 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Small_Open_Mono_01" ID="{F94951D9-85EB-4EC4-BD22-9156EE6AD4D1}">
+												<AudioFileSource Name="book_open-008" ID="{35B4DF04-DF01-436D-A7D5-BD7F4790CE1D}">
 													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.3"/>
+														<Property Name="FadeOutShape" Type="int16" Value="1"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>Household_Book_Small_Open_Mono_01.wav</AudioFile>
+													<AudioFile>book_open-008.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="116054218"/>
+														<MediaID ID="938264846"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Small_Open_Mono_01" ID="{F94951D9-85EB-4EC4-BD22-9156EE6AD4D1}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Household_Book_Small_Open_Mono_02" ID="{A4E11C19-9562-4EAE-A4B6-BA7C5E0A3A18}" ShortID="292205857">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Small_Open_Mono_02" ID="{EAB686D9-454E-4FC1-BF1B-B514E12B8162}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Household_Book_Small_Open_Mono_02.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="208443398"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Small_Open_Mono_02" ID="{EAB686D9-454E-4FC1-BF1B-B514E12B8162}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Household_Book_Small_Open_Mono_03" ID="{F8DC5B6B-3201-4E1C-878E-36DA6DEDB3AE}" ShortID="197499018">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Small_Open_Mono_03" ID="{8F5F1D56-1C28-4AC0-B016-3707C06DF36A}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Household_Book_Small_Open_Mono_03.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="709952812"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Small_Open_Mono_03" ID="{8F5F1D56-1C28-4AC0-B016-3707C06DF36A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Household_Book_Small_Open_Mono_04" ID="{1FB1A59E-F2F7-4919-9B5F-11A6DD348003}" ShortID="810343041">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Small_Open_Mono_04" ID="{0D96E9E0-F5E3-46F3-9EA8-C571217C2FB2}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Household_Book_Small_Open_Mono_04.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="1023460665"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Small_Open_Mono_04" ID="{0D96E9E0-F5E3-46F3-9EA8-C571217C2FB2}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Household_Book_Small_Open_Mono_05" ID="{EE3EBE3E-E174-4328-AE0A-80D02F2AC152}" ShortID="821879423">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Household_Book_Small_Open_Mono_05" ID="{355F34E7-45A5-4D45-94E3-B9FFC5DD2B61}">
-													<PropertyList>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Household_Book_Small_Open_Mono_05.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="302613101"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Household_Book_Small_Open_Mono_05" ID="{355F34E7-45A5-4D45-94E3-B9FFC5DD2B61}" Platform="Linked"/>
+												<ActiveSource Name="book_open-008" ID="{35B4DF04-DF01-436D-A7D5-BD7F4790CE1D}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -990,6 +901,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="UI_BookClose" ID="{BE13B201-3109-43A8-9228-B930CA28DB30}" ShortID="202264259">
 							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="OverrideEffect" Type="bool" Value="True"/>
 							</PropertyList>
 							<ReferenceList>
@@ -1394,6 +1306,52 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="open_door_01" ID="{5F80EEE4-1551-4375-BD5C-5E3F4EFE0C7B}" ShortID="844516248">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="open_door_01" ID="{F85CDECF-9417-4EC1-A0D4-8DC978869D3E}">
+											<Language>SFX</Language>
+											<AudioFile>open_door_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="509523933"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="open_door_01" ID="{F85CDECF-9417-4EC1-A0D4-8DC978869D3E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="open_door_02" ID="{1DDD258C-EEE5-4319-A1EB-7F23886DD93A}" ShortID="44210839">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="open_door_02" ID="{3545ACD3-242A-49CB-AC39-7608227D98F1}">
+											<Language>SFX</Language>
+											<AudioFile>open_door_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="7472567"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="open_door_02" ID="{3545ACD3-242A-49CB-AC39-7608227D98F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="DoorClose" ID="{4276F4E9-52E9-46D5-B618-FB9D337174DA}" ShortID="60186483">
 							<ReferenceList>
@@ -1404,6 +1362,52 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="close_door_01" ID="{9205291B-ED2C-4023-BF18-F78F44228387}" ShortID="414463634">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="close_door_01" ID="{8D7273CE-FEC1-4EBD-975F-5733B2D731BC}">
+											<Language>SFX</Language>
+											<AudioFile>close_door_01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="745052999"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="close_door_01" ID="{8D7273CE-FEC1-4EBD-975F-5733B2D731BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="close_door_02" ID="{22370EA0-C59A-4D72-A5A5-C7EE1E1820C0}" ShortID="911206918">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Foley" ID="{5A208B7D-BF5F-4344-A1B6-3D5E00DE8F50}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="close_door_02" ID="{74079531-CA0A-42E2-8553-32D3DBF6003E}">
+											<Language>SFX</Language>
+											<AudioFile>close_door_02.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1062200065"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="close_door_02" ID="{74079531-CA0A-42E2-8553-32D3DBF6003E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
@@ -1428,6 +1432,9 @@
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="VO_Dislike" ID="{B01DDE0E-3819-4606-A084-001CC8BF61A3}" ShortID="853226752">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -3007,6 +3014,9 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="VO_Like" ID="{4C7C696B-F46A-49F5-B5D1-4507D546D9B4}" ShortID="359920252">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
