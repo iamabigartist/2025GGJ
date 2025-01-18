@@ -1,60 +1,85 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PPTController : MonoBehaviour
 {
-    public Button targetButton;      // 被控制显示和隐藏的目标按钮 (B 按钮)
-    public Image displayImage;       // 图片组件
-    public Text displayText;         // 文本框组件
-    public Sprite[] images;          // 图片数组
-    public string[] texts;           // 文本数组
+    [Header("按钮和内容控制")]
+    public Image displayImage;                // 图片组件
+    public Text displayText;                  // 文本框组件
+    public List<Sprite> images;               // 图片数组，暴露为 List 供修改
+    public List<string> texts;                // 文本数组，暴露为 List 供修改
 
-    [Header("是否隐藏以下元素")]
-    public bool hideThisButton = true;   // 是否隐藏当前按钮 (A 按钮)
-    public bool hideTextBox = false;    // 是否隐藏文本框
-    public bool hideTargetButton = false; // 是否隐藏目标按钮
+    [Header("交互控制")]
+    public float clickCooldown = 2f;          // 点击后禁用的冷却时间（秒）
+    public string sceneToLoad;                // 最后一击后加载的场景名称
 
-    private int currentIndex = 0;    // 当前切换索引
-    private int maxClicks;           // 最大点击次数
+    [Header("隐藏选项")]
+    public bool hideThisButton = true;        // 是否隐藏当前按钮 (A 按钮)
+    public bool hideTextBox = false;          // 是否隐藏文本框
+
+    private int currentIndex = 0;             // 当前切换索引
+    private int maxClicks;                    // 最大点击次数
+    private bool isCooldown = false;          // 冷却状态
 
     void Start()
     {
-        maxClicks = Mathf.Min(images.Length, texts.Length); // 确定最大点击次数
+        maxClicks = Mathf.Min(images.Count, texts.Count); // 确定最大点击次数
         GetComponent<Button>().onClick.AddListener(OnButtonClick); // 绑定按钮点击事件
-        UpdateContent();                                     // 初始化显示
-        if (hideTargetButton)
-        {
-            targetButton.gameObject.SetActive(false);        // 初始状态隐藏目标按钮
-        }
+        UpdateContent();                                  // 初始化显示
     }
 
     void OnButtonClick()
     {
-        currentIndex++;             // 更新索引
+        if (isCooldown) return;  // 如果按钮正在冷却，直接返回
+
+        StartCoroutine(ButtonCooldown()); // 开始按钮冷却
+        currentIndex++;                   // 更新点击次数
+
         if (currentIndex < maxClicks)
         {
-            UpdateContent();        // 更新内容
+            UpdateContent();              // 更新图片和文字内容
         }
         else
         {
-            // 根据用户选择隐藏对应元素
+            // 最后一次点击时加载场景
+            if (!string.IsNullOrEmpty(sceneToLoad))
+            {
+                SceneManager.LoadScene(sceneToLoad); // 加载指定场景
+            }
+
+            // 隐藏其他组件（如果勾选了对应选项）
             if (hideThisButton)
-                gameObject.SetActive(false); // 隐藏当前按钮 (A 按钮)
+                gameObject.SetActive(false); // 隐藏当前按钮
 
             if (hideTextBox && displayText != null)
                 displayText.gameObject.SetActive(false); // 隐藏文本框
-
-            if (targetButton != null)
-                targetButton.gameObject.SetActive(true); // 显示目标按钮
         }
     }
 
     void UpdateContent()
     {
-        if (displayImage != null)
+        if (currentIndex < images.Count && displayImage != null)
+        {
             displayImage.sprite = images[currentIndex];  // 更新图片
+        }
 
-        if (displayText != null)
+        if (currentIndex < texts.Count && displayText != null)
+        {
             displayText.text = texts[currentIndex];      // 更新文字
+        }
+    }
+
+    IEnumerator ButtonCooldown()
+    {
+        isCooldown = true; // 标记按钮进入冷却状态
+        GetComponent<Button>().interactable = false; // 禁用按钮交互
+
+        yield return new WaitForSeconds(clickCooldown); // 等待冷却时间
+
+        GetComponent<Button>().interactable = true; // 恢复按钮交互
+        isCooldown = false; // 冷却结束
     }
 }

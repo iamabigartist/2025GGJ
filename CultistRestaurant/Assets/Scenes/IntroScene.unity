@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f08db672035f8042ade2e0bbbe42e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetButton: {fileID: 391915705}
   displayImage: {fileID: 58966301}
   displayText: {fileID: 1968140419}
   images:
@@ -185,9 +184,10 @@ MonoBehaviour:
   - "\u6DA8\u6F6E\u4E86"
   - "\u4ECA\u5929\u4F60\u6B63\u5E38\u5DE5\u4F5C"
   - 
+  clickCooldown: 2
+  sceneToLoad: 
   hideThisButton: 0
   hideTextBox: 1
-  hideTargetButton: 0
 --- !u!114 &58966300
 MonoBehaviour:
   m_ObjectHideFlags: 0
