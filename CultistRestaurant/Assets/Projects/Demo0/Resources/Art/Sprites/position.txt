@@ -18,7 +18,7 @@ Group,Layer,CenterX(Relative),CenterY(Relative)
 4_UI,4_out,840,-424
 4_UI,5_quit,-243,-427
 4_UI,6_menuBg,814,-34
-1_snaildish,1_firstPlate,314,156
+1_firstPlate,1_firstPlate,314,156
 2_sauce,2_sauce10,251,111
 2_sauce,2_sauce01,245,105
 2_sauce,2_sauce00,260,130
