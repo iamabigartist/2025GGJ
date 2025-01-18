@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{ABCCA196-0E92-4BC2-8275-19437B714F23}" SchemaVersion="119">
 	<Triggers>
-		<WorkUnit Name="Default Work Unit" ID="{ABCCA196-0E92-4BC2-8275-19437B714F23}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{ABCCA196-0E92-4BC2-8275-19437B714F23}" PersistMode="Standalone">
+			<ChildrenList>
+				<Trigger Name="FindPollution" ID="{E78F981D-5820-4DF2-A3C5-C95D0B89E5A1}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Triggers>
 </WwiseDocument>

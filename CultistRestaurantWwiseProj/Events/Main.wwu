@@ -117,6 +117,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Trigger_FindPollution" ID="{C6852E3D-E484-4967-9957-06EFB2B5F1E2}">
+							<ChildrenList>
+								<Action Name="" ID="{D021B8F7-479F-4515-A653-BA51270C0A6C}" ShortID="841739673">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FindPollution" ID="{E78F981D-5820-4DF2-A3C5-C95D0B89E5A1}" WorkUnitID="{ABCCA196-0E92-4BC2-8275-19437B714F23}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Foley" ID="{224D3793-E818-46FC-8672-44C348A248AD}" ShortID="732879166">

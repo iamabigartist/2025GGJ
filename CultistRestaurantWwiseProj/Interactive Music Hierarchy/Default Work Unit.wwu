@@ -261,6 +261,27 @@
 									</ObjectLists>
 								</MusicSegment>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Stingers">
+									<Reference>
+										<Local>
+											<MusicStinger Name="" ID="{147C692E-F12F-4D9D-A380-3E3535ED015C}">
+												<PropertyList>
+													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Segment">
+														<ObjectRef Name="Stinger_110 - Drumkit Stinger" ID="{D596BE16-E492-485A-8165-A4B44704F455}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+													</Reference>
+													<Reference Name="Trigger">
+														<ObjectRef Name="FindPollution" ID="{E78F981D-5820-4DF2-A3C5-C95D0B89E5A1}" WorkUnitID="{ABCCA196-0E92-4BC2-8275-19437B714F23}"/>
+													</Reference>
+												</ReferenceList>
+											</MusicStinger>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</MusicPlaylistContainer>
 						<MusicSegment Name="Day3_outro" ID="{C2553878-8EE4-4E61-8B30-AD87062E2915}" ShortID="39079889">
 							<PropertyList>
@@ -628,6 +649,27 @@
 									</ObjectLists>
 								</MusicSegment>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Stingers">
+									<Reference>
+										<Local>
+											<MusicStinger Name="" ID="{721866BC-286D-42DE-900B-54E21B005F09}">
+												<PropertyList>
+													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Segment">
+														<ObjectRef Name="Stinger_110 - Drumkit Stinger" ID="{D596BE16-E492-485A-8165-A4B44704F455}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+													</Reference>
+													<Reference Name="Trigger">
+														<ObjectRef Name="FindPollution" ID="{E78F981D-5820-4DF2-A3C5-C95D0B89E5A1}" WorkUnitID="{ABCCA196-0E92-4BC2-8275-19437B714F23}"/>
+													</Reference>
+												</ReferenceList>
+											</MusicStinger>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Day2" ID="{6D1C4C2C-4967-4183-930E-456EE609AE0B}" ShortID="627010899">
 							<PropertyList>
@@ -957,6 +999,27 @@
 									</ObjectLists>
 								</MusicSegment>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Stingers">
+									<Reference>
+										<Local>
+											<MusicStinger Name="" ID="{C42E1BBD-9E33-4D88-BB23-FA83D46285B2}">
+												<PropertyList>
+													<Property Name="PlaySegmentAt" Type="int16" Value="3"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="Segment">
+														<ObjectRef Name="Stinger_71 - Drumkit Stinger" ID="{C92B584E-A9EA-4472-B783-035F79BE0C69}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+													</Reference>
+													<Reference Name="Trigger">
+														<ObjectRef Name="FindPollution" ID="{E78F981D-5820-4DF2-A3C5-C95D0B89E5A1}" WorkUnitID="{ABCCA196-0E92-4BC2-8275-19437B714F23}"/>
+													</Reference>
+												</ReferenceList>
+											</MusicStinger>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Noise" ID="{269D381C-4CE9-4FA9-A969-3536E5E53E96}" ShortID="1071155717">
 							<ReferenceList>
@@ -1265,6 +1328,179 @@
 						</ObjectList>
 					</ObjectLists>
 				</MusicSwitchContainer>
+				<Folder Name="Stingers" ID="{7433E264-2ED0-4275-9CDA-F8356EF59742}" ShortID="970492170">
+					<ChildrenList>
+						<MusicSegment Name="Stinger_110 - Drumkit Stinger" ID="{D596BE16-E492-485A-8165-A4B44704F455}" ShortID="940047481">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Stinger_110 - Drumkit Stinger" ID="{E9E87675-A459-449D-8DAC-357FE982C7D7}" ShortID="199715894">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{89E52623-BA5A-4662-9968-9F0E30582E47}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Stinger_110 - Drumkit Stinger" ID="{EEB74C06-9693-4727-98FD-13C44B2070C9}">
+											<Language>SFX</Language>
+											<AudioFile>Stinger_110 - Drumkit Stinger.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="756508321"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{B405BF93-E0A3-4694-96D7-FCFEB37FAC7C}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Stinger_110 - Drumkit Stinger" ID="{30A7D16B-79E0-4CDB-9D5D-777160A3A39B}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="3818.20833333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Stinger_110 - Drumkit Stinger" ID="{EEB74C06-9693-4727-98FD-13C44B2070C9}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{114C69EE-3C00-45AE-A87E-72027B7217B5}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{B619F8F2-4C43-43AF-BED0-EF01211B3894}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="3818.20833333333"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="Stinger_71 - Drumkit Stinger" ID="{C92B584E-A9EA-4472-B783-035F79BE0C69}" ShortID="237307238">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="5915.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Stinger_71 - Drumkit Stinger" ID="{5B224EC2-3FE0-431A-984E-ABFACF0583DA}" ShortID="717172290">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{9A41BC71-D4B7-4300-9BD8-72B82E7B639C}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Stinger_71 - Drumkit Stinger" ID="{A699D023-9051-4451-98CB-B18FBBE3B066}">
+											<Language>SFX</Language>
+											<AudioFile>Stinger_71 - Drumkit Stinger.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="385623879"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{F730EA7E-9B1D-4429-99E6-D878626036D0}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="Stinger_71 - Drumkit Stinger" ID="{37C7243C-AA05-4BDF-B463-31419F7EB145}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="5915.5"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="Stinger_71 - Drumkit Stinger" ID="{A699D023-9051-4451-98CB-B18FBBE3B066}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{0D9C3A7E-A4C7-49A9-B599-1DF5867A03A7}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{43488EBE-AB74-4D10-9F60-E470040D972F}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="5915.5"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

@@ -6,21 +6,17 @@
 				<SoundcasterSession Name="TEST" ID="{D5F5EFD7-83AD-469E-84A2-EF83E46C8B78}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+							<ObjectRef Name="Music" ID="{84A336CF-211E-4D01-BE9D-2EBFEF6B1243}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Music" ID="{84A336CF-211E-4D01-BE9D-2EBFEF6B1243}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+							<ObjectRef Name="Trigger_FindPollution" ID="{C6852E3D-E484-4967-9957-06EFB2B5F1E2}" WorkUnitID="{5C488041-6DEB-47A6-BAD0-0D68800734C0}"/>
 							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Underwater" ID="{BA8C9D05-2CF7-4DDC-A7AA-0BC0C67D4E40}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
-							<Position X="2" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{3D4BEBAE-C387-4F02-A36A-2FFC9411C1CB}"/>
+						<CurrentStateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
