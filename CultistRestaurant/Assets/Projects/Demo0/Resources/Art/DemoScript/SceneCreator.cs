@@ -141,4 +141,50 @@ public class SceneCreator : MonoBehaviour
         }
         #endif
     }
+
+    [Button("设置所有精灵材质", ButtonSizes.Large)]
+    private void SetAllSpritesMaterial()
+    {
+        #if UNITY_EDITOR
+        // 加载指定材质
+        string materialPath = "Assets/Projects/Demo0/Resources/Art/Render/MyUnlit.mat";
+        Material material = AssetDatabase.LoadAssetAtPath<Material>(materialPath);
+        
+        if (material == null)
+        {
+            Debug.LogError($"未能找到材质: {materialPath}");
+            return;
+        }
+
+        // 获取所有子物体的SpriteRenderer组件
+        SpriteRenderer[] spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
+        
+        // 记录修改数量
+        int modifiedCount = 0;
+
+        // 设置材质
+        foreach (SpriteRenderer renderer in spriteRenderers)
+        {
+            // 记录修改用于撤销
+            Undo.RecordObject(renderer, "Change Sprite Material");
+            
+            renderer.material = material;
+            modifiedCount++;
+            
+            // 标记为已修改
+            EditorUtility.SetDirty(renderer);
+        }
+
+        // 保存场景
+        if (modifiedCount > 0)
+        {
+            UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(gameObject.scene);
+            Debug.Log($"已修改 {modifiedCount} 个精灵的材质");
+        }
+        else
+        {
+            Debug.Log("未找到需要修改的精灵");
+        }
+        #endif
+    }
 }
