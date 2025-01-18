@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb0cb75d1fec404d99d6d7b002456a3d, type: 3}
-  m_Name: "\u9EC4\u6CB9\u8717\u725B"
+  m_Name: "1-\u8611\u83C7\u6C64"
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -100,8 +100,8 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The snail shell is intact, with plump and glossy meat. The butter has
-        seeped in, giving it a mouthwatering shine. '
+      Data: 'The mushroom slices are neatly cut, of even thickness, floating in the
+        soup with a natural ivory texture and a delicate sheen. '
     - Name: 
       Entry: 8
       Data: 
@@ -113,7 +113,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u8717\u725B\u5916\u58F3\u5B8C\u6574\uFF0C\u8089\u8D28\u9971\u6EE1\uFF0C\u9EC4\u6CB9\u6E17\u900F\u7684\u5149\u6CFD\u8BA9\u4EBA\u98DF\u6B32\u5927\u5F00\u3002 "
+      Data: "\u8611\u83C7\u5207\u7247\u6574\u9F50\uFF0C\u539A\u5EA6\u9002\u4E2D\uFF0C\u6F02\u6D6E\u5728\u6C64\u9762\u4E0A\uFF0C\u5448\u73B0\u51FA\u81EA\u7136\u7684\u5976\u767D\u8272\u7EB9\u7406\uFF0C\u5E26\u6709\u8F7B\u5FAE\u7684\u5149\u6CFD\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -202,8 +202,8 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The shell is scorched black, and cracks reveal charred snail meat that
-        emits a pungent burnt smell. '
+      Data: 'The edges of the mushroom slices are charred, leaving visible scorch
+        marks on the surface, with bits of burnt residue in the soup. '
     - Name: 
       Entry: 8
       Data: 
@@ -215,7 +215,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u8717\u725B\u58F3\u8868\u9762\u7126\u9ED1\uFF0C\u88C2\u7EB9\u4E2D\u663E\u9732\u51FA\u88AB\u70E7\u7126\u7684\u8089\u5757\uFF0C\u6563\u53D1\u51FA\u4E00\u80A1\u523A\u9F3B\u7684\u70AD\u5473\u3002 "
+      Data: "\u8611\u83C7\u7247\u8FB9\u7F18\u7126\u9ED1\uFF0C\u8868\u9762\u6D6E\u7740\u660E\u663E\u7684\u70E7\u7126\u75D5\u8FF9\uFF0C\u6C64\u4E2D\u6DF7\u6742\u4E86\u88AB\u70E4\u7CCA\u7684\u788E\u5C51\uFF0C\u7834\u574F\u4E86\u6574\u4F53\u7684\u89C6\u89C9\u6548\u679C\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -263,7 +263,7 @@ MonoBehaviour:
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
     - Name: Correct
       Entry: 5
-      Data: false
+      Data: true
     - Name: Polluted
       Entry: 5
       Data: true
@@ -304,8 +304,9 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The shell bulges slightly, and a tiny, wriggling tentacle emerges from
-        a crack, as if trying to grasp something. '
+      Data: 'The bottom of the mushroom slices split open, revealing two tiny "legs,"
+        as if they had just sprouted from the ground, quietly lying in the soup,
+        waiting to flee. '
     - Name: 
       Entry: 8
       Data: 
@@ -317,7 +318,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u8717\u725B\u58F3\u9690\u7EA6\u9F13\u8D77\uFF0C\u88C2\u7F1D\u4E2D\u63A2\u51FA\u4E86\u4E00\u6761\u5FAE\u5FAE\u6446\u52A8\u7684\u89E6\u624B\uFF0C\u4EFF\u4F5B\u5728\u8BD5\u56FE\u6293\u4F4F\u4EC0\u4E48\u3002 "
+      Data: "\u8611\u83C7\u7247\u5E95\u90E8\u88C2\u5F00\uFF0C\u9732\u51FA\u4E24\u53EA\u7EC6\u5C0F\u7684\u201C\u817F\u201D\uFF0C\u4EFF\u4F5B\u521A\u4ECE\u5730\u91CC\u957F\u51FA\u6765\uFF0C\u9759\u9759\u5730\u505C\u5728\u6C64\u4E2D\uFF0C\u50CF\u662F\u5728\u7B49\u5F85\u9003\u79BB\u7684\u65F6\u673A\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -344,7 +345,7 @@ MonoBehaviour:
       Data: "\u8BE1\u5F02\u97F3\u6548"
     - Name: AnimationEvent
       Entry: 1
-      Data: "\u4E0D\u505C\u8815\u52A8"
+      Data: "\u5C0F\u5E45\u6643\u52A8"
     - Name: 
       Entry: 8
       Data: 
@@ -428,7 +429,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u9171\u6C41\u6D53\u7A20\u987A\u6ED1\uFF0C\u8272\u6CFD\u6E29\u6DA6\uFF0C\u5B8C\u7F8E\u8986\u76D6\u4E3B\u83DC\u8868\u9762\u3002 "
+      Data: "\u6C64\u5E95\u5976\u767D\u6D53\u7A20\uFF0C\u8868\u9762\u6D6E\u7740\u4E00\u5C42\u7EC6\u817B\u7684\u5149\u6CFD\uFF0C\u6563\u53D1\u7740\u9999\u6D53\u7684\u5976\u6CB9\u548C\u8611\u83C7\u9999\u6C14\uFF0C\u6E29\u6696\u8BF1\u4EBA\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -440,8 +441,8 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The sauce is thick and smooth, with a warm, glossy hue perfectly coating
-        the dish. '
+      Data: 'The soup is thick and creamy, with a fine glossy surface, exuding the
+        rich aroma of cream and mushrooms, warm and inviting. '
     - Name: 
       Entry: 8
       Data: 
@@ -530,7 +531,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u9171\u6C41\u8FC7\u7A00\uFF0C\u6EA2\u6EE1\u76D8\u8FB9\uFF0C\u770B\u8D77\u6765\u50CF\u4E00\u6EE9\u6DF7\u4E71\u7684\u6DB2\u4F53\u3002 "
+      Data: "\u6C64\u7684\u989C\u8272\u8FC7\u6DF1\uFF0C\u5448\u73B0\u4E00\u79CD\u8FC7\u5EA6\u6D53\u7F29\u7684\u8910\u8272\uFF0C\u8868\u9762\u6F02\u6D6E\u7740\u660E\u663E\u7684\u6CB9\u8102\u548C\u6C89\u6DC0\u7269\uFF0C\u8BA9\u4EBA\u96BE\u4EE5\u4E0B\u53E3\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -542,8 +543,8 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The sauce is overly thin, spilling messily over the plate, looking like
-        a chaotic pool of liquid. '
+      Data: 'The soup has an overly dark color, resembling over-reduced broth, with
+        visible oil slicks and sediment floating on top, making it unappetizing. '
     - Name: 
       Entry: 8
       Data: 
@@ -632,7 +633,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u9171\u6C41\u6CDB\u8D77\u5947\u602A\u7684\u6D9F\u6F2A\uFF0C\u5C1D\u8D77\u6765\u597D\u50CF\u662F\u6D77\u6C34\u4E00\u6837\u82E6\u6DA9 "
+      Data: "\u6C64\u9762\u4E0A\u7F13\u7F13\u5F62\u6210\u4E00\u4E2A\u6F29\u6DA1\uFF0C\u4E2D\u5FC3\u4E0D\u65F6\u6CDB\u8D77\u84DD\u7D2B\u8272\u7684\u5FAE\u5149\uFF0C\u5C1D\u8D77\u6765\u6709\u4E00\u79CD\u5947\u602A\u7684\u6D77\u9C9C\u5473\uFF0C\u4F46\u662F\u4F3C\u4E4E\u66F4\u7F8E\u5473\u4E86 "
     - Name: 
       Entry: 8
       Data: 
@@ -644,8 +645,9 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The sauce ripples strangely, tasting like seawater mixed with a bitter,
-        otherworldly flavor. '
+      Data: 'A vortex slowly forms on the surface of the soup, occasionally glowing
+        faintly with blue and purple light, and it tastes like a bizarre yet oddly
+        delicious seafood flavor. '
     - Name: 
       Entry: 8
       Data: 
@@ -669,10 +671,10 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u8BE1\u5F02\u97F3\u6548"
+      Data: "\u54C1\u5C1D\u53C9\u97F3\u6548"
     - Name: AnimationEvent
       Entry: 1
-      Data: "\u5192\u6CE1\u6CE1\uFF1F\uFF08\u8D34\u56FE\u5192\u6CE1\u4E5Fok\uFF09"
+      Data: "\u7F13\u6162\u65CB\u8F6C"
     - Name: 
       Entry: 8
       Data: 
@@ -700,3 +702,4 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Priority: 1
