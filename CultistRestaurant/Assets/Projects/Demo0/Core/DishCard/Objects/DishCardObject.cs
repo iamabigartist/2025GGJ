@@ -13,7 +13,7 @@ public class DishCardObject : MonoBehaviour
 	public static DishCardObject Create(DishCardDoc cardDoc, LevelDoc levelDoc)
 	{
 		var go = Instantiate(GameDocMgr.Instance.m_GameGlobalConfig.DishCardPrefab);
-		Instantiate(cardDoc.DishContainerPrefab, go.transform);
+		if (cardDoc.DishContainerPrefab) { Instantiate(cardDoc.DishContainerPrefab, go.transform); }
 		var curDishCardObj = go.GetComponent<DishCardObject>();
 		curDishCardObj.m_Doc = cardDoc;
 		curDishCardObj.m_ClueObjList = new();
