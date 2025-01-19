@@ -147,7 +147,6 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 		{
 			AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.BlackTransition);
 			SceneManager.LoadScene("OverScene");
-			AudioManager.Instance.ClearSound();
 		}
 		else
 		{
@@ -156,13 +155,11 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 			{
 				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.FinishView);
 				SceneManager.LoadScene("GEScene");
-				AudioManager.Instance.ClearSound();
 			}
 			else
 			{
 				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.FinishViewBad);
 				SceneManager.LoadScene("BEScene");
-				AudioManager.Instance.ClearSound();
 			}
 		}
 	}
