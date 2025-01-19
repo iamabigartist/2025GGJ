@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Projects.Demo0.Core.Level;
+using Projects.Demo0.Core.Localization;
 using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Projects.Demo0.Core.GameGlobal
@@ -19,11 +20,16 @@ public class GameGlobalConfig : SerializedScriptableObject
 	public int AcceptPollutedCorrectDish_HPChange = 1;
 
 	[Title("Level")]
+	public MultiLangStr DayEndStr = new();
 	public List<LevelDoc> LevelList = new();
 
 	[Title("StoryEnd")]
 	public float GoodEnd_AcceptPolluteRatioRequired = 0.5f;
-	public EndTextDesc GoodEnd_Desc;
-	public EndTextDesc BadEnd_Desc;
+	public EndTextDesc DeadEnd_Desc = new();
+	public EndTextDesc GoodEnd_Desc = new();
+	public EndTextDesc BadEnd_Desc = new();
+
+	[Title("Default")]
+	public Sprite DefaultDishSprite;
 }
 }

@@ -13,7 +13,7 @@ namespace Audio
                 _instance = FindAnyObjectByType<AudioManager>();
                 if (_instance == null)
                 {
-                    Debug.LogError("AudioManager Instance Not Found!");
+                    Debug.LogWarning("AudioManager Instance Not Found!");
                 }
 
                 return _instance;

@@ -4,14 +4,24 @@ namespace Projects.Demo0.Core
 {
 public class PlayCmd : Cmd
 {
-	public string AudioEvent;
-	public string AnimationEvent;
+	public string AudioEvent = "";
+	public string AnimationEvent = "";
 	public override void Execute(CmdContext ctx)
 	{
-		var animation = ctx.TargetGameObj.GetComponent<Animation>();
-		animation.Play(AnimationEvent);
-		// 然后播放音频API
-		AudioManager.Instance.PostEvent(AudioEvent, AudioManager.Instance.globalInitializer);
+
+		if (!string.IsNullOrEmpty(AnimationEvent))
+		{
+			var exist = ctx.TargetGameObj.TryGetComponent<Animation>(out var animation);
+			if (exist) { animation.Play(AnimationEvent); }
+			else { Debug.LogWarning($"目标物体 {ctx.TargetGameObj.name} 没有 Animation 组件，但是有动画事件 {AnimationEvent}"); }
+		}
+
+		if (!string.IsNullOrEmpty(AudioEvent))
+		{
+			var instance = AudioManager.Instance;
+			if (instance == null) { Debug.LogWarning("AudioManager 未初始化"); }
+			else { AudioManager.Instance.PostEvent(AudioEvent, AudioManager.Instance.globalInitializer); }
+		}
 	}
 }
 }

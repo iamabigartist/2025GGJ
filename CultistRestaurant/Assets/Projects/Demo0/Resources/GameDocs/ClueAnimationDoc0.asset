@@ -21,6 +21,4 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Clips:
-  - {fileID: 0}
-  - {fileID: 0}
+  Clips: []

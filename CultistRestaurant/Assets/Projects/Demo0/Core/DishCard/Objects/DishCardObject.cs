@@ -13,7 +13,7 @@ public class DishCardObject : MonoBehaviour
 	public static DishCardObject Create(DishCardDoc cardDoc, LevelDoc levelDoc)
 	{
 		var go = Instantiate(GameDocMgr.Instance.m_GameGlobalConfig.DishCardPrefab);
-		Instantiate(cardDoc.DishContainerPrefab, go.transform);
+		if (cardDoc.DishContainerPrefab) { Instantiate(cardDoc.DishContainerPrefab, go.transform); }
 		var curDishCardObj = go.GetComponent<DishCardObject>();
 		curDishCardObj.m_Doc = cardDoc;
 		curDishCardObj.m_ClueObjList = new();
@@ -40,6 +40,7 @@ public class DishCardObject : MonoBehaviour
 			curDishCardObj.m_ClueObjList.Add(clueObj);
 		}
 		curDishCardObj.m_SpriteList = curDishCardObj.m_ClueObjList.Where(clue => clue.gameObject.GetComponent<SpriteRenderer>()).ToList();
+		curDishCardObj.gameObject.SetActive(false);
 		return curDishCardObj;
 	}
 
@@ -47,7 +48,7 @@ public class DishCardObject : MonoBehaviour
 	public List<DishClueObject> m_ClueObjList;
 	public List<DishClueObject> m_SpriteList;
 	public event Action OnStartCheck;
-	public event Action<int> OnServeOut;
+	public event Action<(int hpChange, bool acceptPolluted)> OnServeOut;
 	public Animation m_Animation;
 	public float m_SpriteAlpha;
 	float m_SpriteAlpha_Cached;
@@ -73,11 +74,14 @@ public class DishCardObject : MonoBehaviour
 	/// <summary>
 	///     菜上检测桌
 	/// </summary>
-	public void OntoTable() => StartCoroutine(OntoTable_Impl());
-	IEnumerator OntoTable_Impl()
+	public void OntoTable()
 	{
 		gameObject.SetActive(true);
 		m_Animation.Play("DishOntoTable");
+		StartCoroutine(OntoTable_Impl());
+	}
+	IEnumerator OntoTable_Impl()
+	{
 		yield return new WaitUntil(() => !m_Animation.isPlaying);
 		OnStartCheck?.Invoke();
 	}
@@ -85,32 +89,48 @@ public class DishCardObject : MonoBehaviour
 	/// <summary>
 	///     菜下检测桌
 	/// </summary>
-	public void OffTable(bool accept) => StartCoroutine(OffTable_Impl(accept));
-	IEnumerator OffTable_Impl(bool accept)
+	public void OffTable(bool accept)
 	{
 		m_Animation.Play("DishOffTable");
+		StartCoroutine(OffTable_Impl(accept));
+	}
+	IEnumerator OffTable_Impl(bool accept)
+	{
 		yield return new WaitUntil(() => !m_Animation.isPlaying);
 		gameObject.SetActive(false);
-		var hpChange = GetHPChange(accept);
-		OnServeOut?.Invoke(hpChange);
+		OnServeOut?.Invoke(GetDishRes(accept));
 	}
 
 	/// <summary>
 	///     计算菜品在结算时的HP变化
 	/// </summary>
-	int GetHPChange(bool accept)
+	(int hpChange, bool acceptPolluted) GetDishRes(bool accept)
 	{
 		var gameConfig = GameDocMgr.Instance.m_GameGlobalConfig;
+		var dishPolluted = m_ClueObjList.Exists(clue => clue.PollutedClue);
 		if (accept)
 		{
-			if (m_ClueObjList.Exists(clue => !clue.WrongClue)) { return gameConfig.AcceptWrongDish_HPChange; }
-			if (m_ClueObjList.Exists(clue => clue.PollutedClue)) { return gameConfig.AcceptPollutedCorrectDish_HPChange; }
+			if (m_ClueObjList.Exists(clue => clue.WrongClue))
+			{
+				Debug.Log("接受错误菜品");
+				return (gameConfig.AcceptWrongDish_HPChange, dishPolluted);
+			}
+			if (dishPolluted)
+			{
+				Debug.Log("接受正确污染菜品");
+				return (gameConfig.AcceptPollutedCorrectDish_HPChange, true);
+			}
 		}
 		else
 		{
-			if (m_ClueObjList.All(clue => clue.PerfectClue)) { return gameConfig.RefusePerfectDish_HPChange; }
+			if (m_ClueObjList.All(clue => clue.PerfectClue))
+			{
+				Debug.Log("拒绝完美菜品");
+				return (gameConfig.RefusePerfectDish_HPChange, false);
+			}
 		}
-		return 0;
+
+		return (0, false);
 	}
 
 }

@@ -15,7 +15,7 @@ public struct DishClueState : IEquatable<DishClueState>
 public class DishClueStateDoc
 {
 	public DishClueState State;
-	public GameObject CluePrefab;
+	public Sprite ClueStateSprite;
 	public List<Cmd> InteractCmdList = new();
 }
 }

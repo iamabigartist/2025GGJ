@@ -1,15 +1,17 @@
 using Projects.Demo0.Core.Mgr;
+using Sirenix.OdinInspector;
 using UnityEngine;
 namespace Projects.Demo0.Core.DishCard.Objects
 {
 [RequireComponent(typeof(SpriteRenderer), typeof(PolygonCollider2D))]
-public class DishClueObject : MonoBehaviour
+public class DishClueObject : SerializedMonoBehaviour
 {
 	public static (DishClueObject clueObj, GameObject gameObj) Create(DishClueDoc clueDoc, DishClueStateDoc stateDoc)
 	{
-		var prefab = stateDoc.CluePrefab;
-		var gameObj = Instantiate(prefab);
-		gameObj.name = $"Clue_{prefab.name}";
+		GameObject gameObj = new();
+		var curSprite = stateDoc.ClueStateSprite ?? GameDocMgr.Instance.m_GameGlobalConfig.DefaultDishSprite;
+		gameObj.AddComponent<SpriteRenderer>().sprite = curSprite;
+		gameObj.name = $"Clue_{curSprite.name}";
 		var collider = gameObj.AddComponent<PolygonCollider2D>();
 		var clueObj = gameObj.AddComponent<DishClueObject>();
 		clueObj.m_Doc = clueDoc;
