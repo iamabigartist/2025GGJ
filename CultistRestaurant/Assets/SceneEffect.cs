@@ -4,16 +4,17 @@ public class SceneEffect : MonoBehaviour
 {
     // 公共属性
     [SerializeField] 
+    private int _isSunk; // 修改为私有字段
+
     public int isSunk
     {
-        get => _distort;
+        get => _isSunk;
         set
         {
-            _distort = value;
+            _isSunk = value;
             UpdateDistortState();
         }
     }
-    private int _distort;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +35,14 @@ public class SceneEffect : MonoBehaviour
         Transform distortTransform = transform.Find("distort");
         if (distortTransform != null)
         {
-            distortTransform.gameObject.SetActive(_distort == 1);
+            distortTransform.gameObject.SetActive(_isSunk == 1);
         }
+    }
+
+    // 公共方法来打开或关闭distort
+    public void SetDistortActive(bool isActive)
+    {
+        _isSunk = isActive ? 1 : 0; // 根据参数设置_isSunk
+        UpdateDistortState(); // 更新状态
     }
 }
