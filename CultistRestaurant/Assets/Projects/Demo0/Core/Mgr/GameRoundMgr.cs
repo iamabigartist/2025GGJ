@@ -120,6 +120,10 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 		// 关卡循环
 		for (int i = 0; i < levelDocList.Count; i++)
 		{
+			if(i==2){
+				SceneEffect sEffect = GameObject.Find("SceneBG").GetComponent<SceneEffect>();
+				sEffect.SetDistortActive(true);
+			}
 			yield return StartCoroutine(LevelCoroutine(levelDocList[i]));
 			if (PlayerDead) { break; }
 			curtainUIMgr.ShowDayEnd(i);
@@ -130,7 +134,15 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 
 		Debug.Log("Handle Story End");
 		yield return new WaitUntil(() => !curtainUIMgr.IsMoving);
+
+
 		// 处理结局
+		//if scene effect is sunk, then set it to false
+		SceneEffect sceneEffect = GameObject.Find("SceneBG").GetComponent<SceneEffect>();
+		if(sceneEffect.isSunk==1){
+			sceneEffect.SetDistortActive(false);
+		}
+		
 		if (PlayerDead)
 		{
 			AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.BlackTransition);
