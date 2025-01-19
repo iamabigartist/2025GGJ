@@ -45,5 +45,5 @@ snail01,-70,-64
 snail10,-70,-64
 sauce01,-54,-24
 sauce10,-69,-50
-sauce10,-63,-44
+sauce00,-63,-44
 snailPlate,0,2
