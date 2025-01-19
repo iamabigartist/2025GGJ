@@ -28,7 +28,7 @@ public class DishClueObject : SerializedMonoBehaviour
 		var clueObj = gameObj.AddComponent<DishClueObject>();
 		clueObj.m_Doc = clueDoc;
 		clueObj.m_StateDoc = stateDoc;
-		var animation = gameObj.GetComponent<Animation>();
+		var animation = gameObj.AddComponent<Animation>();
 		foreach (var clip in GameDocMgr.Instance.m_ClueAnimationDoc.Clips) { animation.AddClip(clip, clip.name); }
 		return (clueObj, gameObj);
 	}
