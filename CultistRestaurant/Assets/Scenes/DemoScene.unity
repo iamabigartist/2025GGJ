@@ -166,8 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/3_elements/3_mushroom
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!4 &244511174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8043232212945546840, guid: 52f089ddf95219548ad1854eb5f80a1c, type: 3}
@@ -977,8 +975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/1_mainDish
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!4 &599113356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8792667630341310885, guid: b647c4a99223d25489d3fdbbff07594b, type: 3}
@@ -1469,8 +1465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/3_elements/4_pasta
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!4 &807579637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5036161315554141301, guid: 505b3c9186697e24983f654c02404ec7, type: 3}
@@ -1873,7 +1867,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1029054490
 Transform:
   m_ObjectHideFlags: 0
@@ -2413,8 +2407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/1_bg
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1 &1248644424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,8 +2456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/3_elements/3_egg
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1 &1266653383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,8 +2663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/3_elements/2_soup
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1 &1324177320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,8 +3643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1 &1826180105
 GameObject:
   m_ObjectHideFlags: 0
@@ -4006,8 +3992,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/3_elements/2_steak
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1001 &1928642535416622475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4643,7 +4627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6863928155118054928, guid: 6b113a1f74b14ac48b9ab45d1e35a39c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

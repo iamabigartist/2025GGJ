@@ -1,0 +1,16 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+#
+# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
+#
+CultistRestaurant/Library/
+CultistRestaurant/[Tt]emp/
+CultistRestaurant/[Oo]bj/
+CultistRestaurant/[Bb]uild/
+CultistRestaurant/[Bb]uilds/
+CultistRestaurant/[Ll]ogs/
+CultistRestaurant/UserSettings/
+CultistRestaurant/.idea/
+*.csproj
+*.sln
+.vsconfig
+[Bb]uild/
