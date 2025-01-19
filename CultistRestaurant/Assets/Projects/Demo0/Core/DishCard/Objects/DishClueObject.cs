@@ -34,7 +34,11 @@ public class DishClueObject : SerializedMonoBehaviour
 	}
 	public DishClueStateDoc m_StateDoc;
 	public DishClueDoc m_Doc;
-	void OnMouseDown() => StartCoroutine(m_StateDoc.InteractCmdList.ExecuteCmdList(new() { TargetGameObj = gameObject }));
+	void OnMouseDown()
+	{
+		GetComponent<Animation>().Play("ClueClick");
+		StartCoroutine(m_StateDoc.InteractCmdList.ExecuteCmdList(new() { TargetGameObj = gameObject }));
+	}
 	void OnDestroy() => StopAllCoroutines();
 
 	public bool WrongClue => m_StateDoc.State is { Correct    : false };
