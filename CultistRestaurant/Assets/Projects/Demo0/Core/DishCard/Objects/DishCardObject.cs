@@ -191,15 +191,16 @@ public class DishCardObject : MonoBehaviour
 			if (m_ClueObjList.Exists(clue => clue.WrongClue))
 			{
 				Debug.Log("接受错误菜品");
+				AudioManager.Instance.PostEvent("Play_VO_Dislike", AudioManager.Instance.globalInitializer);
 				MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.AcceptWrongDishDesc.ToString());
 				return (gameConfig.AcceptWrongDish_HPChange, dishPolluted);
 			}
 			if (dishPolluted)
 			{
 				Debug.Log("接受正确污染菜品");
+				AudioManager.Instance.PostEvent("Play_VO_Like", AudioManager.Instance.globalInitializer);
 				MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.AcceptPollutedCorrectDishDesc.ToString());
 				return (gameConfig.AcceptPollutedCorrectDish_HPChange, true);
-				
 			}
 		}
 		else
@@ -207,6 +208,7 @@ public class DishCardObject : MonoBehaviour
 			if (m_ClueObjList.All(clue => clue.PerfectClue))
 			{
 				Debug.Log("拒绝完美菜品");
+				AudioManager.Instance.PostEvent("Play_VO_Dislike", AudioManager.Instance.globalInitializer);
 				MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.RefusePerfectDishDesc.ToString());
 				return (gameConfig.RefusePerfectDish_HPChange, false);
 			}

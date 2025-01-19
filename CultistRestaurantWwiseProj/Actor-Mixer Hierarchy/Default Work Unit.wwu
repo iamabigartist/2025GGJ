@@ -1578,6 +1578,11 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="VO_Dislike" ID="{B01DDE0E-3819-4606-A084-001CC8BF61A3}" ShortID="853226752">
 									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.3</Value>
+											</ValueList>
+										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
@@ -1852,266 +1857,6 @@
 													</ObjectLists>
 													<ActiveSourceList>
 														<ActiveSource Name="vo_dislike_neg7-001" ID="{BB06B0C5-84F8-414E-90D6-9D782457C529}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</BlendContainer>
-										<BlendContainer Name="Dislike_02" ID="{27A5FEAC-A655-4979-A401-EFFCA7E0DF4F}" ShortID="41231042">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="vo_dislike_neg12-002" ID="{6A7CB1D1-A598-4A36-A2F8-B81CBFD8EF7F}" ShortID="163538981">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="vo_dislike_neg12-002" ID="{CC4F6479-C22C-4382-9799-33B829AD1234}">
-															<Language>SFX</Language>
-															<AudioFile>vo_dislike_neg12-002.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="166263023"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{A9A1E863-9E13-433F-A440-F2E75BF844C0}" ShortID="821221712">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{1D4DD664-BA64-4D15-ADA4-306F54F149ED}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>-96</YPos>
-																								<Flags>5</Flags>
-																								<SegmentShape>Exp2</SegmentShape>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-													<ActiveSourceList>
-														<ActiveSource Name="vo_dislike_neg12-002" ID="{CC4F6479-C22C-4382-9799-33B829AD1234}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="vo_dislike_normal-002" ID="{6DC99F99-694A-47F3-8784-ABA45BF7BD28}" ShortID="448642449">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="vo_dislike_normal-002" ID="{7668446E-2E7F-483E-8EF1-BCE7046158D6}">
-															<Language>SFX</Language>
-															<AudioFile>vo_dislike_normal-002.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="5684675"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{91871BE4-AD43-4738-B8A9-2439A4BC4174}" ShortID="1002137360">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{78595883-CE91-409D-A690-BAF20C01E9E9}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>0</YPos>
-																								<Flags>5</Flags>
-																								<SegmentShape>Exp2</SegmentShape>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>-6</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-													<ActiveSourceList>
-														<ActiveSource Name="vo_dislike_normal-002" ID="{7668446E-2E7F-483E-8EF1-BCE7046158D6}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="vo_dislike_plus12-002" ID="{4EC98951-CC91-4F28-9D23-38D2F1B0B819}" ShortID="336667378">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="vo_dislike_plus12-002" ID="{E33AB35B-21D7-46CA-965F-C14398F63185}">
-															<Language>SFX</Language>
-															<AudioFile>vo_dislike_plus12-002.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="290094615"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{7EE65769-C496-48F1-BE53-A6D3039477EF}" ShortID="437195615">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{9D3D89E0-C2C5-4E22-88C7-3E1AA810B016}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>-96</YPos>
-																								<Flags>5</Flags>
-																								<SegmentShape>Log2</SegmentShape>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>-12</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-													<ActiveSourceList>
-														<ActiveSource Name="vo_dislike_plus12-002" ID="{E33AB35B-21D7-46CA-965F-C14398F63185}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="vo_dislike_neg7-002" ID="{451A04A4-F5A2-4363-AFF1-2610BA62BC03}" ShortID="426103627">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="vo_dislike_neg7-002" ID="{258C70D6-8D24-4E31-AAEC-CD524EDA0710}">
-															<Language>SFX</Language>
-															<AudioFile>vo_dislike_neg7-002.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="725392472"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ObjectLists>
-														<ObjectList Name="RTPC">
-															<Reference>
-																<Local>
-																	<RTPC Name="" ID="{0BA49988-0D8C-4D5D-BCEB-085C514BE206}" ShortID="694931633">
-																		<PropertyList>
-																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
-																		</PropertyList>
-																		<ReferenceList>
-																			<Reference Name="ControlInput">
-																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
-																			</Reference>
-																			<Reference Name="Curve">
-																				<Custom>
-																					<Curve Name="" ID="{323A4474-A90E-46EF-8F55-7F0E5727AC9C}">
-																						<PropertyList>
-																							<Property Name="Flags" Type="int32" Value="3"/>
-																						</PropertyList>
-																						<PointList>
-																							<Point>
-																								<XPos>0</XPos>
-																								<YPos>-96</YPos>
-																								<Flags>5</Flags>
-																								<SegmentShape>Exp2</SegmentShape>
-																							</Point>
-																							<Point>
-																								<XPos>5</XPos>
-																								<YPos>0</YPos>
-																								<Flags>37</Flags>
-																							</Point>
-																						</PointList>
-																					</Curve>
-																				</Custom>
-																			</Reference>
-																		</ReferenceList>
-																	</RTPC>
-																</Local>
-															</Reference>
-														</ObjectList>
-													</ObjectLists>
-													<ActiveSourceList>
-														<ActiveSource Name="vo_dislike_neg7-002" ID="{258C70D6-8D24-4E31-AAEC-CD524EDA0710}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
@@ -3160,6 +2905,11 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="VO_Like" ID="{4C7C696B-F46A-49F5-B5D1-4507D546D9B4}" ShortID="359920252">
 									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.3</Value>
+											</ValueList>
+										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
