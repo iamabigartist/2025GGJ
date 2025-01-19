@@ -444,6 +444,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  playerHP: 0
   GetCardTotalNum: 0
   WorldPollutedNum: 0
   DishServeOutSignal: 0
@@ -630,8 +631,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/3_cakeDish
-  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1001 &3545892426447926121
 PrefabInstance:
   m_ObjectHideFlags: 0
