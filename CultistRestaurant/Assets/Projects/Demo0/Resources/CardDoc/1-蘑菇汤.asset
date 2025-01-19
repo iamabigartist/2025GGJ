@@ -16,12 +16,12 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 26392889d0335a94a972fafd2f42b603, type: 3}
-    - {fileID: 21300000, guid: 145338a69e74794459f04267b4f7a945, type: 3}
-    - {fileID: 21300000, guid: af2d5e0a0b00a09418594a43fbfb8365, type: 3}
     - {fileID: 21300000, guid: 5cc37748259099e45826d7195639bf07, type: 3}
     - {fileID: 21300000, guid: 86248edf5033f2f4f91a1cd46e44c958, type: 3}
     - {fileID: 21300000, guid: f34a15cd73eb5474fa20223061e10bac, type: 3}
+    - {fileID: 21300000, guid: 26392889d0335a94a972fafd2f42b603, type: 3}
+    - {fileID: 21300000, guid: 145338a69e74794459f04267b4f7a945, type: 3}
+    - {fileID: 21300000, guid: af2d5e0a0b00a09418594a43fbfb8365, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -64,8 +64,8 @@ MonoBehaviour:
       Data: 0
     - Name: InteractCmdList
       Entry: 7
-      Data: 4|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
-        Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
+      Data: 4|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 2
@@ -103,11 +103,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: $v
       Entry: 1
-      Data: 'The mushroom slices are neatly cut, of even thickness, floating in the
-        soup with a natural ivory texture and a delicate sheen. '
+      Data: "\u6C64\u5E95\u5976\u767D\u6D53\u7A20\uFF0C\u8868\u9762\u6D6E\u7740\u4E00\u5C42\u7EC6\u817B\u7684\u5149\u6CFD\uFF0C\u6563\u53D1\u7740\u9999\u6D53\u7684\u5976\u6CB9\u548C\u8611\u83C7\u9999\u6C14\uFF0C\u6E29\u6696\u8BF1\u4EBA\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -116,10 +115,11 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 1
-      Data: "\u8611\u83C7\u5207\u7247\u6574\u9F50\uFF0C\u539A\u5EA6\u9002\u4E2D\uFF0C\u6F02\u6D6E\u5728\u6C64\u9762\u4E0A\uFF0C\u5448\u73B0\u51FA\u81EA\u7136\u7684\u5976\u767D\u8272\u7EB9\u7406\uFF0C\u5E26\u6709\u8F7B\u5FAE\u7684\u5149\u6CFD\u3002 "
+      Data: 'The soup is thick and creamy, with a fine glossy surface, exuding the
+        rich aroma of cream and mushrooms, warm and inviting. '
     - Name: 
       Entry: 8
       Data: 
@@ -146,7 +146,7 @@ MonoBehaviour:
       Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
-      Data: 111
+      Data: "\u65E0"
     - Name: 
       Entry: 8
       Data: 
@@ -179,8 +179,8 @@ MonoBehaviour:
       Data: 1
     - Name: InteractCmdList
       Entry: 7
-      Data: 11|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
-        Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
+      Data: 11|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 2
@@ -208,11 +208,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: $v
       Entry: 1
-      Data: 'The edges of the mushroom slices are charred, leaving visible scorch
-        marks on the surface, with bits of burnt residue in the soup. '
+      Data: "\u6C64\u7684\u989C\u8272\u8FC7\u6DF1\uFF0C\u5448\u73B0\u4E00\u79CD\u8FC7\u5EA6\u6D53\u7F29\u7684\u8910\u8272\uFF0C\u8868\u9762\u6F02\u6D6E\u7740\u660E\u663E\u7684\u6CB9\u8102\u548C\u6C89\u6DC0\u7269\uFF0C\u8BA9\u4EBA\u96BE\u4EE5\u4E0B\u53E3\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -221,10 +220,11 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 1
-      Data: "\u8611\u83C7\u7247\u8FB9\u7F18\u7126\u9ED1\uFF0C\u8868\u9762\u6D6E\u7740\u660E\u663E\u7684\u70E7\u7126\u75D5\u8FF9\uFF0C\u6C64\u4E2D\u6DF7\u6742\u4E86\u88AB\u70E4\u7CCA\u7684\u788E\u5C51\uFF0C\u7834\u574F\u4E86\u6574\u4F53\u7684\u89C6\u89C9\u6548\u679C\u3002 "
+      Data: 'The soup has an overly dark color, resembling over-reduced broth, with
+        visible oil slicks and sediment floating on top, making it unappetizing. '
     - Name: 
       Entry: 8
       Data: 
@@ -284,8 +284,8 @@ MonoBehaviour:
       Data: 2
     - Name: InteractCmdList
       Entry: 7
-      Data: 17|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
-        Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
+      Data: 17|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 2
@@ -313,12 +313,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: $v
       Entry: 1
-      Data: 'The bottom of the mushroom slices split open, revealing two tiny "legs,"
-        as if they had just sprouted from the ground, quietly lying in the soup,
-        waiting to flee. '
+      Data: "\u6C64\u9762\u4E0A\u7F13\u7F13\u5F62\u6210\u4E00\u4E2A\u6F29\u6DA1\uFF0C\u5C1D\u8D77\u6765\u6709\u4E00\u79CD\u5947\u602A\u7684\u6D77\u9C9C\u5473\uFF0C\u4F46\u662F\u4F3C\u4E4E\u66F4\u7F8E\u5473\u4E86 "
     - Name: 
       Entry: 8
       Data: 
@@ -327,10 +325,12 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 1
-      Data: "\u8611\u83C7\u7247\u5E95\u90E8\u88C2\u5F00\uFF0C\u9732\u51FA\u4E24\u53EA\u7EC6\u5C0F\u7684\u201C\u817F\u201D\uFF0C\u4EFF\u4F5B\u521A\u4ECE\u5730\u91CC\u957F\u51FA\u6765\uFF0C\u9759\u9759\u5730\u505C\u5728\u6C64\u4E2D\uFF0C\u50CF\u662F\u5728\u7B49\u5F85\u9003\u79BB\u7684\u65F6\u673A\u3002 "
+      Data: 'A vortex slowly forms on the surface of the soup, occasionally glowing
+        faintly with blue and purple light, and it tastes like a bizarre yet oddly
+        delicious seafood flavor. '
     - Name: 
       Entry: 8
       Data: 
@@ -357,7 +357,7 @@ MonoBehaviour:
       Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
-      Data: "\u5C0F\u5E45\u6643\u52A8"
+      Data: "\u7F13\u6162\u65CB\u8F6C"
     - Name: 
       Entry: 8
       Data: 
@@ -409,8 +409,8 @@ MonoBehaviour:
       Data: 3
     - Name: InteractCmdList
       Entry: 7
-      Data: 25|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
-        mscorlib
+      Data: 25|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+        Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
@@ -438,10 +438,11 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 1
-      Data: "\u6C64\u5E95\u5976\u767D\u6D53\u7A20\uFF0C\u8868\u9762\u6D6E\u7740\u4E00\u5C42\u7EC6\u817B\u7684\u5149\u6CFD\uFF0C\u6563\u53D1\u7740\u9999\u6D53\u7684\u5976\u6CB9\u548C\u8611\u83C7\u9999\u6C14\uFF0C\u6E29\u6696\u8BF1\u4EBA\u3002 "
+      Data: 'The mushroom slices are neatly cut, of even thickness, floating in the
+        soup with a natural ivory texture and a delicate sheen. '
     - Name: 
       Entry: 8
       Data: 
@@ -450,11 +451,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: $v
       Entry: 1
-      Data: 'The soup is thick and creamy, with a fine glossy surface, exuding the
-        rich aroma of cream and mushrooms, warm and inviting. '
+      Data: "\u8611\u83C7\u5207\u7247\u6574\u9F50\uFF0C\u539A\u5EA6\u9002\u4E2D\uFF0C\u6F02\u6D6E\u5728\u6C64\u9762\u4E0A\uFF0C\u5448\u73B0\u51FA\u81EA\u7136\u7684\u5976\u767D\u8272\u7EB9\u7406\uFF0C\u5E26\u6709\u8F7B\u5FAE\u7684\u5149\u6CFD\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -481,7 +481,7 @@ MonoBehaviour:
       Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
-      Data: "\u65E0"
+      Data: 111
     - Name: 
       Entry: 8
       Data: 
@@ -514,8 +514,8 @@ MonoBehaviour:
       Data: 4
     - Name: InteractCmdList
       Entry: 7
-      Data: 31|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
-        mscorlib
+      Data: 31|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+        Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
@@ -543,10 +543,11 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 1
-      Data: "\u6C64\u7684\u989C\u8272\u8FC7\u6DF1\uFF0C\u5448\u73B0\u4E00\u79CD\u8FC7\u5EA6\u6D53\u7F29\u7684\u8910\u8272\uFF0C\u8868\u9762\u6F02\u6D6E\u7740\u660E\u663E\u7684\u6CB9\u8102\u548C\u6C89\u6DC0\u7269\uFF0C\u8BA9\u4EBA\u96BE\u4EE5\u4E0B\u53E3\u3002 "
+      Data: 'The edges of the mushroom slices are charred, leaving visible scorch
+        marks on the surface, with bits of burnt residue in the soup. '
     - Name: 
       Entry: 8
       Data: 
@@ -555,11 +556,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: $v
       Entry: 1
-      Data: 'The soup has an overly dark color, resembling over-reduced broth, with
-        visible oil slicks and sediment floating on top, making it unappetizing. '
+      Data: "\u8611\u83C7\u7247\u8FB9\u7F18\u7126\u9ED1\uFF0C\u8868\u9762\u6D6E\u7740\u660E\u663E\u7684\u70E7\u7126\u75D5\u8FF9\uFF0C\u6C64\u4E2D\u6DF7\u6742\u4E86\u88AB\u70E4\u7CCA\u7684\u788E\u5C51\uFF0C\u7834\u574F\u4E86\u6574\u4F53\u7684\u89C6\u89C9\u6548\u679C\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -619,8 +619,8 @@ MonoBehaviour:
       Data: 5
     - Name: InteractCmdList
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
-        mscorlib
+      Data: 37|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+        Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
@@ -648,10 +648,12 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 1
-      Data: "\u6C64\u9762\u4E0A\u7F13\u7F13\u5F62\u6210\u4E00\u4E2A\u6F29\u6DA1\uFF0C\u5C1D\u8D77\u6765\u6709\u4E00\u79CD\u5947\u602A\u7684\u6D77\u9C9C\u5473\uFF0C\u4F46\u662F\u4F3C\u4E4E\u66F4\u7F8E\u5473\u4E86 "
+      Data: 'The bottom of the mushroom slices split open, revealing two tiny "legs,"
+        as if they had just sprouted from the ground, quietly lying in the soup,
+        waiting to flee. '
     - Name: 
       Entry: 8
       Data: 
@@ -660,12 +662,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: $v
       Entry: 1
-      Data: 'A vortex slowly forms on the surface of the soup, occasionally glowing
-        faintly with blue and purple light, and it tastes like a bizarre yet oddly
-        delicious seafood flavor. '
+      Data: "\u8611\u83C7\u7247\u5E95\u90E8\u88C2\u5F00\uFF0C\u9732\u51FA\u4E24\u53EA\u7EC6\u5C0F\u7684\u201C\u817F\u201D\uFF0C\u4EFF\u4F5B\u521A\u4ECE\u5730\u91CC\u957F\u51FA\u6765\uFF0C\u9759\u9759\u5730\u505C\u5728\u6C64\u4E2D\uFF0C\u50CF\u662F\u5728\u7B49\u5F85\u9003\u79BB\u7684\u65F6\u673A\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -692,7 +692,7 @@ MonoBehaviour:
       Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
-      Data: "\u7F13\u6162\u65CB\u8F6C"
+      Data: "\u5C0F\u5E45\u6643\u52A8"
     - Name: 
       Entry: 8
       Data: 
