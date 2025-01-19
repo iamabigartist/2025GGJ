@@ -18,7 +18,7 @@ namespace Audio
         
         void PlaySound()
         {
-            // uuid = AudioManager.Instance.PostEvent(eventName, AudioManager.Instance.globalInitializer);
+            uuid = AudioManager.Instance.PostEvent(eventName, AudioManager.Instance.globalInitializer);
         }
     }
 }
