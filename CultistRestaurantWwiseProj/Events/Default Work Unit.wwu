@@ -139,6 +139,18 @@
 							<ChildrenList>
 								<Action Name="" ID="{70AF20D8-D10F-4D56-9258-B22DFBBB96B7}" ShortID="1072024847">
 									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CF0E7BA3-3D75-4C8D-9573-FAAF0494F957}" ShortID="476370857">
+									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -170,6 +182,17 @@
 						<Event Name="Play_Music" ID="{67C2563D-4632-4F0C-A3B4-E10943510306}">
 							<ChildrenList>
 								<Action Name="" ID="{7F4198F8-C1AB-4CF9-BCA1-BBE6DB30AEA7}" ShortID="420343537">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Music" ID="{84A336CF-211E-4D01-BE9D-2EBFEF6B1243}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{60F782FD-6DFD-4545-83B0-82F69AA0C4EC}" ShortID="361130242">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Music" ID="{84A336CF-211E-4D01-BE9D-2EBFEF6B1243}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
