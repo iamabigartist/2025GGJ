@@ -97,7 +97,11 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 			card.OnServeOut += tuple =>
 			{
 				var (hpChange, acceptPolluted) = tuple;
-				if (acceptPolluted) { WorldPollutedNum++; }
+				if (acceptPolluted)
+				{
+					WorldPollutedNum++;
+					AudioManager.Instance.SetGlobalRtpcValue(AudioManager.RtpcConstants.GlobalPollutionLevel, WorldPollutedNum);
+				}
 				PlayerHP += hpChange;
 				OnDishServeOutSignal();
 			};

@@ -117,6 +117,7 @@ namespace Audio
         public void SetGlobalRtpcValue(string key, float val)
         {
             AkSoundEngine.SetRTPCValue(key, val);
+            Debug.Log($"Audio Manager, SetGlobalRtpcValue, key name is: {key}, val is: {val}");
         }
     }
 }
