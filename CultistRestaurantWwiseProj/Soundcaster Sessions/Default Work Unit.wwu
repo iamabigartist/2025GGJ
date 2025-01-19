@@ -16,7 +16,7 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Level02" ID="{81CAC907-04EB-4EED-92C8-C33919A2C76B}"/>
+						<CurrentStateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

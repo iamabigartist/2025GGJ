@@ -149,6 +149,17 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{D3B3066B-A1DD-4D4F-AE70-BA2ACDEB3681}" ShortID="103546879">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Underwater" ID="{BA8C9D05-2CF7-4DDC-A7AA-0BC0C67D4E40}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{CF0E7BA3-3D75-4C8D-9573-FAAF0494F957}" ShortID="476370857">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
@@ -159,14 +170,7 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Play_Underwater" ID="{4A4C6470-F63A-474B-A781-CBDDFF4CAD43}">
-							<ChildrenList>
-								<Action Name="" ID="{2415AE23-7994-4D2C-9844-1BCAA18CB539}" ShortID="655085542">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="1"/>
-									</PropertyList>
+								<Action Name="" ID="{E07496DB-D2CD-4968-BD71-2B37EA6D9D45}" ShortID="855795316">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Underwater" ID="{BA8C9D05-2CF7-4DDC-A7AA-0BC0C67D4E40}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
