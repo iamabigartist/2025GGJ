@@ -6,7 +6,10 @@ namespace Projects.Demo0.Core.Level
 public class LevelDoc : SerializedScriptableObject
 {
 	[Title("Difficulty")]
-	public int CardCount = 7;
+	[Tooltip("选出的菜品数量")]
+	public float DishCardSelectRatio = 0.7f;
+	[Tooltip("生成的菜品数量")]
+	public int GenDishCardTotalCount = 10;
 	[Tooltip("菜品存在错误概率")]
 	public float ClueWrongProb = 0.6f;
 	[Tooltip("菜品存在污染概率")]

@@ -21,7 +21,8 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  CardCount: 6
+  DishCardSelectRatio: 0.6
+  GenDishCardTotalCount: 6
   ClueWrongProb: 0.55
   CluePollutedProb: 0
   ClueWrongRatio: 0.7

@@ -583,14 +583,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 6fceaf01a4ffeba49b85f10126200d75, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: f6bc515b7a7e1e14eb0b42b93680fdd9, type: 3}
+    m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 1
-    m_MinSize: 25
+    m_MinSize: 18
     m_MaxSize: 80
     m_Alignment: 1
-    m_AlignByGeometry: 1
+    m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0

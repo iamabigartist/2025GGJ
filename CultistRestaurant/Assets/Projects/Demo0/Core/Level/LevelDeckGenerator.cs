@@ -9,8 +9,10 @@ public class LevelDeckGenerator
 	{
 		var globalDeckDocList = GameDocMgr.Instance.m_GameGlobalConfig.DishDeck;
 		var deck = new List<DishCardObject>();
-		var selectedIndexList = RndSelect.UniformSelect(levelDoc.CardCount, globalDeckDocList.Count);
-		var shuffledIndexList = RndSelect.LocalLikeShuffleSwap(selectedIndexList, GameDocMgr.Instance.m_GameGlobalConfig.ShuffleSwapCount);
+		var selectCardCount = (int)(globalDeckDocList.Count * levelDoc.DishCardSelectRatio);
+		var selectedIndexList = RndUtil.UniformSelect(selectCardCount, globalDeckDocList.Count);
+		var expandedIndexList = RndUtil.ExpandDuplicate(selectedIndexList, levelDoc.GenDishCardTotalCount);
+		var shuffledIndexList = RndUtil.LocalLikeShuffleSwap(selectedIndexList, GameDocMgr.Instance.m_GameGlobalConfig.ShuffleSwapCount);
 		foreach (var selectedIndex in selectedIndexList)
 		{
 			var cardDoc = globalDeckDocList[selectedIndex];
