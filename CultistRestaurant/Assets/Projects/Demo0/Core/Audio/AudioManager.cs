@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -25,6 +26,7 @@ namespace Audio
         public GameObject globalInitializer;
         public AkWwiseInitializationSettings wwiseSetting;
         [ReadOnly] public uint uuidMusic;
+        private List<uint> _playingSoundIds = new List<uint>();
 
         // constants
         public static class StateConstants
@@ -87,13 +89,8 @@ namespace Audio
                 Debug.LogError(
                     $"WwiseUnity: Failed load bnk with result: {result}, id: {bankId}, path is: {AkBasePathGetter.Get().SoundBankBasePath}");
             }
-            
-            // Post music event
-            uuidMusic = PostEvent("Play_Music", globalInitializer);
-            
-            // Set init game syncs
-            SetStateValue(StateConstants.GameLevelGrp, StateConstants.GameLevelVal.StartView);
-            SetGlobalRtpcValue(RtpcConstants.GlobalPollutionLevel, 0);
+
+            ClearSound();
         }
 
         public uint PostEvent(string eventName, GameObject go)
@@ -101,6 +98,7 @@ namespace Audio
             uint eventId = AkSoundEngine.GetIDFromString(eventName);
             uint uuid = AkSoundEngine.PostEvent(eventId, go);
             Debug.Log($"Audio Manager, Post event complete, event name is: {eventName}, uuid is: {uuid}");
+            _playingSoundIds.Add(uuid);
             return uuid;
         }
         
@@ -119,6 +117,20 @@ namespace Audio
         {
             AkSoundEngine.SetRTPCValue(key, val);
             Debug.Log($"Audio Manager, SetGlobalRtpcValue, key name is: {key}, val is: {val}");
+        }
+
+        public void ClearSound()
+        {
+            foreach (var uuid in _playingSoundIds)
+            {
+                StopPlayingID(uuid);
+            }
+            // Post music event
+            uuidMusic = PostEvent("Play_Music", globalInitializer);
+            
+            // Set init game syncs
+            SetStateValue(StateConstants.GameLevelGrp, StateConstants.GameLevelVal.StartView);
+            SetGlobalRtpcValue(RtpcConstants.GlobalPollutionLevel, 0);
         }
     }
 }

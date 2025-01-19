@@ -156,6 +156,7 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 		yield return new WaitUntil(() => ContinueSignal);
 
 		Debug.Log("Game Over");
+		AudioManager.Instance.ClearSound();
 		ReturnToIntroScene();
 	}
 	public static void ReturnToIntroScene() => SceneManager.LoadScene("IntroScene");

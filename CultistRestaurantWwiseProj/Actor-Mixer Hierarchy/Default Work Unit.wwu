@@ -417,7 +417,11 @@
 										<CustomStateList>
 											<CustomState>
 												<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
-												<CustomState Name="" ID="{DB7EEB63-CF8A-4D7F-8F02-7496D75C107D}" ShortID="579161078"/>
+												<CustomState Name="" ID="{DB7EEB63-CF8A-4D7F-8F02-7496D75C107D}" ShortID="579161078">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
+													</PropertyList>
+												</CustomState>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
@@ -445,7 +449,11 @@
 											</CustomState>
 											<CustomState>
 												<StateRef Name="IntroView" ID="{99AD2C5C-F404-4EB0-8FA3-332F1B3F0DA4}"/>
-												<CustomState Name="" ID="{C76EF3B6-6B8B-4921-9505-0D4B29883E68}" ShortID="481150700"/>
+												<CustomState Name="" ID="{C76EF3B6-6B8B-4921-9505-0D4B29883E68}" ShortID="481150700">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
+													</PropertyList>
+												</CustomState>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
@@ -503,7 +511,11 @@
 										<CustomStateList>
 											<CustomState>
 												<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
-												<CustomState Name="" ID="{DA5BAA5C-01B5-445B-90EA-5F8C71174F39}" ShortID="829371865"/>
+												<CustomState Name="" ID="{DA5BAA5C-01B5-445B-90EA-5F8C71174F39}" ShortID="829371865">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
+													</PropertyList>
+												</CustomState>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
