@@ -277,11 +277,14 @@
 														<AudioFileSource Name="Call Bell 02-001" ID="{6C96D42F-BBF7-4E7A-BCDB-ECD203419D2E}">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.206063190825833"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Call Bell 02-001.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="629922223"/>
+																<MediaID ID="585385966"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -302,11 +305,12 @@
 														<AudioFileSource Name="Call Bell 02-002" ID="{60EEFA72-BE53-40D4-9B86-07FF80FCD378}">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Call Bell 02-002.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="591800787"/>
+																<MediaID ID="961529658"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -327,11 +331,12 @@
 														<AudioFileSource Name="Call Bell 02-003" ID="{3140217C-87B2-4283-96FB-A4575090D803}">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Call Bell 02-003.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="285285113"/>
+																<MediaID ID="23729296"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -352,6 +357,7 @@
 														<AudioFileSource Name="Call Bell 02-004" ID="{1347BC55-A8D6-4256-AEC3-E31FBFBBA066}">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Call Bell 02-004.wav</AudioFile>
@@ -404,11 +410,12 @@
 														<AudioFileSource Name="Call Bell 02-003" ID="{C03A6C95-3EA8-442F-B471-D643C545B2C8}">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Call Bell 02-003.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="285285113"/>
+																<MediaID ID="23729296"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -429,11 +436,12 @@
 														<AudioFileSource Name="Call Bell 02-001" ID="{E961C1C9-F97D-47FB-89A3-19A384744BDC}">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Call Bell 02-001.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="629922223"/>
+																<MediaID ID="585385966"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -454,11 +462,12 @@
 														<AudioFileSource Name="Call Bell 02-002" ID="{8BF6DD1A-B6D5-4A9F-86E7-1E1735B4682A}">
 															<PropertyList>
 																<Property Name="FadeOutDuration" Type="Real64" Value="0.25"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.2"/>
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>Call Bell 02-002.wav</AudioFile>
 															<MediaIDList>
-																<MediaID ID="591800787"/>
+																<MediaID ID="961529658"/>
 															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
@@ -1305,6 +1314,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="plate_slide-002" ID="{A44B9F6A-B528-4AA3-81C2-C494AB7A8D12}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.4"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.4"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>plate_slide-002.wav</AudioFile>
 															<MediaIDList>
@@ -1327,6 +1341,12 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="plate_slide-003" ID="{B7BC5315-55D4-4624-AB0F-B7E3C57C20B1}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.4"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.4"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>plate_slide-003.wav</AudioFile>
 															<MediaIDList>
@@ -1349,6 +1369,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="plate_slide-001" ID="{371F07F4-259F-4F8C-8063-43523AFEFF63}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.4"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.4"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>plate_slide-001.wav</AudioFile>
 															<MediaIDList>
@@ -1420,6 +1445,12 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="plate_slide_rev-001" ID="{02AEA8DE-F46F-4631-A4CB-493E52F6A49B}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.4"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.4"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>plate_slide_rev-001.wav</AudioFile>
 															<MediaIDList>
@@ -1442,6 +1473,12 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="plate_slide_rev-002" ID="{BFE87F6B-6869-4C11-B0CF-F9E4F4B70FCE}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.4"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.4"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>plate_slide_rev-002.wav</AudioFile>
 															<MediaIDList>
@@ -1464,6 +1501,11 @@
 													</ReferenceList>
 													<ChildrenList>
 														<AudioFileSource Name="plate_slide_rev-003" ID="{7B86E1F1-85A2-45F8-AE23-A687FA7C03CA}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.4"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.4"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.3"/>
+															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>plate_slide_rev-003.wav</AudioFile>
 															<MediaIDList>

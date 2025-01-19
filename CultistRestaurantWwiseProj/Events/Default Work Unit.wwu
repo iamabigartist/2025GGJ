@@ -241,6 +241,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_PlateCome" ID="{484B1487-4235-4A07-BFA7-3293CBD390D2}">
+							<ChildrenList>
+								<Action Name="" ID="{7C13A1CD-7C04-471F-98E3-F1BC656827F2}" ShortID="606632691">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlateCome" ID="{35F41939-DD63-49FD-902D-7DBCDAD23472}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_PlateGo" ID="{658BDADB-E1A8-4B56-8058-C074EBF8DB85}">
+							<ChildrenList>
+								<Action Name="" ID="{15A9E111-26A5-4D06-8215-AD78E65DCCBA}" ShortID="785263786">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="PlateGo" ID="{80B110B6-F907-4C51-90F7-1B7F112314A6}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="CS" ID="{CD3E5258-9940-4F93-8364-86D0F6760D13}" ShortID="209869456">

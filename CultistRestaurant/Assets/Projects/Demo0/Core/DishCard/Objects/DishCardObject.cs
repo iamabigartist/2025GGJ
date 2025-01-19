@@ -9,6 +9,7 @@ using Projects.Demo0.Core.Mgr;
 using Projects.Demo0.Core.Utils.MessageBubble;
 using UnityEngine;
 using System.IO;
+using Audio;
 using Random = UnityEngine.Random;
 public class DishCardObject : MonoBehaviour
 {
@@ -152,6 +153,7 @@ public class DishCardObject : MonoBehaviour
 	public void OntoTable()
 	{
 		gameObject.SetActive(true);
+		AudioManager.Instance.PostEvent("Play_PlateCome", AudioManager.Instance.globalInitializer);
 		m_Animation.Play("DishOntoTable");
 		StartCoroutine(OntoTable_Impl());
 	}
@@ -166,6 +168,7 @@ public class DishCardObject : MonoBehaviour
 	/// </summary>
 	public void OffTable(bool accept)
 	{
+		AudioManager.Instance.PostEvent("Play_PlateGo", AudioManager.Instance.globalInitializer);
 		m_Animation.Play("DishOffTable");
 		StartCoroutine(OffTable_Impl(accept));
 	}
