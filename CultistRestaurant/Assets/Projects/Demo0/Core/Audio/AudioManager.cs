@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Audio
@@ -22,6 +23,28 @@ namespace Audio
 
         public GameObject globalInitializer;
         public AkWwiseInitializationSettings wwiseSetting;
+        [ReadOnly] public uint uuidMusic;
+
+        // constants
+        public static class StateConstants
+        {
+            public const string GameLevelGrp = "GameLevel";
+            public static class GameLevelVal
+            {
+                public const string StartView = "StartView";
+                public const string IntroView = "IntroView";
+                public const string FinishView = "FinishView";
+                public const string Level01 = "Level01";
+                public const string Level02 = "Level02";
+                public const string Level03 = "Level03";
+                public const string BlackTransition = "BlackTransition";
+            }
+        }
+        
+        public static class RtpcConstants
+        {
+            public const string GlobalPollutionLevel = "GlobalPollutionLevel";
+        }
 
 
         private void Awake()
@@ -60,6 +83,13 @@ namespace Audio
                 Debug.LogError(
                     $"WwiseUnity: Failed load bnk with result: {result}, id: {bankId}, path is: {AkBasePathGetter.Get().SoundBankBasePath}");
             }
+            
+            // Post music event
+            uuidMusic = PostEvent("Play_Music", globalInitializer);
+            
+            // Set init game syncs
+            SetStateValue(StateConstants.GameLevelGrp, StateConstants.GameLevelVal.StartView);
+            SetGlobalRtpcValue(RtpcConstants.GlobalPollutionLevel, 0);
         }
 
         public uint PostEvent(string eventName, GameObject go)
@@ -70,9 +100,9 @@ namespace Audio
             return uuid;
         }
         
-        public void ExecuteActionOnPlayingID(uint uuid)
+        public void StopPlayingID(uint uuid, int fadeoutTime = 100, AkCurveInterpolation fadeoutCurve = AkCurveInterpolation.AkCurveInterpolation_Linear)
         {
-            AkSoundEngine.ExecuteActionOnPlayingID(AkActionOnEventType.AkActionOnEventType_Stop, uuid, 100, AkCurveInterpolation.AkCurveInterpolation_Linear);
+            AkSoundEngine.ExecuteActionOnPlayingID(AkActionOnEventType.AkActionOnEventType_Stop, uuid, fadeoutTime, fadeoutCurve);
         }
 
         public void SetStateValue(string group, string val)

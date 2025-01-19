@@ -60,6 +60,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_UI_Trash" ID="{E8A18E5C-BA73-4052-90BD-6D6F92542D46}">
+							<ChildrenList>
+								<Action Name="" ID="{28436BAC-B99C-4F1E-A365-0F156138A05B}" ShortID="305651697">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_Trash" ID="{66DF11AC-5D17-449B-8645-7D2BE2ADB477}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="VO" ID="{3757040D-166B-4E84-9FDF-13D5D08865C6}" ShortID="187241560">
@@ -94,9 +105,23 @@
 						<Event Name="Play_RestaurantBase" ID="{221CDEFF-A412-4BE5-9C02-162D80422A88}">
 							<ChildrenList>
 								<Action Name="" ID="{B6C1EF7E-3AD5-4638-9AB2-031036E9BB4C}" ShortID="950687956">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="RestaurantBase" ID="{05BE4146-6151-49A1-99C9-B5F2A9EA694D}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Underwater" ID="{4A4C6470-F63A-474B-A781-CBDDFF4CAD43}">
+							<ChildrenList>
+								<Action Name="" ID="{2415AE23-7994-4D2C-9844-1BCAA18CB539}" ShortID="655085542">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Underwater" ID="{BA8C9D05-2CF7-4DDC-A7AA-0BC0C67D4E40}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -165,6 +190,54 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="TestSpeech" ID="{874FE8C9-F3EB-41C4-9EE6-5AF0D09C5266}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="CS" ID="{CD3E5258-9940-4F93-8364-86D0F6760D13}" ShortID="209869456">
+					<ChildrenList>
+						<Event Name="Play_CS_01" ID="{4B22FBE1-B283-4F97-A142-66F08416B38A}">
+							<ChildrenList>
+								<Action Name="" ID="{11B18FAD-6C71-4ECB-8FCB-8C95CFB6023D}" ShortID="85018137">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CS_01" ID="{6B59CF7C-01EE-4AF4-9B76-38A25DE7C720}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CS_02" ID="{867DED4D-67D2-41B0-83A0-6CB03E01D8DA}">
+							<ChildrenList>
+								<Action Name="" ID="{F79BEC99-D59B-48DF-83A3-A016E38BAF62}" ShortID="686387554">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CS_02" ID="{3145B555-FFDB-4EBB-94C1-F1FCD79334DA}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_CS_00" ID="{8B0B1B10-9E7C-4669-9744-F9421AF5BC50}">
+							<ChildrenList>
+								<Action Name="" ID="{2E08A471-E8CD-4F98-B4DF-2E1EC0CA1207}" ShortID="206385284">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CS_00" ID="{950C9C95-EDDD-4388-A263-8C9764A80BA6}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Play_Silence" ID="{523CEC36-6A13-4761-A8DF-BFEBE1D3CD8A}">
+					<ChildrenList>
+						<Action Name="" ID="{1D37D746-2172-4080-9D83-2875D1DAC654}" ShortID="395555101">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Silence" ID="{48B921F2-69E3-4D4B-AB20-B4F5251A8DB4}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -450,7 +450,18 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 35b07a7954e32c4439d068d8df33724e, type: 3}
   - {fileID: 21300000, guid: 8e8c9edf35ff17744b729a0feb3ede7d, type: 3}
   - {fileID: 21300000, guid: 2d1a2af74f5c61846915a52039a164b7, type: 3}
-  clickCooldown: 2
+  audioEvents:
+  - Play_Silence
+  - Play_CS_00
+  - Play_CS_01
+  - Play_CS_02
+  - Play_Silence
+  clickCooldowns:
+  - 1
+  - 3.5
+  - 4.5
+  - 4.5
+  - 1
   sceneToLoad: DemoScene
   hideThisButton: 0
   hideTextBox: 1
@@ -875,7 +886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &391915704
 RectTransform:
   m_ObjectHideFlags: 0

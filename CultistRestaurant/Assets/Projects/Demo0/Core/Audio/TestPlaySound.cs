@@ -14,7 +14,7 @@ namespace Audio
         
         private void OnDisable()
         {
-            AudioManager.Instance.ExecuteActionOnPlayingID(uuid);
+            AudioManager.Instance.StopPlayingID(uuid);
         }
     }
 }

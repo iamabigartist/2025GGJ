@@ -5,6 +5,8 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Audio;
+
 public class PPTController : SerializedMonoBehaviour
 {
 	[Header("按钮和内容控制")]
@@ -12,9 +14,11 @@ public class PPTController : SerializedMonoBehaviour
 	public Text displayText; // 文本框组件
 	public List<Sprite> images; // 图片数组，暴露为 List 供修改
 	public List<MultiLangStr> texts = new(); // 文本数组，暴露为 List 供修改
+	public List<string> audioEvents = new(); // 音频事件名
+	private List<uint> _audioIds = new(); // 记录一下音频uuid
 
 	[Header("交互控制")]
-	public float clickCooldown = 2f; // 点击后禁用的冷却时间（秒）
+	public List<float> clickCooldowns = new List<float>(); // 点击后禁用的冷却时间（秒）
 	public string sceneToLoad; // 最后一击后加载的场景名称
 
 	[Header("隐藏选项")]
@@ -35,9 +39,9 @@ public class PPTController : SerializedMonoBehaviour
 	void OnButtonClick()
 	{
 		if (isCooldown) return; // 如果按钮正在冷却，直接返回
-
-		StartCoroutine(ButtonCooldown()); // 开始按钮冷却
+		
 		currentIndex++; // 更新点击次数
+		StartCoroutine(ButtonCooldown()); // 开始按钮冷却
 
 		if (currentIndex < maxClicks)
 		{
@@ -49,6 +53,8 @@ public class PPTController : SerializedMonoBehaviour
 			if (!string.IsNullOrEmpty(sceneToLoad))
 			{
 				SceneManager.LoadScene(sceneToLoad); // 加载指定场景
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.Level01);
+				AudioManager.Instance.PostEvent("Play_RestaurantBase", AudioManager.Instance.globalInitializer);
 			}
 
 			// 隐藏其他组件（如果勾选了对应选项）
@@ -71,6 +77,22 @@ public class PPTController : SerializedMonoBehaviour
 		{
 			displayText.text = texts[currentIndex].ToString(); // 更新文字
 		}
+		
+		if (currentIndex < audioEvents.Count)
+		{
+			if (currentIndex == 2)
+			{
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.IntroView); // 如果是第二页的话，暂停音乐
+			}
+			
+			if (currentIndex > 1)
+			{
+				AudioManager.Instance.StopPlayingID(_audioIds[currentIndex-1], 2000); // 先停止上一个声音
+			}
+			
+			uint uuid = AudioManager.Instance.PostEvent(audioEvents[currentIndex], AudioManager.Instance.globalInitializer); // 再播放当前声音
+			_audioIds.Add(uuid);
+		}
 	}
 
 	IEnumerator ButtonCooldown()
@@ -78,7 +100,13 @@ public class PPTController : SerializedMonoBehaviour
 		isCooldown = true; // 标记按钮进入冷却状态
 		GetComponent<Button>().interactable = false; // 禁用按钮交互
 
-		yield return new WaitForSeconds(clickCooldown); // 等待冷却时间
+		float cooldown = 1 ; //至少1秒
+		if (currentIndex < clickCooldowns.Count && clickCooldowns[currentIndex] > cooldown)
+		{
+			cooldown = clickCooldowns[currentIndex];
+		}
+		Debug.Log($"currentIndex: {currentIndex}, cooldown: {cooldown}");
+		yield return new WaitForSeconds(cooldown); // 等待冷却时间
 
 		GetComponent<Button>().interactable = true; // 恢复按钮交互
 		isCooldown = false; // 冷却结束
