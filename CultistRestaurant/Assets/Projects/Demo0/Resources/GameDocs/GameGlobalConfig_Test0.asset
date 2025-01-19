@@ -528,7 +528,7 @@ MonoBehaviour:
   MaxHP: 3
   AcceptWrongDish_HPChange: -2
   RefusePerfectDish_HPChange: -2
-  AcceptPollutedCorrectDish_HPChange: 4
+  AcceptPollutedCorrectDish_HPChange: 1
   LevelList:
   - {fileID: 11400000, guid: 21382dd29eac88343b1205b45cf43070, type: 2}
   - {fileID: 11400000, guid: 151a0f47734758848b7ff4248469882e, type: 2}
