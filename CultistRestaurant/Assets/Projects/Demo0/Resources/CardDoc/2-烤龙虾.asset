@@ -24,7 +24,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 41388cb183b245545965322e9745b090, type: 3}
     - {fileID: 21300000, guid: c58911c69f5337b41a7ad2af0058ab90, type: 3}
     - {fileID: 21300000, guid: a31b018c6036dd74b8c315bc9569e66d, type: 3}
-    - {fileID: 21300000, guid: 91037eb96eb958e4d88b7cd5131bb0aa, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -146,7 +145,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u65E0"
@@ -251,7 +250,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
@@ -356,7 +355,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u6C34\u58F0\uFF08\u5E38\u89C4\u8BE1\u5F02\u97F3\u6548\u4E5F\u53EF\u4EE5\uFF09"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u5DE6\u53F3\u62C9\u4F38\u6536\u7F29"
@@ -480,7 +479,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u65E0"
@@ -585,7 +584,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
@@ -690,7 +689,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u7A7A\u7075\u7684\u6572\u51FB\u58F0\uFF08\u4E09\u89D2\u94C1\uFF0C\u98CE\u94C3\uFF09"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u65CB\u8F6C"
@@ -961,8 +960,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: ClueStateSprite
-      Entry: 10
-      Data: 8
+      Entry: 6
+      Data: 
     - Name: InteractCmdList
       Entry: 7
       Data: 58|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],

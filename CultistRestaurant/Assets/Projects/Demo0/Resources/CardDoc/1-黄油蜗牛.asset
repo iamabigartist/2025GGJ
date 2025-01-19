@@ -142,7 +142,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u65E0"
@@ -247,7 +247,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
@@ -352,7 +352,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u8BE1\u5F02\u97F3\u6548"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u4E0D\u505C\u8815\u52A8"
@@ -476,7 +476,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u65E0"
@@ -581,7 +581,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
@@ -686,7 +686,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u8BE1\u5F02\u97F3\u6548"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u5192\u6CE1\u6CE1\uFF1F\uFF08\u8D34\u56FE\u5192\u6CE1\u4E5Fok\uFF09"

@@ -93,6 +93,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_UI_ClickJuicyStrong" ID="{45C3E15D-EFF8-4326-8D18-FD0C2C53AE29}">
+							<ChildrenList>
+								<Action Name="" ID="{7CE4F68C-8DEA-4AE0-9367-4C4E7C6F4DD0}" ShortID="862319058">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UI_ClickJuicyStrong" ID="{990B2474-5172-4197-B459-BBA0812F54C1}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="VO" ID="{3757040D-166B-4E84-9FDF-13D5D08865C6}" ShortID="187241560">

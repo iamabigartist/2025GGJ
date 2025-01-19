@@ -53,7 +53,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -137,7 +137,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u65E0"
@@ -168,7 +168,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -241,7 +241,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
@@ -272,7 +272,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -346,7 +346,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u8BE1\u5F02\u97F3\u6548"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u8F7B\u5FAE\u8815\u52A8"
@@ -396,7 +396,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -470,7 +470,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u65E0"
@@ -501,7 +501,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -575,7 +575,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u901A\u7528\u70B9\u51FB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
@@ -606,7 +606,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -680,7 +680,7 @@ MonoBehaviour:
       Data: 0
     - Name: AudioEvent
       Entry: 1
-      Data: "\u6572\u51FB\uFF0C\u60E8\u53EB"
+      Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
       Data: "\u8815\u52A8"
@@ -730,7 +730,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -845,7 +845,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -950,7 +950,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: CluePrefab
+    - Name: ClueStateSprite
       Entry: 6
       Data: 
     - Name: InteractCmdList
@@ -1057,3 +1057,4 @@ MonoBehaviour:
       Data: 
   RecipeDesc: 
   Priority: 2
+  DishContainerPrefab: {fileID: 0}
