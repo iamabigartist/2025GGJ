@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2518909250658430937}
   - component: {fileID: 765648972694255950}
+  - component: {fileID: 7916724951011356315}
   m_Layer: 0
   m_Name: 1_cakeplate
   m_TagString: Untagged
@@ -87,3 +88,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!111 &7916724951011356315
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8063943738003050211}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 9471e2b963c6c7e49b9f7b49348fc660, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 9471e2b963c6c7e49b9f7b49348fc660, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0

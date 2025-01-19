@@ -146,7 +146,7 @@ MonoBehaviour:
       Data: Play_UI_ClickJuicyStrong
     - Name: AnimationEvent
       Entry: 1
-      Data: "\u65E0"
+      Data: ClueClicked
     - Name: 
       Entry: 8
       Data: 
