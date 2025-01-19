@@ -22,7 +22,11 @@ public class PlayCmd : Cmd
 		{
 			var instance = AudioManager.Instance;
 			if (instance == null) { Debug.Log("AudioManager 未初始化"); }
-			else { AudioManager.Instance.PostEvent(AudioEvent, AudioManager.Instance.globalInitializer); }
+			else
+			{
+				Debug.Log($"播放音频事件 {AudioEvent} on {instance.name}");
+				AudioManager.Instance.PostEvent(AudioEvent, AudioManager.Instance.globalInitializer);
+			}
 		}
 	}
 }

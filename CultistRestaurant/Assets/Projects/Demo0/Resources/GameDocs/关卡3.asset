@@ -22,8 +22,8 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   CardCount: 6
-  ClueWrongProb: 0.5
+  ClueWrongProb: 0.35
   CluePollutedProb: 0.65
-  ClueWrongRatio: 0.3
+  ClueWrongRatio: 0.4
   CluePollutedRatio: 0.85
   PolluteSceneShowSkin: 60

@@ -18,6 +18,11 @@ public class GameGlobalConfig : SerializedScriptableObject
 	public int AcceptWrongDish_HPChange = -2;
 	public int RefusePerfectDish_HPChange = -1;
 	public int AcceptPollutedCorrectDish_HPChange = 1;
+	public MultiLangStr AcceptWrongDishDesc = new();
+	public MultiLangStr RefusePerfectDishDesc = new();
+	public MultiLangStr AcceptPollutedCorrectDishDesc = new();
+	public MultiLangStr AcceptNormalDishDesc = new();
+	public MultiLangStr RefuseNormalDishDesc = new();
 
 	[Title("Level")]
 	public MultiLangStr DayEndStr = new();
