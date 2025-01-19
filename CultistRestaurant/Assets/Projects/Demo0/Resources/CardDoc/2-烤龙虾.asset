@@ -553,7 +553,7 @@ MonoBehaviour:
       Data: false
     - Name: Polluted
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -999,7 +999,7 @@ MonoBehaviour:
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
     - Name: Correct
       Entry: 5
-      Data: false
+      Data: true
     - Name: Polluted
       Entry: 5
       Data: true

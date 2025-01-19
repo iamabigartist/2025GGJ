@@ -80,7 +80,7 @@ public class DishCardObject : MonoBehaviour
 		var cardNeedWrong = levelDoc.ClueWrongProb >= Random.value;
 		var cardNeedPolluted = levelDoc.CluePollutedProb >= Random.value;
 		Debug.Log($"生成菜品：{cardDoc.name}，需要错误线索：{cardNeedWrong}，需要污染线索：{cardNeedPolluted}");
-		float z = -0.0001f * (cardDoc.ClueList.Count + 1);
+		float z = -0.0001f;
 		foreach (var clueDoc in cardDoc.ClueList)
 		{
 			DishClueStateDoc curClueStateDoc;
@@ -123,7 +123,7 @@ public class DishCardObject : MonoBehaviour
 			clueGo.transform.localPosition = new(clueGo.transform.localPosition.x, clueGo.transform.localPosition.y, z);
 
 			curDishCardObj.m_ClueObjList.Add(clueObj);
-			z += 0.0001f;
+			z -= 0.0001f;
 		}
 		curDishCardObj.m_SpriteList = curDishCardObj.m_ClueObjList.Where(clue => clue.gameObject.GetComponent<SpriteRenderer>()).ToList();
 		curDishCardObj.gameObject.SetActive(false);
