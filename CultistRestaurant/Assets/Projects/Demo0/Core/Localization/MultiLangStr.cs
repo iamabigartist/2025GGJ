@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 namespace Projects.Demo0.Core.Localization
 {
-[InlineProperty] [HideLabel] [HideReferenceObjectPicker]
+[InlineProperty] [HideReferenceObjectPicker]
 public class MultiLangStr
 {
 	public static LanguageType CurrentLanguage = LanguageType.Chinese;

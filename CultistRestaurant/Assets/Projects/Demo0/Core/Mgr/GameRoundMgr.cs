@@ -7,16 +7,25 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 namespace Projects.Demo0.Core.Mgr
 {
-public class GameRoundMgr : MonoSingleton<GameRoundMgr>
+public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 {
-	public int PlayerHP;
-	public bool PlayerDead => PlayerHP <= 0;
+	int playerHP;
+	public int PlayerHP
+	{
+		get => playerHP;
+		set
+		{
+			playerHP = Mathf.Clamp(value, 0, gameConfig.MaxHP);
+			playerUIMgr.SetHP(playerHP);
+		}
+	}
+	public bool PlayerDead => PlayerHP == 0;
 	public int GetCardTotalNum;
 	public int WorldPollutedNum;
 
 
 	public bool DishServeOutSignal;
-	public bool OnDishServeOutSignal() => DishServeOutSignal = false;
+	public bool OnDishServeOutSignal() => DishServeOutSignal = true;
 
 	public bool ContinueSignal;
 	void OnContinueSignal() => ContinueSignal = true;
@@ -72,6 +81,7 @@ public class GameRoundMgr : MonoSingleton<GameRoundMgr>
 				OnDishServeOutSignal();
 			};
 			CurrentCard = card;
+			DishServeOutSignal = false;
 			card.OntoTable();
 			yield return new WaitUntil(() => DishServeOutSignal);
 			if (PlayerDead) { break; }

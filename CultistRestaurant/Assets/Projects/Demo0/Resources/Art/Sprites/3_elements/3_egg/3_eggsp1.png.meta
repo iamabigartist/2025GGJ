@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -112,18 +112,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 
-      internalID: 0
+      spriteID: 4854409608dd66e43b1c2f24845702e9
+      internalID: -996579869
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
     customData: 
-    physicsShape: []
+    physicsShape:
+    - - {x: -1.5, y: -25}
+      - {x: 0.5, y: -26}
+      - {x: 1.5, y: -25}
+      - {x: 5.5, y: -25}
+      - {x: 6.5, y: -24}
+      - {x: 8.5, y: -24}
+      - {x: 13.5, y: -22}
+      - {x: 15.5, y: -19}
+      - {x: 16.5, y: -19}
+      - {x: 20.5, y: -16}
+      - {x: 22.5, y: -15}
+      - {x: 22.5, y: -13}
+      - {x: 25.5, y: -12}
+      - {x: 26.5, y: -7}
+      - {x: 27.5, y: -6}
+      - {x: 27.5, y: 0}
+      - {x: 25.5, y: 2}
+      - {x: 25.5, y: 3}
+      - {x: 26.5, y: 4}
+      - {x: 26.5, y: 7}
+      - {x: 24.5, y: 9}
+      - {x: 23.5, y: 14}
+      - {x: 22.5, y: 17}
+      - {x: 14.5, y: 24}
+      - {x: 12.5, y: 24}
+      - {x: 11.5, y: 25}
+      - {x: 7.5, y: 25}
+      - {x: 6.5, y: 26}
+      - {x: -5.5, y: 26}
+      - {x: -8.5, y: 24}
+      - {x: -10.5, y: 24}
+      - {x: -14.5, y: 21}
+      - {x: -15.5, y: 21}
+      - {x: -20.5, y: 17}
+      - {x: -22.5, y: 16}
+      - {x: -26.5, y: 7}
+      - {x: -26.5, y: 4}
+      - {x: -27.5, y: 2}
+      - {x: -26.5, y: 1}
+      - {x: -27.5, y: -2}
+      - {x: -26.5, y: -3}
+      - {x: -27.5, y: -5}
+      - {x: -22.5, y: -11}
+      - {x: -20.5, y: -11}
+      - {x: -21.5, y: -12}
+      - {x: -21.5, y: -15}
+      - {x: -20.5, y: -16}
+      - {x: -20.5, y: -18}
+      - {x: -16.5, y: -22}
+      - {x: -12.5, y: -22}
+      - {x: -11.5, y: -24}
+      - {x: -6.5, y: -26}
+      - {x: -3.5, y: -26}
     bones: []
     spriteID: 228cef90c5b03b842a8a8bc8eb9809e1
-    internalID: 0
+    internalID: -1618099166
     vertices: []
     indices: 
     edges: []

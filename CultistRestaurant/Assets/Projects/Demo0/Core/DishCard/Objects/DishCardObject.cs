@@ -40,6 +40,7 @@ public class DishCardObject : MonoBehaviour
 			curDishCardObj.m_ClueObjList.Add(clueObj);
 		}
 		curDishCardObj.m_SpriteList = curDishCardObj.m_ClueObjList.Where(clue => clue.gameObject.GetComponent<SpriteRenderer>()).ToList();
+		curDishCardObj.gameObject.SetActive(false);
 		return curDishCardObj;
 	}
 
@@ -73,11 +74,14 @@ public class DishCardObject : MonoBehaviour
 	/// <summary>
 	///     菜上检测桌
 	/// </summary>
-	public void OntoTable() => StartCoroutine(OntoTable_Impl());
-	IEnumerator OntoTable_Impl()
+	public void OntoTable()
 	{
 		gameObject.SetActive(true);
 		m_Animation.Play("DishOntoTable");
+		StartCoroutine(OntoTable_Impl());
+	}
+	IEnumerator OntoTable_Impl()
+	{
 		yield return new WaitUntil(() => !m_Animation.isPlaying);
 		OnStartCheck?.Invoke();
 	}
@@ -85,10 +89,13 @@ public class DishCardObject : MonoBehaviour
 	/// <summary>
 	///     菜下检测桌
 	/// </summary>
-	public void OffTable(bool accept) => StartCoroutine(OffTable_Impl(accept));
-	IEnumerator OffTable_Impl(bool accept)
+	public void OffTable(bool accept)
 	{
 		m_Animation.Play("DishOffTable");
+		StartCoroutine(OffTable_Impl(accept));
+	}
+	IEnumerator OffTable_Impl(bool accept)
+	{
 		yield return new WaitUntil(() => !m_Animation.isPlaying);
 		gameObject.SetActive(false);
 		OnServeOut?.Invoke(GetDishRes(accept));
@@ -103,12 +110,24 @@ public class DishCardObject : MonoBehaviour
 		var dishPolluted = m_ClueObjList.Exists(clue => clue.PollutedClue);
 		if (accept)
 		{
-			if (m_ClueObjList.Exists(clue => !clue.WrongClue)) { return (gameConfig.AcceptWrongDish_HPChange, dishPolluted); }
-			if (dishPolluted) { return (gameConfig.AcceptPollutedCorrectDish_HPChange, true); }
+			if (m_ClueObjList.Exists(clue => clue.WrongClue))
+			{
+				Debug.Log("接受错误菜品");
+				return (gameConfig.AcceptWrongDish_HPChange, dishPolluted);
+			}
+			if (dishPolluted)
+			{
+				Debug.Log("接受正确污染菜品");
+				return (gameConfig.AcceptPollutedCorrectDish_HPChange, true);
+			}
 		}
 		else
 		{
-			if (m_ClueObjList.All(clue => clue.PerfectClue)) { return (gameConfig.RefusePerfectDish_HPChange, false); }
+			if (m_ClueObjList.All(clue => clue.PerfectClue))
+			{
+				Debug.Log("拒绝完美菜品");
+				return (gameConfig.RefusePerfectDish_HPChange, false);
+			}
 		}
 
 		return (0, false);
