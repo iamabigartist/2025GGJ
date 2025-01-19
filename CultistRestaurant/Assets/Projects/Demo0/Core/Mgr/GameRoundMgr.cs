@@ -108,6 +108,7 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 			CurrentCard = card;
 			DishServeOutSignal = false;
 			card.OntoTable();
+			playerUIMgr.SetRecipeDesc(card.m_Doc.RecipeDesc.ToString());
 			yield return new WaitUntil(() => DishServeOutSignal);
 			if (PlayerDead) { break; }
 		}

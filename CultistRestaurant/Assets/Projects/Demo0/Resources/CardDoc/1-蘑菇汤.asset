@@ -16,37 +16,82 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 5cc37748259099e45826d7195639bf07, type: 3}
-    - {fileID: 21300000, guid: 86248edf5033f2f4f91a1cd46e44c958, type: 3}
-    - {fileID: 21300000, guid: f34a15cd73eb5474fa20223061e10bac, type: 3}
     - {fileID: 21300000, guid: 26392889d0335a94a972fafd2f42b603, type: 3}
     - {fileID: 21300000, guid: 145338a69e74794459f04267b4f7a945, type: 3}
     - {fileID: 21300000, guid: af2d5e0a0b00a09418594a43fbfb8365, type: 3}
+    - {fileID: 21300000, guid: 5cc37748259099e45826d7195639bf07, type: 3}
+    - {fileID: 21300000, guid: 86248edf5033f2f4f91a1cd46e44c958, type: 3}
+    - {fileID: 21300000, guid: f34a15cd73eb5474fa20223061e10bac, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: RecipeDesc
+      Entry: 7
+      Data: 0|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+    - Name: Text
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp],[System.String, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 1
+      Data: "\u8611\u83C7\uFF1A\u8611\u83C7\u5207\u7247\u5747\u5300\uFF0C\u5E72\u51C0\uFF0C\u539A\u5EA6\u9002\u4E2D\u3002\u8611\u83C7\u8868\u9762\u5448\u5976\u767D\u8272\u7EB9\u7406\uFF0C\u6F02\u6D6E\u5728\u6C64\u9762\uFF0C\u5206\u5E03\u5747\u5300\u3002
+        \u6C64\uFF1A\u6C64\u5E95\u5976\u767D\u6D53\u7A20\uFF0C\u8272\u6CFD\u5747\u5300\uFF0C\u65E0\u6CB9\u8102\u6216\u6C89\u6DC0\u7269\u3002"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: ClueList
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueDoc,
+      Data: 3|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueDoc,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 1|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
+      Data: 4|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
     - Name: StateDoc
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
+      Data: 5|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 3|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 6|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -64,372 +109,37 @@ MonoBehaviour:
       Data: 0
     - Name: InteractCmdList
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 5|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
-    - Name: DelaySec
-      Entry: 4
-      Data: 0
-    - Name: Str
-      Entry: 7
-      Data: 6|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
-    - Name: Text
-      Entry: 7
-      Data: 7|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
-        Assembly-CSharp],[System.String, mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 8|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: "\u6C64\u5E95\u5976\u767D\u6D53\u7A20\uFF0C\u8868\u9762\u6D6E\u7740\u4E00\u5C42\u7EC6\u817B\u7684\u5149\u6CFD\uFF0C\u6563\u53D1\u7740\u9999\u6D53\u7684\u5976\u6CB9\u548C\u8611\u83C7\u9999\u6C14\uFF0C\u6E29\u6696\u8BF1\u4EBA\u3002 "
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'The soup is thick and creamy, with a fine glossy surface, exuding the
-        rich aroma of cream and mushrooms, warm and inviting. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 9|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
-    - Name: DelaySec
-      Entry: 4
-      Data: 0
-    - Name: AudioEvent
-      Entry: 1
-      Data: Play_UI_ClickJuicyStrong
-    - Name: AnimationEvent
-      Entry: 1
-      Data: "\u65E0"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
-    - Name: State
-      Entry: 7
-      Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
-    - Name: Correct
-      Entry: 5
-      Data: false
-    - Name: Polluted
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: ClueStateSprite
-      Entry: 10
-      Data: 1
-    - Name: InteractCmdList
-      Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 12|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
-    - Name: DelaySec
-      Entry: 4
-      Data: 0
-    - Name: Str
-      Entry: 7
-      Data: 13|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
-    - Name: Text
-      Entry: 7
-      Data: 14|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
-        Assembly-CSharp],[System.String, mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 8
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: "\u6C64\u7684\u989C\u8272\u8FC7\u6DF1\uFF0C\u5448\u73B0\u4E00\u79CD\u8FC7\u5EA6\u6D53\u7F29\u7684\u8910\u8272\uFF0C\u8868\u9762\u6F02\u6D6E\u7740\u660E\u663E\u7684\u6CB9\u8102\u548C\u6C89\u6DC0\u7269\uFF0C\u8BA9\u4EBA\u96BE\u4EE5\u4E0B\u53E3\u3002 "
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'The soup has an overly dark color, resembling over-reduced broth, with
-        visible oil slicks and sediment floating on top, making it unappetizing. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 15|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
-    - Name: DelaySec
-      Entry: 4
-      Data: 0
-    - Name: AudioEvent
-      Entry: 1
-      Data: Play_UI_ClickJuicyStrong
-    - Name: AnimationEvent
-      Entry: 1
-      Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 16|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
-    - Name: State
-      Entry: 7
-      Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
-    - Name: Correct
-      Entry: 5
-      Data: true
-    - Name: Polluted
-      Entry: 5
-      Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: ClueStateSprite
-      Entry: 10
-      Data: 2
-    - Name: InteractCmdList
-      Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 18|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
-    - Name: DelaySec
-      Entry: 4
-      Data: 0
-    - Name: Str
-      Entry: 7
-      Data: 19|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
-    - Name: Text
-      Entry: 7
-      Data: 20|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
-        Assembly-CSharp],[System.String, mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 9
-      Data: 8
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: "\u6C64\u9762\u4E0A\u7F13\u7F13\u5F62\u6210\u4E00\u4E2A\u6F29\u6DA1\uFF0C\u5C1D\u8D77\u6765\u6709\u4E00\u79CD\u5947\u602A\u7684\u6D77\u9C9C\u5473\uFF0C\u4F46\u662F\u4F3C\u4E4E\u66F4\u7F8E\u5473\u4E86 "
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: 'A vortex slowly forms on the surface of the soup, occasionally glowing
-        faintly with blue and purple light, and it tastes like a bizarre yet oddly
-        delicious seafood flavor. '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 21|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
-    - Name: DelaySec
-      Entry: 4
-      Data: 0
-    - Name: AudioEvent
-      Entry: 1
-      Data: Play_UI_ClickJuicyStrong
-    - Name: AnimationEvent
-      Entry: 1
-      Data: "\u7F13\u6162\u65CB\u8F6C"
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 22|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
-    - Name: StateDoc
-      Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 24|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
-    - Name: State
-      Entry: 7
-      Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
-    - Name: Correct
-      Entry: 5
-      Data: true
-    - Name: Polluted
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: ClueStateSprite
-      Entry: 10
-      Data: 3
-    - Name: InteractCmdList
-      Entry: 7
-      Data: 25|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+      Data: 7|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
         Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 26|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 8|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 27|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 9|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 28|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 10|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
-      Entry: 9
-      Data: 8
+      Entry: 7
+      Data: 11|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 12
       Data: 2
@@ -472,7 +182,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 29|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 12|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -496,7 +206,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 30|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 13|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -511,30 +221,30 @@ MonoBehaviour:
       Data: 
     - Name: ClueStateSprite
       Entry: 10
-      Data: 4
+      Data: 1
     - Name: InteractCmdList
       Entry: 7
-      Data: 31|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+      Data: 14|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
         Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 32|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 15|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 33|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 16|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 34|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 17|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 12
       Data: 2
@@ -577,7 +287,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 35|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 18|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -601,7 +311,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 19|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -616,30 +326,30 @@ MonoBehaviour:
       Data: 
     - Name: ClueStateSprite
       Entry: 10
-      Data: 5
+      Data: 2
     - Name: InteractCmdList
       Entry: 7
-      Data: 37|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+      Data: 20|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
         Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 38|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 21|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 39|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 22|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 40|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 23|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 12
       Data: 2
@@ -683,7 +393,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 41|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 24|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -715,11 +425,345 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 25|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
+    - Name: StateDoc
+      Entry: 7
+      Data: 26|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 27|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+    - Name: State
+      Entry: 7
+      Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
+    - Name: Correct
+      Entry: 5
+      Data: true
+    - Name: Polluted
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ClueStateSprite
+      Entry: 10
+      Data: 3
+    - Name: InteractCmdList
+      Entry: 7
+      Data: 28|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 29|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+    - Name: DelaySec
+      Entry: 4
+      Data: 0
+    - Name: Str
+      Entry: 7
+      Data: 30|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+    - Name: Text
+      Entry: 7
+      Data: 31|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp],[System.String, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 11
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 1
+      Data: "\u6C64\u5E95\u5976\u767D\u6D53\u7A20\uFF0C\u8868\u9762\u6D6E\u7740\u4E00\u5C42\u7EC6\u817B\u7684\u5149\u6CFD\uFF0C\u6563\u53D1\u7740\u9999\u6D53\u7684\u5976\u6CB9\u548C\u8611\u83C7\u9999\u6C14\uFF0C\u6E29\u6696\u8BF1\u4EBA\u3002 "
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 1
+      Data: 'The soup is thick and creamy, with a fine glossy surface, exuding the
+        rich aroma of cream and mushrooms, warm and inviting. '
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  RecipeDesc: "\u8611\u83C7\uFF1A\u8611\u83C7\u5207\u7247\u5747\u5300\uFF0C\u5E72\u51C0\uFF0C\u539A\u5EA6\u9002\u4E2D\u3002\u8611\u83C7\u8868\u9762\u5448\u5976\u767D\u8272\u7EB9\u7406\uFF0C\u6F02\u6D6E\u5728\u6C64\u9762\uFF0C\u5206\u5E03\u5747\u5300\u3002\r\n\u6C64\uFF1A\u6C64\u5E95\u5976\u767D\u6D53\u7A20\uFF0C\u8272\u6CFD\u5747\u5300\uFF0C\u65E0\u6CB9\u8102\u6216\u6C89\u6DC0\u7269\u3002\r\n"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 32|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+    - Name: DelaySec
+      Entry: 4
+      Data: 0
+    - Name: AudioEvent
+      Entry: 1
+      Data: Play_UI_ClickJuicyStrong
+    - Name: AnimationEvent
+      Entry: 1
+      Data: "\u65E0"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 33|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+    - Name: State
+      Entry: 7
+      Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
+    - Name: Correct
+      Entry: 5
+      Data: false
+    - Name: Polluted
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ClueStateSprite
+      Entry: 10
+      Data: 4
+    - Name: InteractCmdList
+      Entry: 7
+      Data: 34|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 35|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+    - Name: DelaySec
+      Entry: 4
+      Data: 0
+    - Name: Str
+      Entry: 7
+      Data: 36|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+    - Name: Text
+      Entry: 7
+      Data: 37|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp],[System.String, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 11
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 1
+      Data: "\u6C64\u7684\u989C\u8272\u8FC7\u6DF1\uFF0C\u5448\u73B0\u4E00\u79CD\u8FC7\u5EA6\u6D53\u7F29\u7684\u8910\u8272\uFF0C\u8868\u9762\u6F02\u6D6E\u7740\u660E\u663E\u7684\u6CB9\u8102\u548C\u6C89\u6DC0\u7269\uFF0C\u8BA9\u4EBA\u96BE\u4EE5\u4E0B\u53E3\u3002 "
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 1
+      Data: 'The soup has an overly dark color, resembling over-reduced broth, with
+        visible oil slicks and sediment floating on top, making it unappetizing. '
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 38|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+    - Name: DelaySec
+      Entry: 4
+      Data: 0
+    - Name: AudioEvent
+      Entry: 1
+      Data: Play_UI_ClickJuicyStrong
+    - Name: AnimationEvent
+      Entry: 1
+      Data: "\u70B9\u51FB\u6643\u52A8\uFF08\u53D1\u73B0\u53D7\u635F\u90E8\u4F4D\uFF09"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 39|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+    - Name: State
+      Entry: 7
+      Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
+    - Name: Correct
+      Entry: 5
+      Data: true
+    - Name: Polluted
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ClueStateSprite
+      Entry: 10
+      Data: 5
+    - Name: InteractCmdList
+      Entry: 7
+      Data: 40|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 41|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+    - Name: DelaySec
+      Entry: 4
+      Data: 0
+    - Name: Str
+      Entry: 7
+      Data: 42|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+    - Name: Text
+      Entry: 7
+      Data: 43|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp],[System.String, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 11
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 1
+      Data: "\u6C64\u9762\u4E0A\u7F13\u7F13\u5F62\u6210\u4E00\u4E2A\u6F29\u6DA1\uFF0C\u5C1D\u8D77\u6765\u6709\u4E00\u79CD\u5947\u602A\u7684\u6D77\u9C9C\u5473\uFF0C\u4F46\u662F\u4F3C\u4E4E\u66F4\u7F8E\u5473\u4E86 "
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 1
+      Data: 'A vortex slowly forms on the surface of the soup, occasionally glowing
+        faintly with blue and purple light, and it tastes like a bizarre yet oddly
+        delicious seafood flavor. '
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 44|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+    - Name: DelaySec
+      Entry: 4
+      Data: 0
+    - Name: AudioEvent
+      Entry: 1
+      Data: Play_UI_ClickJuicyStrong
+    - Name: AnimationEvent
+      Entry: 1
+      Data: "\u7F13\u6162\u65CB\u8F6C"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   Priority: 1
   DishContainerPrefab: {fileID: 765823727953742811, guid: d137db1446de0284aae0b760b8007377, type: 3}
