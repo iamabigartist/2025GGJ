@@ -9,13 +9,14 @@ namespace Projects.Demo0.Core.Mgr
 {
 public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 {
-	int playerHP;
+	public int playerHP;
 	public int PlayerHP
 	{
 		get => playerHP;
 		set
 		{
-			playerHP = Mathf.Clamp(value, 0, gameConfig.MaxHP);
+			playerHP = value;
+			if (playerHP < 0) { playerHP = 0; }
 			playerUIMgr.SetHP(playerHP);
 		}
 	}

@@ -6,6 +6,7 @@ using Projects.Demo0.Core;
 using Projects.Demo0.Core.DishCard.Objects;
 using Projects.Demo0.Core.Level;
 using Projects.Demo0.Core.Mgr;
+using Projects.Demo0.Core.Utils.MessageBubble;
 using UnityEngine;
 using Random = UnityEngine.Random;
 public class DishCardObject : MonoBehaviour
@@ -113,12 +114,15 @@ public class DishCardObject : MonoBehaviour
 			if (m_ClueObjList.Exists(clue => clue.WrongClue))
 			{
 				Debug.Log("接受错误菜品");
+				MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.AcceptWrongDishDesc.ToString());
 				return (gameConfig.AcceptWrongDish_HPChange, dishPolluted);
 			}
 			if (dishPolluted)
 			{
 				Debug.Log("接受正确污染菜品");
+				MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.AcceptPollutedCorrectDishDesc.ToString());
 				return (gameConfig.AcceptPollutedCorrectDish_HPChange, true);
+				
 			}
 		}
 		else
@@ -126,9 +130,13 @@ public class DishCardObject : MonoBehaviour
 			if (m_ClueObjList.All(clue => clue.PerfectClue))
 			{
 				Debug.Log("拒绝完美菜品");
+				MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.RefusePerfectDishDesc.ToString());
 				return (gameConfig.RefusePerfectDish_HPChange, false);
 			}
 		}
+
+		if (accept) { MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.AcceptNormalDishDesc.ToString()); }
+		else { MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.RefuseNormalDishDesc.ToString()); }
 
 		return (0, false);
 	}
