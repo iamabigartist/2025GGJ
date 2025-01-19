@@ -36,7 +36,7 @@ public class DishClueObject : SerializedMonoBehaviour
 	public DishClueDoc m_Doc;
 	void OnMouseDown()
 	{
-		GetComponent<Animation>().Play("ClueClick");
+		GetComponent<Animation>().Play("ClueClicked");
 		StartCoroutine(m_StateDoc.InteractCmdList.ExecuteCmdList(new() { TargetGameObj = gameObject }));
 	}
 	void OnDestroy() => StopAllCoroutines();
