@@ -41,6 +41,10 @@ public class PPTController : SerializedMonoBehaviour
 		if (!string.IsNullOrEmpty(sceneToLoad))
 		{
 			SceneManager.LoadScene(sceneToLoad); // 加载指定场景
+			if (sceneToLoad == "IntroScene")
+			{
+				AudioManager.Instance.ClearSound();
+			}
 			foreach (var uuid in _audioIds)
 			{
 				AudioManager.Instance.StopPlayingID(uuid, 2000); // 停止所有可能正在播放的声音
