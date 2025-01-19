@@ -15,6 +15,7 @@ public class DishClueObject : SerializedMonoBehaviour
 		var spriteRenderer = gameObj.AddComponent<SpriteRenderer>();
 		spriteRenderer.sprite = curSprite;
 		
+		spriteRenderer.sortingLayerName = "elements"; //所有菜品单元都在这个层
 		// 从sprite名称中提取第一个数字作为sorting order
 		var firstNumber = new string(curSprite.name.Where(c => char.IsDigit(c)).Take(1).ToArray());
 		if (int.TryParse(firstNumber, out int orderInLayer))
@@ -22,12 +23,7 @@ public class DishClueObject : SerializedMonoBehaviour
 			spriteRenderer.sortingOrder = orderInLayer;
 		}
 		
-		// 如果sprite资产路径包含elements，设置其sortingLayer
-		if (AssetDatabase.GetAssetPath(curSprite).Contains("elements"))
-		{
-			spriteRenderer.sortingLayerName = "elements";
-		}
-		gameObj.name = $"Clue_{curSprite.name}";
+		gameObj.name = $"Clue_{curSprite.name}"; 
 		var collider = gameObj.AddComponent<PolygonCollider2D>();
 		var clueObj = gameObj.AddComponent<DishClueObject>();
 		clueObj.m_Doc = clueDoc;
