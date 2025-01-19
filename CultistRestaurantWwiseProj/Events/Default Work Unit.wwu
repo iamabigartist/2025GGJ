@@ -137,7 +137,7 @@
 					<ChildrenList>
 						<Event Name="Play_RestaurantBase" ID="{221CDEFF-A412-4BE5-9C02-162D80422A88}">
 							<ChildrenList>
-								<Action Name="" ID="{B6C1EF7E-3AD5-4638-9AB2-031036E9BB4C}" ShortID="950687956">
+								<Action Name="" ID="{70AF20D8-D10F-4D56-9258-B22DFBBB96B7}" ShortID="1072024847">
 									<PropertyList>
 										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
@@ -169,7 +169,7 @@
 					<ChildrenList>
 						<Event Name="Play_Music" ID="{67C2563D-4632-4F0C-A3B4-E10943510306}">
 							<ChildrenList>
-								<Action Name="" ID="{42A29584-8D22-41B7-8116-2C29A3B0D743}" ShortID="764645941">
+								<Action Name="" ID="{7F4198F8-C1AB-4CF9-BCA1-BBE6DB30AEA7}" ShortID="420343537">
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Music" ID="{84A336CF-211E-4D01-BE9D-2EBFEF6B1243}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
