@@ -449,7 +449,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 684bd346865b8a24abc1d22266b7a7f7, type: 3}
   - {fileID: 21300000, guid: 35b07a7954e32c4439d068d8df33724e, type: 3}
   - {fileID: 21300000, guid: 8e8c9edf35ff17744b729a0feb3ede7d, type: 3}
-  - {fileID: 21300000, guid: 2d1a2af74f5c61846915a52039a164b7, type: 3}
+  - {fileID: 21300000, guid: ea7a982a32a50d14ba1d636649be1151, type: 3}
   audioEvents:
   - Play_Silence
   - Play_CS_00
@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -711,7 +711,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 90
+    m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -722,7 +722,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F00\u59CB\u6E38\u620F"
+  m_Text: "SKIP\u2192"
 --- !u!222 &292376396
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -880,13 +880,14 @@ GameObject:
   - component: {fileID: 391915707}
   - component: {fileID: 391915706}
   - component: {fileID: 391915705}
+  - component: {fileID: 391915708}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &391915704
 RectTransform:
   m_ObjectHideFlags: 0
@@ -904,8 +905,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000068665, y: -458}
-  m_SizeDelta: {x: 468.0031, y: 119.7029}
+  m_AnchoredPosition: {x: -847.52, y: -489.3678}
+  m_SizeDelta: {x: 186.95, y: 73.3882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &391915705
 MonoBehaviour:
@@ -951,10 +952,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 391915708}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -970,7 +971,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391915703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1001,6 +1002,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391915703}
   m_CullTransparentMesh: 1
+--- !u!114 &391915708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391915703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9ac5243a8b6274ea6419edb12c5657, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: DemoScene
 --- !u!1 &575725739
 GameObject:
   m_ObjectHideFlags: 0

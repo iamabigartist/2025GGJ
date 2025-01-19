@@ -19,6 +19,12 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 67cba381a045a9b4a8e814bd559532c1, type: 3}
     - {fileID: 21300000, guid: 48f5139aead28594399cfc2b1b147438, type: 3}
     - {fileID: 21300000, guid: fa0f837b6d7bb3546ab1511df610f2f2, type: 3}
+    - {fileID: 21300000, guid: aa659687496560547a59b1e674426e2a, type: 3}
+    - {fileID: 21300000, guid: 112c13170e33fca44ba05df821b12c4a, type: 3}
+    - {fileID: 21300000, guid: 41388cb183b245545965322e9745b090, type: 3}
+    - {fileID: 21300000, guid: c58911c69f5337b41a7ad2af0058ab90, type: 3}
+    - {fileID: 21300000, guid: a31b018c6036dd74b8c315bc9569e66d, type: 3}
+    - {fileID: 21300000, guid: 91037eb96eb958e4d88b7cd5131bb0aa, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -401,8 +407,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: ClueStateSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 3
     - Name: InteractCmdList
       Entry: 7
       Data: 25|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -506,8 +512,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: ClueStateSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 4
     - Name: InteractCmdList
       Entry: 7
       Data: 31|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -611,8 +617,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: ClueStateSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 5
     - Name: InteractCmdList
       Entry: 7
       Data: 37|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -735,8 +741,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: ClueStateSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 6
     - Name: InteractCmdList
       Entry: 7
       Data: 45|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -850,8 +856,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: ClueStateSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 7
     - Name: InteractCmdList
       Entry: 7
       Data: 52|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
@@ -955,8 +961,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: ClueStateSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 8
     - Name: InteractCmdList
       Entry: 7
       Data: 58|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
