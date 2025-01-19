@@ -26,26 +26,71 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: RecipeDesc
+      Entry: 7
+      Data: 0|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+    - Name: Text
+      Entry: 7
+      Data: 1|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp],[System.String, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 2|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 1
+      Data: "\u8717\u725B\uFF1A\u8717\u725B\u58F3\u5B8C\u6574\uFF0C\u65E0\u7834\u635F\u3002\u8717\u725B\u8089\u8D28\u9971\u6EE1\uFF0C\u8868\u9762\u5747\u5300\u8986\u76D6\u9EC4\u6CB9\uFF0C\u5448\u73B0\u81EA\u7136\u7684\u5149\u6CFD\u3002
+        \u9171\u6C41\uFF1A\u9171\u6C41\u6D53\u7A20\u987A\u6ED1\uFF0C\u5747\u5300\u8986\u76D6\u5728\u4E3B\u83DC\u8868\u9762\u3002\u989C\u8272\u81EA\u7136\u4E14\u6E29\u6DA6\uFF0C\u4E0D\u5E94\u8FC7\u7A00\u6216\u6EA2\u51FA\u76D8\u8FB9\uFF0C\u8C03\u5473\u4E0D\u5F97\u8FC7\u54B8"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: ClueList
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueDoc,
+      Data: 3|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueDoc,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 1|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
+      Data: 4|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
     - Name: StateDoc
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
+      Data: 5|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 3|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 6|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -63,27 +108,27 @@ MonoBehaviour:
       Data: 0
     - Name: InteractCmdList
       Entry: 7
-      Data: 4|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+      Data: 7|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
         Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 5|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 8|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 6|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 9|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 7|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 10|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 8|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 11|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -136,7 +181,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 9|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 12|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -160,7 +205,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 13|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -178,27 +223,27 @@ MonoBehaviour:
       Data: 1
     - Name: InteractCmdList
       Entry: 7
-      Data: 11|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+      Data: 14|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
         Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 12|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 15|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 13|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 16|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 14|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 17|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 12
       Data: 2
@@ -241,7 +286,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 15|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 18|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -265,7 +310,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 16|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 19|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -283,27 +328,27 @@ MonoBehaviour:
       Data: 2
     - Name: InteractCmdList
       Entry: 7
-      Data: 17|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
+      Data: 20|Unity.Plastic.Antlr3.Runtime.Misc.ListStack`1[[Projects.Demo0.Core.Cmd,
         Assembly-CSharp]], Unity.Plastic.Antlr3.Runtime
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 18|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 21|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 19|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 22|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 20|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 23|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 12
       Data: 2
@@ -346,7 +391,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 21|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 24|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -379,17 +424,17 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 22|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
+      Data: 25|Projects.Demo0.Core.DishClueDoc, Assembly-CSharp
     - Name: StateDoc
       Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
+      Data: 26|System.Collections.Generic.List`1[[Projects.Demo0.Core.DishClueStateDoc,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 24|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 27|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -407,27 +452,27 @@ MonoBehaviour:
       Data: 3
     - Name: InteractCmdList
       Entry: 7
-      Data: 25|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+      Data: 28|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 26|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 29|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 27|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 30|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 28|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 31|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 12
       Data: 2
@@ -470,7 +515,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 29|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 32|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -494,7 +539,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 30|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 33|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -512,27 +557,27 @@ MonoBehaviour:
       Data: 4
     - Name: InteractCmdList
       Entry: 7
-      Data: 31|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+      Data: 34|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 32|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 35|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 33|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 36|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 34|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 37|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 12
       Data: 2
@@ -575,7 +620,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 35|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 38|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -599,7 +644,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 36|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
+      Data: 39|Projects.Demo0.Core.DishClueStateDoc, Assembly-CSharp
     - Name: State
       Entry: 7
       Data: Projects.Demo0.Core.DishClueState, Assembly-CSharp
@@ -617,27 +662,27 @@ MonoBehaviour:
       Data: 4
     - Name: InteractCmdList
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
+      Data: 40|System.Collections.Generic.List`1[[Projects.Demo0.Core.Cmd, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 38|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
+      Data: 41|Projects.Demo0.Core.MessageBubbleCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
     - Name: Str
       Entry: 7
-      Data: 39|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 42|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 40|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 43|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 8
+      Data: 11
     - Name: 
       Entry: 12
       Data: 2
@@ -680,7 +725,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 41|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
+      Data: 44|Projects.Demo0.Core.PlayCmd, Assembly-CSharp
     - Name: DelaySec
       Entry: 4
       Data: 0
@@ -717,6 +762,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  RecipeDesc: "\u8717\u725B\uFF1A\u8717\u725B\u58F3\u5B8C\u6574\uFF0C\u65E0\u7834\u635F\u3002\u8717\u725B\u8089\u8D28\u9971\u6EE1\uFF0C\u8868\u9762\u5747\u5300\u8986\u76D6\u9EC4\u6CB9\uFF0C\u5448\u73B0\u81EA\u7136\u7684\u5149\u6CFD\u3002\r\n\u9171\u6C41\uFF1A\u9171\u6C41\u6D53\u7A20\u987A\u6ED1\uFF0C\u5747\u5300\u8986\u76D6\u5728\u4E3B\u83DC\u8868\u9762\u3002\u989C\u8272\u81EA\u7136\u4E14\u6E29\u6DA6\uFF0C\u4E0D\u5E94\u8FC7\u7A00\u6216\u6EA2\u51FA\u76D8\u8FB9\uFF0C\u8C03\u5473\u4E0D\u5F97\u8FC7\u54B8\r\n"
   Priority: 1
   DishContainerPrefab: {fileID: 7235421365721862438, guid: dad4de68373e36e40947ca8ccd144b8f, type: 3}

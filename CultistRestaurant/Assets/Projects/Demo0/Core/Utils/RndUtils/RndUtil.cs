@@ -4,7 +4,7 @@ using static UnityEngine.Mathf;
 using Random = UnityEngine.Random;
 namespace Projects.Demo0.Core.Utils.RndUtils
 {
-public static class RndSelect
+public static class RndUtil
 {
 	/// <summary>
 	///     给定数量的元素中随机选择其中n个，并且均匀分布
@@ -16,6 +16,16 @@ public static class RndSelect
 		for (var i = 0; i < selectCount; i++)
 		{
 			result.Add(Random.Range(i * partition, Min((i + 1) * partition, total)));
+		}
+		return result;
+	}
+
+	public static List<int> ExpandDuplicate(List<int> itemList, int expandToCount)
+	{
+		var result = new List<int>(expandToCount);
+		for (var i = 0; i < expandToCount - itemList.Count; i++)
+		{
+			result.Add(itemList[Random.Range(0, itemList.Count)]);
 		}
 		return result;
 	}

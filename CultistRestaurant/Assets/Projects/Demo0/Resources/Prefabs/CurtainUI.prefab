@@ -355,19 +355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f65f3b7a31749049bb016366bdd3db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes: []
   m_Anim: {fileID: 5539321723285057768}
   TitleText: {fileID: 5285660280960607582}
   EndDescText: {fileID: 7705523434479203310}
   m_ContinueBtn: {fileID: 4188383217037618995}
+  IsMoving: 0
 --- !u!1 &6095686295783233802
 GameObject:
   m_ObjectHideFlags: 0

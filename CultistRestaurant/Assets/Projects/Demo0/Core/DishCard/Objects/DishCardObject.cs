@@ -79,6 +79,7 @@ public class DishCardObject : MonoBehaviour
 		curDishCardObj.m_ClueObjList = new();
 		var cardNeedWrong = levelDoc.ClueWrongProb >= Random.value;
 		var cardNeedPolluted = levelDoc.CluePollutedProb >= Random.value;
+		Debug.Log($"生成菜品：{cardDoc.name}，需要错误线索：{cardNeedWrong}，需要污染线索：{cardNeedPolluted}");
 		foreach (var clueDoc in cardDoc.ClueList)
 		{
 			DishClueStateDoc curClueStateDoc;
@@ -86,7 +87,12 @@ public class DishCardObject : MonoBehaviour
 			bool clueNeedPolluted = cardNeedPolluted && levelDoc.CluePollutedRatio >= Random.value;
 			if (!clueNeedPolluted)
 			{
-				var clueStateList = clueDoc.StateDoc.Where(stateDoc => stateDoc.State.Correct != clueNeedWrong).ToList();
+				var clueStateList = clueDoc.StateDoc.Where(stateDoc => !stateDoc.State.Polluted).ToList();
+				// 如果存在符合要求的线索状态，则可以移除其他相反状态，否则也只能从相反状态中选择了
+				if (clueStateList.Exists(stateDoc => !stateDoc.State.Correct == clueNeedWrong))
+				{
+					clueStateList.RemoveAll(stateDoc => stateDoc.State.Correct == clueNeedWrong);
+				}
 				curClueStateDoc = clueStateList[Random.Range(0, clueStateList.Count)];
 			}
 			else
@@ -117,6 +123,7 @@ public class DishCardObject : MonoBehaviour
 		}
 		curDishCardObj.m_SpriteList = curDishCardObj.m_ClueObjList.Where(clue => clue.gameObject.GetComponent<SpriteRenderer>()).ToList();
 		curDishCardObj.gameObject.SetActive(false);
+		Debug.Log($"生成菜品完成：{cardDoc.name}，错误线索：{curDishCardObj.m_ClueObjList.Count(clue => clue.WrongClue)}，污染线索：{curDishCardObj.m_ClueObjList.Count(clue => clue.PollutedClue)}");
 		return curDishCardObj;
 	}
 
