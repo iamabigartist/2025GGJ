@@ -53,7 +53,7 @@ public class PPTController : SerializedMonoBehaviour
 			if (!string.IsNullOrEmpty(sceneToLoad))
 			{
 				SceneManager.LoadScene(sceneToLoad); // 加载指定场景
-				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.Level01);
+				AudioManager.Instance.StopPlayingID(_audioIds[maxClicks-1], 2000); // 先停止最后一个声音
 				AudioManager.Instance.PostEvent("Play_RestaurantBase", AudioManager.Instance.globalInitializer);
 			}
 
@@ -88,6 +88,11 @@ public class PPTController : SerializedMonoBehaviour
 			if (currentIndex > 1)
 			{
 				AudioManager.Instance.StopPlayingID(_audioIds[currentIndex-1], 2000); // 先停止上一个声音
+			}
+
+			if (currentIndex == maxClicks - 1)
+			{
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.Level01); // 最后一页的话，恢复音乐
 			}
 			
 			uint uuid = AudioManager.Instance.PostEvent(audioEvents[currentIndex], AudioManager.Instance.globalInitializer); // 再播放当前声音

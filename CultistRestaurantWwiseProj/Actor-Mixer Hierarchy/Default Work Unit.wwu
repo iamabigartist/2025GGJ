@@ -172,6 +172,9 @@
 											<Reference>
 												<Local>
 													<EffectSlot Name="" ID="{8DCEC437-3120-44A2-8452-B7DF416D48B7}" ShortID="425675609">
+														<PropertyList>
+															<Property Name="Render" Type="bool" Value="True"/>
+														</PropertyList>
 														<ReferenceList>
 															<Reference Name="Effect">
 																<Custom>
@@ -484,6 +487,7 @@
 												<Value>5</Value>
 											</ValueList>
 										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
@@ -743,6 +747,31 @@
 										</RandomSequenceContainer>
 									</ChildrenList>
 									<ObjectLists>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{DB642E36-48E3-4349-AEA7-6AA919D3C0DE}" ShortID="498841969">
+														<PropertyList>
+															<Property Name="Render" Type="bool" Value="True"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="Effect">
+																<Custom>
+																	<Effect Name="Parametric EQ (Custom)" ID="{65D2C20B-AF79-44D0-8F45-3F330003D563}" ShortID="825369433" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+																		<PropertyList>
+																			<Property Name="FrequencyBand3" Type="Real32" Value="3000"/>
+																			<Property Name="GainBand3" Type="Real32" Value="5"/>
+																			<Property Name="OnOffBand1" Type="bool" Value="False"/>
+																			<Property Name="OnOffBand2" Type="bool" Value="False"/>
+																		</PropertyList>
+																	</Effect>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
 										<ObjectList Name="Playlist">
 											<Reference>
 												<ObjectRef Name="BookAttack" ID="{18D8F0D5-FEE4-4F72-9F82-F3E636EDFED3}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
@@ -5423,7 +5452,13 @@
 										</ObjectList>
 									</ObjectLists>
 								</RandomSequenceContainer>
-								<BlendContainer Name="CS_00" ID="{950C9C95-EDDD-4388-A263-8C9764A80BA6}" ShortID="339026044">
+								<RandomSequenceContainer Name="CS_00" ID="{D0C8BC02-4E9D-4E56-9BB8-2AEB2DBA7587}" ShortID="491726075">
+									<PropertyList>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -5433,11 +5468,11 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="sandwich" ID="{8337C4CF-9706-4152-9615-42F6A0034DC5}" ShortID="541041542">
+										<Sound Name="Sandwich" ID="{8337C4CF-9706-4152-9615-42F6A0034DC5}" ShortID="541041542">
 											<PropertyList>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-5</Value>
+														<Value>-7</Value>
 													</ValueList>
 												</Property>
 											</PropertyList>
@@ -5446,11 +5481,16 @@
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
 												</Reference>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<AudioFileSource Name="sandwich" ID="{AD0BFFE4-84B7-4DB0-A4B6-2868F542DBF3}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.114502200773725"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>sandwich.wav</AudioFile>
 													<MediaIDList>
@@ -5462,179 +5502,7 @@
 												<ActiveSource Name="sandwich" ID="{AD0BFFE4-84B7-4DB0-A4B6-2868F542DBF3}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<RandomSequenceContainer Name="ChopRandom" ID="{20177597-7A83-4206-BC19-79E80ADF4142}" ShortID="130052713">
-											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64">
-													<ValueList>
-														<Value>-15</Value>
-													</ValueList>
-												</Property>
-												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{456ED18F-436B-4D43-8020-EEF64DC34B3D}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="0.5"/>
-																	<Property Name="Min" Type="Real64" Value="-1"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{3109FC1D-DE23-434C-9EAD-3CB5FB425846}" ShortID="790376184">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{C91639BA-5DE1-4A07-8996-597B2B89AB35}">
-															<Language>SFX</Language>
-															<AudioFile>Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="775846170"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{C91639BA-5DE1-4A07-8996-597B2B89AB35}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{B3951E32-282F-423E-9615-2345520DD70E}" ShortID="739972775">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{5E5C2194-9AE3-4C4A-9F38-5E844F64F64D}">
-															<Language>SFX</Language>
-															<AudioFile>Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="662850948"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{5E5C2194-9AE3-4C4A-9F38-5E844F64F64D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{A6D2758E-785D-4C2B-ADCA-2C2D85CD011E}" ShortID="998610191">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{EFB79265-B51C-4BB4-8123-D7C5ACD8958B}">
-															<Language>SFX</Language>
-															<AudioFile>Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="967284505"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{EFB79265-B51C-4BB4-8123-D7C5ACD8958B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{079B5CA6-9A6F-4FE7-9FFD-C3658BED7D36}" ShortID="137072254">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{B9BFC08C-1A08-46A3-A580-A9B68F973649}">
-															<Language>SFX</Language>
-															<AudioFile>Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="261880920"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{B9BFC08C-1A08-46A3-A580-A9B68F973649}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{AB698144-3A23-41E9-913F-0CC098417C00}" ShortID="284782256">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{8F0BCE9E-952A-49C7-9D07-8D85D4A46C3D}">
-															<Language>SFX</Language>
-															<AudioFile>Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="555280395"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{8F0BCE9E-952A-49C7-9D07-8D85D4A46C3D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<PositioningInfo>
-												<Panner Name="" ID="{DCB664F9-0AD6-4A4E-8391-0ABF62224250}">
-													<PropertyList>
-														<Property Name="PanX" Type="Real64" Value="55.0143266475645"/>
-														<Property Name="PanY" Type="Real64" Value="-100"/>
-													</PropertyList>
-												</Panner>
-											</PositioningInfo>
-										</RandomSequenceContainer>
-										<Sound Name="boiling" ID="{0F5B4623-D559-4F98-947B-6383212CE696}" ShortID="309026126">
-											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="MakeUpGain" Type="Real64">
-													<ValueList>
-														<Value>2</Value>
-													</ValueList>
-												</Property>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-											</PropertyList>
+										<BlendContainer Name="KitchenAmb" ID="{876F9D92-8DAA-49A6-8EE3-9A23F0267E01}" ShortID="772010620">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -5644,94 +5512,32 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{CD2E6210-3163-40C3-A049-B8B68C2FA965}">
+												<RandomSequenceContainer Name="ChopRandom" ID="{20177597-7A83-4206-BC19-79E80ADF4142}" ShortID="130052713">
 													<PropertyList>
-														<Property Name="CrossfadeDuration" Type="Real64" Value="2000"/>
-														<Property Name="LoopBegin" Type="Real64" Value="1.17284432733302"/>
-														<Property Name="LoopEnd" Type="Real64" Value="17.890386931549"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>household, kitchen, cooking, water, rice, boil, pan.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="379999489"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<PositioningInfo>
-												<Panner Name="" ID="{960D3F47-C856-4B9A-A578-8B55756FD2BB}">
-													<PropertyList>
-														<Property Name="PanX" Type="Real64" Value="87.2970391595033"/>
-														<Property Name="PanY" Type="Real64" Value="-0.202634245187436"/>
-													</PropertyList>
-												</Panner>
-											</PositioningInfo>
-											<ActiveSourceList>
-												<ActiveSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{CD2E6210-3163-40C3-A049-B8B68C2FA965}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<BlendContainer Name="Sizzle" ID="{18A5EA64-1410-4005-A78A-D677D00BBF2D}" ShortID="6311805">
-											<PropertyList>
-												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{47E11452-303F-402E-8F87-3A6C82F6C366}" ShortID="350538681">
-													<PropertyList>
-														<Property Name="IsStreamingEnabled" Type="bool">
-															<ValueList>
-																<Value>True</Value>
-															</ValueList>
-														</Property>
 														<Property Name="MakeUpGain" Type="Real64">
 															<ValueList>
-																<Value>-10</Value>
+																<Value>-15</Value>
 															</ValueList>
 														</Property>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{1BF14EBD-0224-4960-B3D3-B2A86EBBC8EB}">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.0279230906530841"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="8.30188316033822"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.074461575074891"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="45429046"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{1BF14EBD-0224-4960-B3D3-B2A86EBBC8EB}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{C66302FE-B4F0-4111-BEB9-64AC22B7866B}" ShortID="871868555">
-													<PropertyList>
-														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-														<Property Name="IsStreamingEnabled" Type="bool">
-															<ValueList>
-																<Value>True</Value>
-															</ValueList>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{456ED18F-436B-4D43-8020-EEF64DC34B3D}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.5"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
 														</Property>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
@@ -5743,44 +5549,611 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{D91B367B-ECE0-45D8-85D1-2963FE7F56F9}">
-															<PropertyList>
-																<Property Name="CrossfadeDuration" Type="Real64" Value="1000"/>
-																<Property Name="LoopBegin" Type="Real64" Value="0.538133585978209"/>
-																<Property Name="LoopEnd" Type="Real64" Value="4.46660350544766"/>
-																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>household, kitchen, cooking, steak, fry, sizzle 1.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="229983716"/>
-															</MediaIDList>
-														</AudioFileSource>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{3109FC1D-DE23-434C-9EAD-3CB5FB425846}" ShortID="790376184">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{C91639BA-5DE1-4A07-8996-597B2B89AB35}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="775846170"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{C91639BA-5DE1-4A07-8996-597B2B89AB35}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{B3951E32-282F-423E-9615-2345520DD70E}" ShortID="739972775">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{5E5C2194-9AE3-4C4A-9F38-5E844F64F64D}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="662850948"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{5E5C2194-9AE3-4C4A-9F38-5E844F64F64D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{A6D2758E-785D-4C2B-ADCA-2C2D85CD011E}" ShortID="998610191">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{EFB79265-B51C-4BB4-8123-D7C5ACD8958B}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="967284505"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{EFB79265-B51C-4BB4-8123-D7C5ACD8958B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{079B5CA6-9A6F-4FE7-9FFD-C3658BED7D36}" ShortID="137072254">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{B9BFC08C-1A08-46A3-A580-A9B68F973649}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="261880920"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{B9BFC08C-1A08-46A3-A580-A9B68F973649}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{AB698144-3A23-41E9-913F-0CC098417C00}" ShortID="284782256">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{8F0BCE9E-952A-49C7-9D07-8D85D4A46C3D}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="555280395"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{8F0BCE9E-952A-49C7-9D07-8D85D4A46C3D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
 													</ChildrenList>
 													<PositioningInfo>
-														<Panner Name="" ID="{AA274FCE-4733-45D9-9077-FDDAEA65B9D7}">
+														<Panner Name="" ID="{DCB664F9-0AD6-4A4E-8391-0ABF62224250}">
 															<PropertyList>
-																<Property Name="PanX" Type="Real64" Value="-100"/>
+																<Property Name="PanX" Type="Real64" Value="55.0143266475645"/>
+																<Property Name="PanY" Type="Real64" Value="-100"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+												</RandomSequenceContainer>
+												<BlendContainer Name="Sizzle" ID="{18A5EA64-1410-4005-A78A-D677D00BBF2D}" ShortID="6311805">
+													<PropertyList>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{47E11452-303F-402E-8F87-3A6C82F6C366}" ShortID="350538681">
+															<PropertyList>
+																<Property Name="IsStreamingEnabled" Type="bool">
+																	<ValueList>
+																		<Value>True</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="MakeUpGain" Type="Real64">
+																	<ValueList>
+																		<Value>-10</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{1BF14EBD-0224-4960-B3D3-B2A86EBBC8EB}">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.0279230906530841"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="8.30188316033822"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.074461575074891"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="45429046"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{1BF14EBD-0224-4960-B3D3-B2A86EBBC8EB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{C66302FE-B4F0-4111-BEB9-64AC22B7866B}" ShortID="871868555">
+															<PropertyList>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="IsStreamingEnabled" Type="bool">
+																	<ValueList>
+																		<Value>True</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{D91B367B-ECE0-45D8-85D1-2963FE7F56F9}">
+																	<PropertyList>
+																		<Property Name="CrossfadeDuration" Type="Real64" Value="1000"/>
+																		<Property Name="LoopBegin" Type="Real64" Value="0.538133585978209"/>
+																		<Property Name="LoopEnd" Type="Real64" Value="4.46660350544766"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>household, kitchen, cooking, steak, fry, sizzle 1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="229983716"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<PositioningInfo>
+																<Panner Name="" ID="{AA274FCE-4733-45D9-9077-FDDAEA65B9D7}">
+																	<PropertyList>
+																		<Property Name="PanX" Type="Real64" Value="-100"/>
+																		<Property Name="PanY" Type="Real64" Value="100"/>
+																	</PropertyList>
+																</Panner>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{D91B367B-ECE0-45D8-85D1-2963FE7F56F9}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{64020A44-A95F-4907-9988-EF965FF1C5BE}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="-79.847182425979"/>
 																<Property Name="PanY" Type="Real64" Value="100"/>
 															</PropertyList>
 														</Panner>
 													</PositioningInfo>
+												</BlendContainer>
+												<Sound Name="Boiling" ID="{0F5B4623-D559-4F98-947B-6383212CE696}" ShortID="309026126">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="IsStreamingEnabled" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{CD2E6210-3163-40C3-A049-B8B68C2FA965}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="2000"/>
+																<Property Name="LoopBegin" Type="Real64" Value="1.17284432733302"/>
+																<Property Name="LoopEnd" Type="Real64" Value="17.890386931549"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>household, kitchen, cooking, water, rice, boil, pan.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="379999489"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{960D3F47-C856-4B9A-A578-8B55756FD2BB}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="87.2970391595033"/>
+																<Property Name="PanY" Type="Real64" Value="-0.202634245187436"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
 													<ActiveSourceList>
-														<ActiveSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{D91B367B-ECE0-45D8-85D1-2963FE7F56F9}" Platform="Linked"/>
+														<ActiveSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{CD2E6210-3163-40C3-A049-B8B68C2FA965}" Platform="Linked"/>
 													</ActiveSourceList>
 												</Sound>
 											</ChildrenList>
-											<PositioningInfo>
-												<Panner Name="" ID="{64020A44-A95F-4907-9988-EF965FF1C5BE}">
-													<PropertyList>
-														<Property Name="PanX" Type="Real64" Value="-79.847182425979"/>
-														<Property Name="PanY" Type="Real64" Value="100"/>
-													</PropertyList>
-												</Panner>
-											</PositioningInfo>
 										</BlendContainer>
 									</ChildrenList>
-								</BlendContainer>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="KitchenAmb" ID="{876F9D92-8DAA-49A6-8EE3-9A23F0267E01}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+											</Reference>
+											<Reference>
+												<ObjectRef Name="Sandwich" ID="{8337C4CF-9706-4152-9615-42F6A0034DC5}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="CS_03" ID="{17635B79-BCBD-468A-BE8F-A193B24D0213}" ShortID="270177220">
+									<PropertyList>
+										<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="KitchenAmb" ID="{A59591A2-ED15-4B71-80ED-3E9EE0141FE4}" ShortID="204934779">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="ChopRandom" ID="{B183319E-C3C6-45C1-8A28-5EA97EC926FC}" ShortID="434197132">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-15</Value>
+															</ValueList>
+														</Property>
+														<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+															<ModifierList>
+																<ModifierInfo>
+																	<Modifier Name="" ID="{AB1FD616-09AC-4594-933D-951D198C4DCE}">
+																		<PropertyList>
+																			<Property Name="Enabled" Type="bool" Value="True"/>
+																			<Property Name="Max" Type="Real64" Value="0.5"/>
+																			<Property Name="Min" Type="Real64" Value="-1"/>
+																		</PropertyList>
+																	</Modifier>
+																</ModifierInfo>
+															</ModifierList>
+														</Property>
+														<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{D9D87E8E-8315-4629-927F-9636FD280342}" ShortID="597824687">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{04E046BC-7D09-4612-B2C8-8381A2F8159D}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="775846170"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{04E046BC-7D09-4612-B2C8-8381A2F8159D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{EA675786-03EB-415F-9052-E969940000F9}" ShortID="99180980">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{8940B712-89A7-45D9-B18F-6FCC2D8BF28A}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="662850948"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{8940B712-89A7-45D9-B18F-6FCC2D8BF28A}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{16AA2253-0C98-4C37-AFB2-B07622F156D5}" ShortID="580854813">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{E106671A-8339-4E83-97AB-A507128A841E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="967284505"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{E106671A-8339-4E83-97AB-A507128A841E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{EACAE756-3805-4AED-9D28-DF9D68E58421}" ShortID="1029842729">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{88BC6DA3-0E90-4B00-B577-7A1CAFE8EF26}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="261880920"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{88BC6DA3-0E90-4B00-B577-7A1CAFE8EF26}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{368C0D69-B972-4D07-A063-E52B56CBAF54}" ShortID="121057711">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{A476711E-5255-4832-A2C4-1FEA9F32EBB6}">
+																	<Language>SFX</Language>
+																	<AudioFile>Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="555280395"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{A476711E-5255-4832-A2C4-1FEA9F32EBB6}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{39F9C56A-15D8-4B3A-9FB8-950ABE3EEE11}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="55.0143266475645"/>
+																<Property Name="PanY" Type="Real64" Value="-100"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+												</RandomSequenceContainer>
+												<BlendContainer Name="Sizzle" ID="{EDD06F24-3BAC-4D80-AD64-E3CEA3EDDA31}" ShortID="856075272">
+													<PropertyList>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{F4078557-DF52-4418-ABFF-5F0737267966}" ShortID="818482139">
+															<PropertyList>
+																<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+																<Property Name="IsStreamingEnabled" Type="bool">
+																	<ValueList>
+																		<Value>True</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{EF24F1F7-D4B5-481C-98F2-B0BA8741304F}">
+																	<PropertyList>
+																		<Property Name="CrossfadeDuration" Type="Real64" Value="1000"/>
+																		<Property Name="LoopBegin" Type="Real64" Value="0.538133585978209"/>
+																		<Property Name="LoopEnd" Type="Real64" Value="4.46660350544766"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>household, kitchen, cooking, steak, fry, sizzle 1.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="229983716"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<PositioningInfo>
+																<Panner Name="" ID="{6A2C49AC-1A6F-449B-8648-A75B2145F765}">
+																	<PropertyList>
+																		<Property Name="PanX" Type="Real64" Value="-100"/>
+																		<Property Name="PanY" Type="Real64" Value="100"/>
+																	</PropertyList>
+																</Panner>
+															</PositioningInfo>
+															<ActiveSourceList>
+																<ActiveSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{EF24F1F7-D4B5-481C-98F2-B0BA8741304F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{8E8511BF-C314-48D7-82A7-3A3138BFA82B}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="-79.847182425979"/>
+																<Property Name="PanY" Type="Real64" Value="100"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+												</BlendContainer>
+												<Sound Name="Boiling" ID="{E9DE5564-8F00-44DC-AED2-93EDB8D743E0}" ShortID="228391237">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="IsStreamingEnabled" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>2</Value>
+															</ValueList>
+														</Property>
+														<Property Name="OverridePositioning" Type="bool" Value="True"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{E210D3B8-0EE6-4D70-B4E5-3EC37E8A1520}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="2000"/>
+																<Property Name="LoopBegin" Type="Real64" Value="1.17284432733302"/>
+																<Property Name="LoopEnd" Type="Real64" Value="17.890386931549"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>household, kitchen, cooking, water, rice, boil, pan.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="379999489"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{E1DB86A9-E180-46E0-85E0-E041E3E23980}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="87.2970391595033"/>
+																<Property Name="PanY" Type="Real64" Value="-0.202634245187436"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{E210D3B8-0EE6-4D70-B4E5-3EC37E8A1520}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Playlist">
+											<Reference>
+												<ObjectRef Name="KitchenAmb" ID="{A59591A2-ED15-4B71-80ED-3E9EE0141FE4}" WorkUnitID="{45D3E79C-68C7-4C66-BC01-0C0D72434AE9}"/>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>
