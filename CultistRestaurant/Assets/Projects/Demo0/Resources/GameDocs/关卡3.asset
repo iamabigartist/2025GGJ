@@ -24,7 +24,7 @@ MonoBehaviour:
   DishCardSelectRatio: 1
   GenDishCardTotalCount: 12
   ClueWrongProb: 0.35
-  CluePollutedProb: 0.65
+  CluePollutedProb: 0.75
   ClueWrongRatio: 0.4
   CluePollutedRatio: 0.85
   PolluteSceneShowSkin: 60
