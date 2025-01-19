@@ -595,6 +595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559186024}
+  - component: {fileID: 1559186025}
   m_Layer: 0
   m_Name: ArtTest
   m_TagString: Untagged
@@ -611,12 +612,26 @@ Transform:
   m_GameObject: {fileID: 1559186023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 436.8983, y: 279.97113, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559186025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559186023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92289188ba0acd34d8b2ccc2d5207448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spritePath: Assets/Projects/Demo0/Resources/Art/Sprites/3_cakeDish
+  positionFilePath: Assets/Projects/Demo0/Resources/Art/Sprites/position.txt
 --- !u!1001 &3545892426447926121
 PrefabInstance:
   m_ObjectHideFlags: 0
