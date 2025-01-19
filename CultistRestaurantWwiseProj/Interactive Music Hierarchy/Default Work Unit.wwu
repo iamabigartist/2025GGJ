@@ -1360,7 +1360,7 @@
 								<StateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
 								<CustomState Name="" ID="{D14A9A6F-4ED1-4421-B51B-B014168F9BF8}" ShortID="309380740">
 									<PropertyList>
-										<Property Name="Lowpass" Type="int16" Value="65"/>
+										<Property Name="Lowpass" Type="int16" Value="50"/>
 									</PropertyList>
 								</CustomState>
 							</CustomState>
