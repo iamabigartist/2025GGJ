@@ -16,6 +16,7 @@
 						<State Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
 						<State Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 						<State Name="IntroView" ID="{99AD2C5C-F404-4EB0-8FA3-332F1B3F0DA4}"/>
+						<State Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

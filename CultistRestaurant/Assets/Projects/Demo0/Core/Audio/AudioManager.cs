@@ -35,6 +35,7 @@ namespace Audio
                 public const string StartView = "StartView";
                 public const string IntroView = "IntroView";
                 public const string FinishView = "FinishView";
+                public const string FinishViewBad = "FinishView_Bad";
                 public const string Level01 = "Level01";
                 public const string Level02 = "Level02";
                 public const string Level03 = "Level03";

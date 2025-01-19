@@ -6,6 +6,11 @@
 				<MusicSwitchContainer Name="Music" ID="{84A336CF-211E-4D01-BE9D-2EBFEF6B1243}" ShortID="816059930">
 					<PropertyList>
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
 						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
@@ -498,7 +503,8 @@
 																				<Property Name="BeginTrimOffset" Type="Real64" Value="3000"/>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="18409.0909090909"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
-																				<Property Name="FadeOutDuration" Type="Real64" Value="4049.80183738951"/>
+																				<Property Name="FadeOutDuration" Type="Real64" Value="4271.70878738345"/>
+																				<Property Name="FadeOutShape" Type="int16" Value="2"/>
 																				<Property Name="PlayAt" Type="Real64" Value="-3000"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="Day3_outro" ID="{E9AEC3DA-5577-4D49-BB4C-8F7502F934E6}"/>
@@ -1328,6 +1334,97 @@
 								</MusicSegment>
 							</ChildrenList>
 						</MusicPlaylistContainer>
+						<MusicSegment Name="Day3_Bad" ID="{C4259608-7DCC-43C1-82C0-3F1942DE627A}" ShortID="402675402">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="4363.64583333333"/>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="BadEnd - Stereo Out" ID="{E7C2BA39-15E7-44A3-9DB4-66C32DE85A60}" ShortID="453679403">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{43F2B613-16FD-4890-9024-3784D318451B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BadEnd - Stereo Out" ID="{D9CEC0BE-CF3C-400D-9AEE-E513E509F7C3}">
+											<Language>SFX</Language>
+											<AudioFile>BadEnd - Stereo Out.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="984100785"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<Reference>
+												<Local>
+													<MusicTrackSequence Name="" ID="{9B526D77-93C2-4488-9A9A-D292543FE769}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<Reference>
+																	<Local>
+																		<MusicClip Name="BadEnd - Stereo Out" ID="{15FC30BF-3DC3-4436-9185-35ADC1358A68}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="4363.64583333333"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="BadEnd - Stereo Out" ID="{D9CEC0BE-CF3C-400D-9AEE-E513E509F7C3}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<Reference>
+										<Local>
+											<MusicCue Name="Entry Cue" ID="{871AE7AB-D316-41B4-89DC-D6FA7E470621}"/>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<MusicCue Name="Exit Cue" ID="{FCE0820C-00AD-4B68-8AC2-3827C3714695}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="4363.64583333333"/>
+												</PropertyList>
+											</MusicCue>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
@@ -1336,6 +1433,10 @@
 							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
+							<CustomState>
+								<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+								<CustomState Name="" ID="{E4E40802-AF7F-403B-B6DD-AA953C37A1DA}" ShortID="263330466"/>
+							</CustomState>
 							<CustomState>
 								<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 								<CustomState Name="" ID="{2B38CBEB-D132-4884-B08D-1F64D06C3411}" ShortID="110707271"/>
@@ -1501,6 +1602,24 @@
 											<ObjectList Name="EntryPath">
 												<Reference>
 													<ObjectRef Name="IntroView" ID="{99AD2C5C-F404-4EB0-8FA3-332F1B3F0DA4}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
+												</Reference>
+											</ObjectList>
+										</ObjectLists>
+									</MultiSwitchEntry>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MultiSwitchEntry Name="" ID="{87485353-2AEF-4762-A8E1-F5E1B7007ADB}">
+										<ReferenceList>
+											<Reference Name="AudioNode">
+												<ObjectRef Name="Day3_Bad" ID="{C4259608-7DCC-43C1-82C0-3F1942DE627A}" WorkUnitID="{27809816-EBF0-4FFE-A079-AC3E26ECC57E}"/>
+											</Reference>
+										</ReferenceList>
+										<ObjectLists>
+											<ObjectList Name="EntryPath">
+												<Reference>
+													<ObjectRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}" WorkUnitID="{A572D3B6-0D8B-4A8D-BF8F-CF501E50EB05}"/>
 												</Reference>
 											</ObjectList>
 										</ObjectLists>

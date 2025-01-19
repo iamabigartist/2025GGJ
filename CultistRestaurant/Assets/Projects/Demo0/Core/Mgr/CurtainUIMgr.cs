@@ -52,14 +52,12 @@ public class CurtainUIMgr : MonoSingleton<CurtainUIMgr>
 	{
 		TitleText.text = $" {count + 1}{GameDocMgr.Instance.m_GameGlobalConfig.DayEndStr}";
 		EndDescText.text = "";
-		AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.BlackTransition);
 		CurtainIn();
 	}
 	public void ShowStoryEnd(EndTextDesc desc)
 	{
 		TitleText.text = desc.m_Title.ToString();
 		EndDescText.text = desc.m_Desc.ToString();
-		AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.FinishView);
 		CurtainIn();
 	}
 	public void ShowDeadEnd() => ShowStoryEnd(GameDocMgr.Instance.m_GameGlobalConfig.DeadEnd_Desc);

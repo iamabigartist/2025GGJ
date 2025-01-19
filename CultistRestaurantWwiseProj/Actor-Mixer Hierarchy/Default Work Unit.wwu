@@ -31,6 +31,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<ActorMixer Name="SFX" ID="{3E8716F7-A3B7-4496-8F76-F81AC4C1EE28}" ShortID="180015725">
+					<PropertyList>
+						<Property Name="MakeUpGain" Type="Real64">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -409,6 +416,10 @@
 										</StateGroupList>
 										<CustomStateList>
 											<CustomState>
+												<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+												<CustomState Name="" ID="{DB7EEB63-CF8A-4D7F-8F02-7496D75C107D}" ShortID="579161078"/>
+											</CustomState>
+											<CustomState>
 												<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 												<CustomState Name="" ID="{F5D04E2D-1C64-4095-9A42-CB7095B0FAC9}" ShortID="93509829">
 													<PropertyList>
@@ -491,6 +502,10 @@
 										</StateGroupList>
 										<CustomStateList>
 											<CustomState>
+												<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+												<CustomState Name="" ID="{DA5BAA5C-01B5-445B-90EA-5F8C71174F39}" ShortID="829371865"/>
+											</CustomState>
+											<CustomState>
 												<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 												<CustomState Name="" ID="{8AFA678A-51C5-47A5-8633-8FBA42B73209}" ShortID="631593861">
 													<PropertyList>
@@ -556,6 +571,10 @@
 									</StateGroupInfo>
 								</StateGroupList>
 								<CustomStateList>
+									<CustomState>
+										<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+										<CustomState Name="" ID="{DD227B50-478F-45B8-8E0A-C680063EB308}" ShortID="31853989"/>
+									</CustomState>
 									<CustomState>
 										<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 										<CustomState Name="" ID="{F393B244-B708-4E00-9C04-5679328F0323}" ShortID="185676422"/>
@@ -1486,6 +1505,10 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
+										<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+										<CustomState Name="" ID="{282F354A-E0FF-4592-BD0F-7950D97ACA99}" ShortID="951008679"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 										<CustomState Name="" ID="{B4890B84-4447-45E4-8B0B-EDEBCF9D5F73}" ShortID="186266736"/>
 									</CustomState>
@@ -2014,6 +2037,10 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
+										<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+										<CustomState Name="" ID="{3943E615-89BA-4C2C-9F74-445D73DFE85D}" ShortID="406332308"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 										<CustomState Name="" ID="{4552D2FE-FEC7-4150-B125-6EB83D135935}" ShortID="91703453"/>
 									</CustomState>
@@ -2060,6 +2087,11 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="UI_ClickJuicyStrong" ID="{990B2474-5172-4197-B459-BBA0812F54C1}" ShortID="425036434">
 									<PropertyList>
+										<Property Name="MakeUpGain" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
@@ -3118,6 +3150,10 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
+										<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+										<CustomState Name="" ID="{5E479C54-5E20-4196-BF6B-B0DDB69E6FE0}" ShortID="914890868"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 										<CustomState Name="" ID="{635729D0-92DD-42E6-94CB-7A7DE5159123}" ShortID="698341044"/>
 									</CustomState>
@@ -3153,6 +3189,13 @@
 							</StateInfo>
 						</ActorMixer>
 						<ActorMixer Name="VO" ID="{AB1E99A1-3E1B-4D7B-A78E-83CE7DFC01B1}" ShortID="622300611">
+							<PropertyList>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -6338,6 +6381,10 @@
 								</StateGroupList>
 								<CustomStateList>
 									<CustomState>
+										<StateRef Name="FinishView_Bad" ID="{895EC5D5-3C17-45BA-B97A-1617BC622FB3}"/>
+										<CustomState Name="" ID="{90070DB6-EF64-49C3-8F3E-2642B4766596}" ShortID="656968862"/>
+									</CustomState>
+									<CustomState>
 										<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
 										<CustomState Name="" ID="{4333A330-69A3-447F-BD84-2E1154A32228}" ShortID="194885598"/>
 									</CustomState>
@@ -6357,7 +6404,7 @@
 										<StateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
 										<CustomState Name="" ID="{B0522AA9-2B36-4590-B800-DB0EB47A8268}" ShortID="21937590">
 											<PropertyList>
-												<Property Name="Lowpass" Type="int16" Value="20"/>
+												<Property Name="Lowpass" Type="int16" Value="15"/>
 											</PropertyList>
 										</CustomState>
 									</CustomState>

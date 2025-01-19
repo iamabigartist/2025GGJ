@@ -122,6 +122,7 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 			yield return StartCoroutine(LevelCoroutine(levelDocList[i]));
 			if (PlayerDead) { break; }
 			curtainUIMgr.ShowDayEnd(i);
+			AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.BlackTransition);
 			ContinueSignal = false;
 			yield return new WaitUntil(() => ContinueSignal);
 		}
@@ -129,12 +130,24 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 		Debug.Log("Handle Story End");
 		yield return new WaitUntil(() => !curtainUIMgr.IsMoving);
 		// 处理结局
-		if (PlayerDead) { curtainUIMgr.ShowDeadEnd(); }
+		if (PlayerDead)
+		{
+			curtainUIMgr.ShowDeadEnd();
+			AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.BlackTransition);
+		}
 		else
 		{
 			if ((float)WorldPollutedNum / GetCardTotalNum <=
-				gameConfig.GoodEnd_AcceptPolluteRatioRequired) { curtainUIMgr.ShowGoodEnd(); }
-			else { curtainUIMgr.ShowBadEnd(); }
+			    gameConfig.GoodEnd_AcceptPolluteRatioRequired)
+			{
+				curtainUIMgr.ShowGoodEnd();
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.FinishView);
+			}
+			else
+			{
+				curtainUIMgr.ShowBadEnd();
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.FinishViewBad);
+			}
 		}
 
 		Debug.Log("Wait Continue Story End");
