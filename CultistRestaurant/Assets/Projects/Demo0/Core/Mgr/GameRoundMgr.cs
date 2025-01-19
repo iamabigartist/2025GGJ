@@ -33,7 +33,9 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 	public DishCardObject CurrentCard;
 	void OnServeBtnClicked(bool accept)
 	{
+		playerUIMgr.SetServeBtnInteractive(false);
 		if (CurrentCard) { CurrentCard.OffTable(accept); }
+		else { Debug.LogError("CurrentCard is null"); }
 	}
 
 	GameGlobalConfig gameConfig;
@@ -74,7 +76,6 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 			};
 			card.OnServeOut += tuple =>
 			{
-				playerUIMgr.SetServeBtnInteractive(false);
 				var (hpChange, acceptPolluted) = tuple;
 				if (acceptPolluted) { WorldPollutedNum++; }
 				PlayerHP += hpChange;
@@ -90,6 +91,7 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 
 	public IEnumerator GameRoundCoroutine()
 	{
+		Debug.Log("Game Start");
 		// 关卡循环
 		for (int i = 0; i < levelDocList.Count; i++)
 		{
@@ -99,6 +101,9 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 			ContinueSignal = false;
 			yield return new WaitUntil(() => ContinueSignal);
 		}
+
+		Debug.Log("Handle Story End");
+		yield return new WaitUntil(() => !curtainUIMgr.IsMoving);
 		// 处理结局
 		if (PlayerDead) { curtainUIMgr.ShowDeadEnd(); }
 		else
@@ -107,10 +112,14 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 				gameConfig.GoodEnd_AcceptPolluteRatioRequired) { curtainUIMgr.ShowGoodEnd(); }
 			else { curtainUIMgr.ShowBadEnd(); }
 		}
+
+		Debug.Log("Wait Continue Story End");
 		ContinueSignal = false;
 		yield return new WaitUntil(() => ContinueSignal);
+
+		Debug.Log("Game Over");
 		ReturnToIntroScene();
 	}
-	public static void ReturnToIntroScene() => SceneManager.LoadScene("IntroScene", LoadSceneMode.Single);
+	public static void ReturnToIntroScene() => SceneManager.LoadScene("IntroScene");
 }
 }

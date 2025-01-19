@@ -291,4 +291,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 151a0f47734758848b7ff4248469882e, type: 2}
   - {fileID: 11400000, guid: 07e233bc6dbe23b4e96b9975ac9af89e, type: 2}
   GoodEnd_AcceptPolluteRatioRequired: 0.5
-  DefaultDishSprite: {fileID: 21300000, guid: 09c813af986755a44af7f5762c1fbce5, type: 3}
+  DefaultDishSprite: {fileID: 21300000, guid: 5cf554d14ed06bd409822a3ffa1ffe28, type: 3}

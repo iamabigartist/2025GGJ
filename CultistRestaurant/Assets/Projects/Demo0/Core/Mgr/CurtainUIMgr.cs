@@ -3,6 +3,7 @@ using System.Collections;
 using Projects.Demo0.Core.GameGlobal;
 using Projects.Demo0.Core.Utils;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 namespace Projects.Demo0.Core.Mgr
 {
@@ -13,6 +14,7 @@ public class CurtainUIMgr : MonoSingleton<CurtainUIMgr>
 	public Text EndDescText;
 	public Button m_ContinueBtn;
 	public event Action OnContinueBtnClicked;
+	[FormerlySerializedAs("IsCurtainMoving")] public bool IsMoving = false;
 	void Start()
 	{
 		m_ContinueBtn.onClick.AddListener(CurtainOff);
@@ -20,18 +22,21 @@ public class CurtainUIMgr : MonoSingleton<CurtainUIMgr>
 	}
 	void CurtainOff()
 	{
+		IsMoving = true;
 		OnContinueBtnClicked?.Invoke();
 		m_ContinueBtn.gameObject.SetActive(false);
 		m_Anim.Play("CurtainOut");
-		StartCoroutine(CurtainOff_Impl());
+		StartCoroutine(CurtainOffCoroutine());
 	}
-	IEnumerator CurtainOff_Impl()
+	IEnumerator CurtainOffCoroutine()
 	{
 		yield return new WaitUntil(() => !m_Anim.isPlaying);
 		gameObject.SetActive(false);
+		IsMoving = false;
 	}
 	public void CurtainIn()
 	{
+		IsMoving = true;
 		gameObject.SetActive(true);
 		m_Anim.Play("CurtainIn");
 		StartCoroutine(CurtainIn_Impl());
@@ -40,6 +45,7 @@ public class CurtainUIMgr : MonoSingleton<CurtainUIMgr>
 	{
 		yield return new WaitUntil(() => !m_Anim.isPlaying);
 		m_ContinueBtn.gameObject.SetActive(true);
+		IsMoving = false;
 	}
 	public void ShowDayEnd(int count)
 	{
