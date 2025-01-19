@@ -863,10 +863,18 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="UI_CommonButton" ID="{4C2ACAE1-6741-4715-AAEC-1A6B0478F82B}" ShortID="392463814">
 									<PropertyList>
-										<Property Name="Highpass" Type="int16">
-											<ValueList>
-												<Value>40</Value>
-											</ValueList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{0F41497B-072B-45D1-963A-6990DFB37239}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="100"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 									</PropertyList>
@@ -879,7 +887,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="App Menu Button 6" ID="{36B3F811-810C-46AD-AB31-FCE9F0A31F35}" ShortID="984918413">
+										<Sound Name="Click" ID="{A3881E3B-7329-4B4A-A22E-4564E48F9570}" ShortID="1035753400">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
@@ -889,86 +897,20 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="App Menu Button 6" ID="{290AAD4A-8C00-42D6-AEDF-47067EEB02F9}">
+												<AudioFileSource Name="Click" ID="{CDB4A9BA-FC3D-43F4-990C-3B578282B37B}">
 													<Language>SFX</Language>
-													<AudioFile>App Menu Button 6.wav</AudioFile>
+													<AudioFile>Click.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="681150199"/>
+														<MediaID ID="893078027"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="App Menu Button 6" ID="{290AAD4A-8C00-42D6-AEDF-47067EEB02F9}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="App Menu Button 6v2" ID="{A788E4C1-1EC4-427F-B5B7-5F36608D153C}" ShortID="398962800">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="App Menu Button 6v2" ID="{FB0E9696-3835-4597-BDC8-702848FB909A}">
-													<Language>SFX</Language>
-													<AudioFile>App Menu Button 6v2.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="877447198"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="App Menu Button 6v2" ID="{FB0E9696-3835-4597-BDC8-702848FB909A}" Platform="Linked"/>
+												<ActiveSource Name="Click" ID="{CDB4A9BA-FC3D-43F4-990C-3B578282B37B}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
-								<Sound Name="UI_CommonButton_Backward" ID="{A8BD8142-C42F-4A1A-A107-EA919FBB0289}" ShortID="613967003">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Modern UI Sound" ID="{6FF80737-50EE-478A-A911-6FBD13C6164D}">
-											<Language>SFX</Language>
-											<AudioFile>Modern UI Sound.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="330428545"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Modern UI Sound" ID="{6FF80737-50EE-478A-A911-6FBD13C6164D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="UI_CommonButton_Forward" ID="{3C4771D0-D5B3-4407-BC6E-95E4683294EF}" ShortID="215028149">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Cool Interface Sound" ID="{7D837B30-BF57-4EA8-B3A3-D0C87CE15E0B}">
-											<Language>SFX</Language>
-											<AudioFile>Cool Interface Sound.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="649091450"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Cool Interface Sound" ID="{7D837B30-BF57-4EA8-B3A3-D0C87CE15E0B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<Sound Name="UI_Trash" ID="{66DF11AC-5D17-449B-8645-7D2BE2ADB477}" ShortID="1042494172">
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -5215,7 +5157,11 @@
 										<CustomStateList>
 											<CustomState>
 												<StateRef Name="BlackTransition" ID="{F99E3BE7-4FD4-4B42-BB5B-6F2B35C695F4}"/>
-												<CustomState Name="" ID="{F5D04E2D-1C64-4095-9A42-CB7095B0FAC9}" ShortID="93509829"/>
+												<CustomState Name="" ID="{F5D04E2D-1C64-4095-9A42-CB7095B0FAC9}" ShortID="93509829">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
+													</PropertyList>
+												</CustomState>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="FinishView" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}"/>
@@ -5289,481 +5235,6 @@
 										<ActiveSource Name="amb_underwater_loop_01" ID="{B203CA74-B5DD-430E-BB2B-4656379B9F27}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<RandomSequenceContainer Name="ChopRandom" ID="{20177597-7A83-4206-BC19-79E80ADF4142}" ShortID="130052713">
-									<PropertyList>
-										<Property Name="MakeUpGain" Type="Real64">
-											<ValueList>
-												<Value>-20</Value>
-											</ValueList>
-										</Property>
-										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-										<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{456ED18F-436B-4D43-8020-EEF64DC34B3D}">
-														<PropertyList>
-															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="1"/>
-															<Property Name="Min" Type="Real64" Value="-1"/>
-														</PropertyList>
-													</Modifier>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<RandomSequenceContainer Name="ChopFast" ID="{343B641A-0811-4B4E-B5DD-47DC7057683C}" ShortID="41428092">
-											<PropertyList>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{9A2D66C3-B6A4-4029-8B3F-7D74A17CAE63}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="0.02"/>
-																	<Property Name="Min" Type="Real64" Value="-0.02"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Chop_Veggie_Single-002" ID="{8E13093A-942E-437D-8A8C-319B4F8C47A3}" ShortID="10676494">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-002" ID="{CC79081E-00FC-48C0-AECC-D1F5A55E15EC}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-002.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="66927905"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-002" ID="{CC79081E-00FC-48C0-AECC-D1F5A55E15EC}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Chop_Veggie_Single-003" ID="{F34F0E5E-1569-48A7-A91F-F684344B9464}" ShortID="826487919">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-003" ID="{E747B8EF-755C-4B57-9775-D4A1CFDD860C}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-003.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="105840777"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-003" ID="{E747B8EF-755C-4B57-9775-D4A1CFDD860C}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Chop_Veggie_Single-004" ID="{9CB924A5-8AC2-4C7F-B812-84D5CCBF6579}" ShortID="207120837">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-004" ID="{3FA293B2-0EA8-4C06-97FE-658C40EA1008}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-004.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="67808766"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-004" ID="{3FA293B2-0EA8-4C06-97FE-658C40EA1008}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Chop_Veggie_Single-005" ID="{5E49FAB6-4F94-4E61-9BB8-E3E93B149872}" ShortID="282487686">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-005" ID="{4ABA191E-D6B8-4B52-966F-0288CB7C7A67}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-005.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="753913319"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-005" ID="{4ABA191E-D6B8-4B52-966F-0288CB7C7A67}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Chop_Veggie_Single-001" ID="{D0009B90-BAD2-4122-A2F7-0559C71FEA64}" ShortID="115824794">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-001" ID="{83CE6C7E-0789-4E54-8A57-0096B9576CDE}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-001.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="780024330"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-001" ID="{83CE6C7E-0789-4E54-8A57-0096B9576CDE}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<Sound Name="Silence" ID="{B58EBE7C-3871-4563-B837-1ACDB11780E5}" ShortID="431431882">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<SourcePlugin Name="Silence" ID="{E8A37807-7869-4D7B-8E1A-B50D18E6D3AF}" ShortID="109368935" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-													<Language>SFX</Language>
-												</SourcePlugin>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Silence" ID="{E8A37807-7869-4D7B-8E1A-B50D18E6D3AF}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<RandomSequenceContainer Name="ChopMid" ID="{E0A4AED9-E88C-466D-AB40-D3D558613FA8}" ShortID="969492030">
-											<PropertyList>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{6DB8A25A-701D-406E-8BA9-69E45BB62209}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="0.02"/>
-																	<Property Name="Min" Type="Real64" Value="-0.02"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Chop_Veggie_Single-002" ID="{1E61F93F-6463-4468-95C3-78E7A810BED5}" ShortID="95589843">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-002" ID="{42CD8282-0BDA-4C1C-BE2F-FC8B7FE6DB8B}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-002.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="66927905"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-002" ID="{42CD8282-0BDA-4C1C-BE2F-FC8B7FE6DB8B}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Chop_Veggie_Single-003" ID="{6534BDBC-07E2-48A2-A9D1-7244D553602C}" ShortID="716737700">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-003" ID="{33574278-22FB-4C4A-9C3E-046B5639AC94}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-003.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="105840777"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-003" ID="{33574278-22FB-4C4A-9C3E-046B5639AC94}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Chop_Veggie_Single-001" ID="{FE2AB850-4984-4F38-9F15-0E39191BBD9E}" ShortID="26513195">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-001" ID="{3751C15F-8D72-477A-A7B9-E97514E3DD89}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-001.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="780024330"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-001" ID="{3751C15F-8D72-477A-A7B9-E97514E3DD89}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<RandomSequenceContainer Name="ChopSlow" ID="{B10C325B-509C-4DA0-B905-633B82C9C50D}" ShortID="475560016">
-											<PropertyList>
-												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
-												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.8">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{B5760A7B-5D01-4B8A-9113-B36CCBCDA5B1}">
-																<PropertyList>
-																	<Property Name="Enabled" Type="bool" Value="True"/>
-																	<Property Name="Max" Type="Real64" Value="0.02"/>
-																	<Property Name="Min" Type="Real64" Value="-0.02"/>
-																</PropertyList>
-															</Modifier>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="Chop_Veggie_Single-004" ID="{BFD56EFE-46D2-4066-A134-F822DEAF7E5D}" ShortID="276482195">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-004" ID="{F31910F5-7D39-4859-8E7F-305D8C163265}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-004.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="67808766"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-004" ID="{F31910F5-7D39-4859-8E7F-305D8C163265}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="Chop_Veggie_Single-005" ID="{47206920-F38B-4D70-AB07-1AC32F947DCC}" ShortID="591313578">
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="Chop_Veggie_Single-005" ID="{B7DF9103-AED9-490B-9F70-853BBA5164EA}">
-															<Language>SFX</Language>
-															<AudioFile>Chop_Veggie_Single-005.wav</AudioFile>
-															<MediaIDList>
-																<MediaID ID="753913319"/>
-															</MediaIDList>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="Chop_Veggie_Single-005" ID="{B7DF9103-AED9-490B-9F70-853BBA5164EA}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-										</RandomSequenceContainer>
-										<Sound Name="Chop_Veggie_Single-001" ID="{3E6CB917-A110-482B-873C-C04A22875596}" ShortID="444436693">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Chop_Veggie_Single-001" ID="{06529320-C85D-41D2-9B55-BDEC7E120651}">
-													<Language>SFX</Language>
-													<AudioFile>Chop_Veggie_Single-001.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="780024330"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Chop_Veggie_Single-001" ID="{06529320-C85D-41D2-9B55-BDEC7E120651}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Chop_Veggie_Single-002" ID="{DDE3F782-CBCF-44DF-BB6C-2598BDE204B3}" ShortID="828436683">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Chop_Veggie_Single-002" ID="{49F51953-5332-4C38-A39A-4211DC7F029A}">
-													<Language>SFX</Language>
-													<AudioFile>Chop_Veggie_Single-002.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="66927905"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Chop_Veggie_Single-002" ID="{49F51953-5332-4C38-A39A-4211DC7F029A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Chop_Veggie_Single-003" ID="{EE8AB7AE-7B5B-467F-86F7-43AAD53AF858}" ShortID="399640294">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Chop_Veggie_Single-003" ID="{31CF8B22-ADA7-4431-8AF4-1AF74634E12A}">
-													<Language>SFX</Language>
-													<AudioFile>Chop_Veggie_Single-003.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="105840777"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Chop_Veggie_Single-003" ID="{31CF8B22-ADA7-4431-8AF4-1AF74634E12A}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Chop_Veggie_Single-004" ID="{4D14FC92-40F1-4BFD-90F0-44B0DE0FE135}" ShortID="130584732">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Chop_Veggie_Single-004" ID="{77CAA11C-72AC-4455-90EB-B8BE3B009521}">
-													<Language>SFX</Language>
-													<AudioFile>Chop_Veggie_Single-004.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="67808766"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Chop_Veggie_Single-004" ID="{77CAA11C-72AC-4455-90EB-B8BE3B009521}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="Chop_Veggie_Single-005" ID="{9C9BC332-2F9F-4E70-8C62-A6BD109C94CD}" ShortID="157996740">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="Chop_Veggie_Single-005" ID="{388B1BF0-02B3-4B2F-9532-9125725D6037}">
-													<Language>SFX</Language>
-													<AudioFile>Chop_Veggie_Single-005.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="753913319"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Chop_Veggie_Single-005" ID="{388B1BF0-02B3-4B2F-9532-9125725D6037}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="CS" ID="{3C40876C-1470-4D99-B155-79F41B50D13A}" ShortID="247407762">
@@ -5952,24 +5423,55 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Ambience_Kitchen_Loop" ID="{102579E4-0EC7-4090-BEED-4F0C74CE34A1}" ShortID="194336414">
+										<Sound Name="sandwich" ID="{8337C4CF-9706-4152-9615-42F6A0034DC5}" ShortID="541041542">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="sandwich" ID="{AD0BFFE4-84B7-4DB0-A4B6-2868F542DBF3}">
+													<Language>SFX</Language>
+													<AudioFile>sandwich.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="765378273"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="sandwich" ID="{AD0BFFE4-84B7-4DB0-A4B6-2868F542DBF3}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<RandomSequenceContainer Name="ChopRandom" ID="{20177597-7A83-4206-BC19-79E80ADF4142}" ShortID="130052713">
 											<PropertyList>
-												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="IsStreamingEnabled" Type="bool">
-													<ValueList>
-														<Value>True</Value>
-													</ValueList>
-												</Property>
-												<Property Name="Lowpass" Type="int16">
-													<ValueList>
-														<Value>50</Value>
-													</ValueList>
-												</Property>
 												<Property Name="MakeUpGain" Type="Real64">
 													<ValueList>
-														<Value>-10</Value>
+														<Value>-15</Value>
 													</ValueList>
 												</Property>
+												<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{456ED18F-436B-4D43-8020-EEF64DC34B3D}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="0.5"/>
+																	<Property Name="Min" Type="Real64" Value="-1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -5980,31 +5482,141 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Ambience_Kitchen_Loop" ID="{7A26341E-8A0D-4B82-B2D7-CF1132D68A28}">
-													<PropertyList>
-														<Property Name="CrossfadeDuration" Type="Real64" Value="2000"/>
-														<Property Name="LoopBegin" Type="Real64" Value="1.19469026548673"/>
-														<Property Name="LoopEnd" Type="Real64" Value="13.8053097345133"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>Ambience_Kitchen_Loop.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="81299576"/>
-													</MediaIDList>
-												</AudioFileSource>
+												<Sound Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{3109FC1D-DE23-434C-9EAD-3CB5FB425846}" ShortID="790376184">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{C91639BA-5DE1-4A07-8996-597B2B89AB35}">
+															<Language>SFX</Language>
+															<AudioFile>Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="775846170"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 051 Cutting Casually 1" ID="{C91639BA-5DE1-4A07-8996-597B2B89AB35}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{B3951E32-282F-423E-9615-2345520DD70E}" ShortID="739972775">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{5E5C2194-9AE3-4C4A-9F38-5E844F64F64D}">
+															<Language>SFX</Language>
+															<AudioFile>Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="662850948"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 052 Cutting Casually 2" ID="{5E5C2194-9AE3-4C4A-9F38-5E844F64F64D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{A6D2758E-785D-4C2B-ADCA-2C2D85CD011E}" ShortID="998610191">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{EFB79265-B51C-4BB4-8123-D7C5ACD8958B}">
+															<Language>SFX</Language>
+															<AudioFile>Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="967284505"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 055 Cutting Fast 1" ID="{EFB79265-B51C-4BB4-8123-D7C5ACD8958B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{079B5CA6-9A6F-4FE7-9FFD-C3658BED7D36}" ShortID="137072254">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{B9BFC08C-1A08-46A3-A580-A9B68F973649}">
+															<Language>SFX</Language>
+															<AudioFile>Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="261880920"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 056 Cutting Fast 2" ID="{B9BFC08C-1A08-46A3-A580-A9B68F973649}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{AB698144-3A23-41E9-913F-0CC098417C00}" ShortID="284782256">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{8F0BCE9E-952A-49C7-9D07-8D85D4A46C3D}">
+															<Language>SFX</Language>
+															<AudioFile>Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="555280395"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 057 Cutting Fast 3" ID="{8F0BCE9E-952A-49C7-9D07-8D85D4A46C3D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
 											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="Ambience_Kitchen_Loop" ID="{7A26341E-8A0D-4B82-B2D7-CF1132D68A28}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="sandwich-001" ID="{76A6EE63-A9C8-49C0-AF34-F413929DD9B7}" ShortID="700643817">
+											<PositioningInfo>
+												<Panner Name="" ID="{DCB664F9-0AD6-4A4E-8391-0ABF62224250}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="55.0143266475645"/>
+														<Property Name="PanY" Type="Real64" Value="-100"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
+										</RandomSequenceContainer>
+										<Sound Name="boiling" ID="{0F5B4623-D559-4F98-947B-6383212CE696}" ShortID="309026126">
 											<PropertyList>
-												<Property Name="MakeUpGain" Type="Real64">
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+												<Property Name="IsStreamingEnabled" Type="bool">
 													<ValueList>
-														<Value>-8</Value>
+														<Value>True</Value>
 													</ValueList>
 												</Property>
+												<Property Name="MakeUpGain" Type="Real64">
+													<ValueList>
+														<Value>2</Value>
+													</ValueList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
@@ -6015,21 +5627,136 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="sandwich-001" ID="{9CE8F1EF-4C63-485A-9817-897A79416034}">
+												<AudioFileSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{CD2E6210-3163-40C3-A049-B8B68C2FA965}">
 													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="2000"/>
+														<Property Name="LoopBegin" Type="Real64" Value="1.17284432733302"/>
+														<Property Name="LoopEnd" Type="Real64" Value="17.890386931549"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 													</PropertyList>
 													<Language>SFX</Language>
-													<AudioFile>sandwich-001.wav</AudioFile>
+													<AudioFile>household, kitchen, cooking, water, rice, boil, pan.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="662225170"/>
+														<MediaID ID="379999489"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{960D3F47-C856-4B9A-A578-8B55756FD2BB}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="87.2970391595033"/>
+														<Property Name="PanY" Type="Real64" Value="-0.202634245187436"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
 											<ActiveSourceList>
-												<ActiveSource Name="sandwich-001" ID="{9CE8F1EF-4C63-485A-9817-897A79416034}" Platform="Linked"/>
+												<ActiveSource Name="household, kitchen, cooking, water, rice, boil, pan" ID="{CD2E6210-3163-40C3-A049-B8B68C2FA965}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
+										<BlendContainer Name="Sizzle" ID="{18A5EA64-1410-4005-A78A-D677D00BBF2D}" ShortID="6311805">
+											<PropertyList>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+												<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{47E11452-303F-402E-8F87-3A6C82F6C366}" ShortID="350538681">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64">
+															<ValueList>
+																<Value>-10</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{1BF14EBD-0224-4960-B3D3-B2A86EBBC8EB}">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0279230906530841"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="8.30188316033822"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.074461575074891"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="45429046"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="Restaurant Kitchen Food Cooking Game - 180 Sizzling Single 6" ID="{1BF14EBD-0224-4960-B3D3-B2A86EBBC8EB}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{C66302FE-B4F0-4111-BEB9-64AC22B7866B}" ShortID="871868555">
+													<PropertyList>
+														<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+														<Property Name="IsStreamingEnabled" Type="bool">
+															<ValueList>
+																<Value>True</Value>
+															</ValueList>
+														</Property>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{D91B367B-ECE0-45D8-85D1-2963FE7F56F9}">
+															<PropertyList>
+																<Property Name="CrossfadeDuration" Type="Real64" Value="1000"/>
+																<Property Name="LoopBegin" Type="Real64" Value="0.538133585978209"/>
+																<Property Name="LoopEnd" Type="Real64" Value="4.46660350544766"/>
+																<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>household, kitchen, cooking, steak, fry, sizzle 1.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="229983716"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<PositioningInfo>
+														<Panner Name="" ID="{AA274FCE-4733-45D9-9077-FDDAEA65B9D7}">
+															<PropertyList>
+																<Property Name="PanX" Type="Real64" Value="-100"/>
+																<Property Name="PanY" Type="Real64" Value="100"/>
+															</PropertyList>
+														</Panner>
+													</PositioningInfo>
+													<ActiveSourceList>
+														<ActiveSource Name="household, kitchen, cooking, steak, fry, sizzle 1" ID="{D91B367B-ECE0-45D8-85D1-2963FE7F56F9}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<PositioningInfo>
+												<Panner Name="" ID="{64020A44-A95F-4907-9988-EF965FF1C5BE}">
+													<PropertyList>
+														<Property Name="PanX" Type="Real64" Value="-79.847182425979"/>
+														<Property Name="PanY" Type="Real64" Value="100"/>
+													</PropertyList>
+												</Panner>
+											</PositioningInfo>
+										</BlendContainer>
 									</ChildrenList>
 								</BlendContainer>
 							</ChildrenList>

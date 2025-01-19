@@ -10,13 +10,13 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Trigger_FindPollution" ID="{C6852E3D-E484-4967-9957-06EFB2B5F1E2}" WorkUnitID="{5C488041-6DEB-47A6-BAD0-0D68800734C0}"/>
+							<ObjectRef Name="Trigger_FindPollution" ID="{C6852E3D-E484-4967-9957-06EFB2B5F1E2}" WorkUnitID="{8FB7921B-30CB-4CF9-9862-78183AEE62E7}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Level03" ID="{57B5F42E-D876-4EB3-83C0-4694ADCDC019}"/>
+						<CurrentStateRef Name="None" ID="{3D4BEBAE-C387-4F02-A36A-2FFC9411C1CB}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
