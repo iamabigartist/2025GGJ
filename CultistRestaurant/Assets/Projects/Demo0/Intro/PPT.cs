@@ -36,6 +36,19 @@ public class PPTController : SerializedMonoBehaviour
 		UpdateContent(); // 初始化显示
 	}
 
+	public void LoadScene()
+	{
+		if (!string.IsNullOrEmpty(sceneToLoad))
+		{
+			SceneManager.LoadScene(sceneToLoad); // 加载指定场景
+			foreach (var uuid in _audioIds)
+			{
+				AudioManager.Instance.StopPlayingID(uuid, 2000); // 停止所有可能正在播放的声音
+			}
+			AudioManager.Instance.PostEvent("Play_RestaurantBase", AudioManager.Instance.globalInitializer);
+		}
+	}
+
 	void OnButtonClick()
 	{
 		if (isCooldown) return; // 如果按钮正在冷却，直接返回
@@ -50,12 +63,7 @@ public class PPTController : SerializedMonoBehaviour
 		else
 		{
 			// 最后一次点击时加载场景
-			if (!string.IsNullOrEmpty(sceneToLoad))
-			{
-				SceneManager.LoadScene(sceneToLoad); // 加载指定场景
-				AudioManager.Instance.StopPlayingID(_audioIds[maxClicks-1], 2000); // 先停止最后一个声音
-				AudioManager.Instance.PostEvent("Play_RestaurantBase", AudioManager.Instance.globalInitializer);
-			}
+			LoadScene();
 
 			// 隐藏其他组件（如果勾选了对应选项）
 			if (hideThisButton)

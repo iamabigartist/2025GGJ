@@ -979,94 +979,6 @@
 										<ActiveSource Name="UI_trash" ID="{27C28D32-914E-4C74-9448-23EDA3E6B9FA}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="click_juicy-001" ID="{5FC05C4B-85AF-4C61-8CBC-90B4A448D7FE}" ShortID="609829716">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="click_juicy-001" ID="{8E10D3E1-7283-4849-9396-79168A5F3EFD}">
-											<Language>SFX</Language>
-											<AudioFile>click_juicy-001.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="710104847"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="click_juicy-001" ID="{8E10D3E1-7283-4849-9396-79168A5F3EFD}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="click_juicy-002" ID="{3E4DF308-7912-4876-9981-352BB61647B2}" ShortID="100217259">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="click_juicy-002" ID="{9DC10EEC-37B6-44CA-949F-F89EAC10B5FC}">
-											<Language>SFX</Language>
-											<AudioFile>click_juicy-002.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="1026309168"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="click_juicy-002" ID="{9DC10EEC-37B6-44CA-949F-F89EAC10B5FC}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="click_juicy-003" ID="{DEC3363B-DA1D-43A2-A4A0-549612C1CE35}" ShortID="916417126">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="click_juicy-003" ID="{3ED0C60F-68A0-4A87-9622-C3C92E7480B8}">
-											<Language>SFX</Language>
-											<AudioFile>click_juicy-003.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="111331717"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="click_juicy-003" ID="{3ED0C60F-68A0-4A87-9622-C3C92E7480B8}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="click_juicy-004" ID="{8ABCE07A-BBEA-4C0A-ADAA-3D64F16757FF}" ShortID="906203015">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="click_juicy-004" ID="{F7DA2ACB-0EC8-4AEA-8694-3CEAC1D459BE}">
-											<Language>SFX</Language>
-											<AudioFile>click_juicy-004.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="351530238"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="click_juicy-004" ID="{F7DA2ACB-0EC8-4AEA-8694-3CEAC1D459BE}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
 								<RandomSequenceContainer Name="UI_ClickJuicyStrong" ID="{990B2474-5172-4197-B459-BBA0812F54C1}" ShortID="425036434">
 									<PropertyList>
 										<Property Name="OverrideEffect" Type="bool" Value="True"/>
@@ -5404,11 +5316,19 @@
 											</CustomState>
 											<CustomState>
 												<StateRef Name="FinishView" ID="{670E326A-78F8-4D10-87B5-085E3A085CA6}"/>
-												<CustomState Name="" ID="{073F17C2-142C-4A27-A1FE-B0A1BD451F99}" ShortID="193193167"/>
+												<CustomState Name="" ID="{073F17C2-142C-4A27-A1FE-B0A1BD451F99}" ShortID="193193167">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
+													</PropertyList>
+												</CustomState>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="StartView" ID="{C184FFB2-EF31-4E56-AA09-4E1CE2D2098F}"/>
-												<CustomState Name="" ID="{3EE335E8-EB88-4790-8B43-85C64473B522}" ShortID="765462907"/>
+												<CustomState Name="" ID="{3EE335E8-EB88-4790-8B43-85C64473B522}" ShortID="765462907">
+													<PropertyList>
+														<Property Name="MakeUpGain" Type="Real64" Value="-192"/>
+													</PropertyList>
+												</CustomState>
 											</CustomState>
 											<CustomState>
 												<StateRef Name="IntroView" ID="{99AD2C5C-F404-4EB0-8FA3-332F1B3F0DA4}"/>
