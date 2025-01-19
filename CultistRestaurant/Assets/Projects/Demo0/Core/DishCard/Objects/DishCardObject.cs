@@ -209,6 +209,8 @@ public class DishCardObject : MonoBehaviour
 				MsgBbViewportMono.CurViewportAppendMsgBb(gameConfig.AcceptPollutedCorrectDishDesc.ToString());
 				return (gameConfig.AcceptPollutedCorrectDish_HPChange, true);
 			}
+			AudioManager.Instance.PostEvent("Play_VO_Normal", AudioManager.Instance.globalInitializer);
+
 		}
 		else
 		{

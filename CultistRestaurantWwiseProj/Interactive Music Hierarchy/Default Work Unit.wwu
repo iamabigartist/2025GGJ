@@ -8,7 +8,7 @@
 						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
 						<Property Name="MakeUpGain" Type="Real64">
 							<ValueList>
-								<Value>10</Value>
+								<Value>5</Value>
 							</ValueList>
 						</Property>
 						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>

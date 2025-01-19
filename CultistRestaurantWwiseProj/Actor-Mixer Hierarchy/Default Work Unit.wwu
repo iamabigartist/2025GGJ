@@ -6372,6 +6372,1318 @@
 										</BlendContainer>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="VO_Normal" ID="{94255C7F-681C-4E3F-A845-99969A9A85F7}" ShortID="891469062">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="Normal_01" ID="{10E1E8F6-6458-4401-AD7D-10EF16D297DE}" ShortID="570775003">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="vo_normal_plus12-001" ID="{8A74E7A4-B35A-4D1F-AF81-578851A8DF1B}" ShortID="260418117">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_plus12-001" ID="{56E5CE1A-AD1F-4638-8F15-08770502DCE5}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_plus12-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="1007648568"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{02FD8321-2FA4-4A0A-9538-74462390BA7F}" ShortID="206807524">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{AEF1059C-2A29-4860-9CCC-919EE76D4962}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Log2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-12</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_plus12-001" ID="{56E5CE1A-AD1F-4638-8F15-08770502DCE5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal-001" ID="{2711BD3E-1A6B-4121-B60D-5B6AEDB4033F}" ShortID="987574179">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal-001" ID="{385DA6D5-D7DC-406C-9865-C70085086560}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="454455946"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{519476D5-7BCE-4C3B-A93F-0DE639FD3F18}" ShortID="723531830">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{7E067DA4-C4CD-416A-BD5B-E2BA2226ECCB}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-6</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal-001" ID="{385DA6D5-D7DC-406C-9865-C70085086560}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg7-001" ID="{CC61DF5E-347C-465F-9A61-63991D38AC2B}" ShortID="633149540">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg7-001" ID="{C56E1AB7-70C8-4F4E-B6AA-CE56DC517F6F}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg7-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="2839215"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{3E3480B5-D65F-48AA-9501-FF239949740B}" ShortID="888291757">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{5894C459-561B-4896-9BD5-2E4783D39C7F}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg7-001" ID="{C56E1AB7-70C8-4F4E-B6AA-CE56DC517F6F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg12-001" ID="{B93FF73B-FA6F-4413-874C-E7521F447F60}" ShortID="64821063">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg12-001" ID="{958F2BDB-9E66-41BA-B3A9-E1956ABEC47F}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg12-001.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="310183934"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{744DEFD8-E06F-4231-B95B-20BE6D76D5B9}" ShortID="86144449">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{691FEAFC-0162-4B70-9B84-53F9B949ECB0}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg12-001" ID="{958F2BDB-9E66-41BA-B3A9-E1956ABEC47F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Normal_02" ID="{6F7BC11F-9D80-4413-A701-429DFF7C3D98}" ShortID="383686869">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="vo_normal_neg7-002" ID="{E58460FB-FA73-4F3A-83CB-B7B29225CC22}" ShortID="52436416">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg7-002" ID="{7D092FC7-B2B2-47FB-B198-43CCA2D39FAE}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg7-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="40229283"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{D4D2D8DE-C753-403E-BF3E-9BF11B0E3FA4}" ShortID="784262641">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{069045D5-DD33-4DE0-8FE7-BCED1D786E68}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg7-002" ID="{7D092FC7-B2B2-47FB-B198-43CCA2D39FAE}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal-002" ID="{CB0BECF7-26B3-419D-B4C6-FB4B0819013B}" ShortID="946097552">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal-002" ID="{10E76AEF-1B87-4094-969D-F85B8F08E5B6}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="505872616"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{0B7EC8FA-DE1C-4177-9883-4D71CAD2FD11}" ShortID="133523962">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{477A378B-CEF1-48F0-B344-C1E2837D6B12}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-6</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal-002" ID="{10E76AEF-1B87-4094-969D-F85B8F08E5B6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_plus12-002" ID="{51002D0C-5C69-426F-B967-AD703E2B9CFF}" ShortID="381546516">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_plus12-002" ID="{A1A2CDF2-7C1A-48CF-A595-88FD0FFA380D}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_plus12-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="115311707"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{77233364-E1C8-4718-AAB7-D61A8C6C0B47}" ShortID="349440938">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{05628F05-D09A-4891-AD11-999D164AC152}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Log2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-12</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_plus12-002" ID="{A1A2CDF2-7C1A-48CF-A595-88FD0FFA380D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg12-002" ID="{BE495E42-01A4-4DB0-B31A-6230B6D36566}" ShortID="446410359">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg12-002" ID="{27286F77-1AC0-4528-8CD6-5A44F22E7C70}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg12-002.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="420312736"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{9FAC14AB-83E7-4EAD-98AC-950C75EB117C}" ShortID="482270336">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{430956DD-9319-42A8-AB18-83C739115E2B}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg12-002" ID="{27286F77-1AC0-4528-8CD6-5A44F22E7C70}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Normal_03" ID="{31AE47BB-4066-4E70-AE1F-AE0F6963A9E8}" ShortID="590175486">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="vo_normal-003" ID="{56AF9475-AAC1-4772-A878-F8995BC617C7}" ShortID="544056322">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal-003" ID="{50AD3B13-AD70-4894-87D9-FEB5FB2D3A5B}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="23026"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{3DE00041-4661-4DBA-9CC3-D1BA30E955CF}" ShortID="98899612">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{C3192014-A1CF-478A-A702-C7094AABF1CB}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-6</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal-003" ID="{50AD3B13-AD70-4894-87D9-FEB5FB2D3A5B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg12-003" ID="{CB6F5968-FFBB-4D34-95F1-D7757612A24C}" ShortID="905317663">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg12-003" ID="{AD429F2C-AD26-4D90-BA2A-7DDD21706215}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg12-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="904143429"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{CC180501-4141-458D-A5D0-15433D2C2BF3}" ShortID="97647305">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{3360CAF2-6055-4453-9041-C1247D241C60}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg12-003" ID="{AD429F2C-AD26-4D90-BA2A-7DDD21706215}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_plus12-003" ID="{8E874B4D-C33B-4B2C-8374-B464BD6E1A2E}" ShortID="836822653">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_plus12-003" ID="{5AF56697-0E75-4EC9-B01C-45A8927C07A6}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_plus12-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="788150240"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{3912F59E-75A6-4A01-8789-873ED9F55A07}" ShortID="777650654">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{567C1B13-DB1B-4BD5-9B9F-F65784DA99A1}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Log2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-12</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_plus12-003" ID="{5AF56697-0E75-4EC9-B01C-45A8927C07A6}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg7-003" ID="{E5219483-7288-4324-9BF6-593AE744A6DC}" ShortID="587253893">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg7-003" ID="{1B62E2F2-594A-4A50-86F0-11FDB6E7E646}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg7-003.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="660274948"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{7EDEBCF4-78A7-4651-87B4-F80F40CC7513}" ShortID="103639019">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{00D2B480-92C4-480A-A01E-ECCF44214809}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg7-003" ID="{1B62E2F2-594A-4A50-86F0-11FDB6E7E646}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Normal_04" ID="{1996D4B5-2782-4060-A01C-EE6976ABAEBA}" ShortID="922032519">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="vo_normal-004" ID="{605D8C17-69C7-46B2-8E48-4BC7A8FF20EA}" ShortID="679234915">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal-004" ID="{B7DFD808-47F6-475C-BBFD-514AADD8E445}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="267823017"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{ACA355C1-CA08-4AD3-AF91-4BBE5070FC8B}" ShortID="466203809">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{E57F6F40-3890-443D-9A3C-259315B10068}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-6</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal-004" ID="{B7DFD808-47F6-475C-BBFD-514AADD8E445}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg12-004" ID="{7899E669-5370-4A96-9213-E854013C5E8F}" ShortID="70708283">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg12-004" ID="{C7752F16-0D24-41B9-B56C-21024027C543}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg12-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="52525373"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{0BF29959-45F0-4408-9418-1F29226454BF}" ShortID="157894449">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{C32BD4BE-A7E0-4EDF-96A5-1EE62F5DB603}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg12-004" ID="{C7752F16-0D24-41B9-B56C-21024027C543}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg7-004" ID="{32E49E4C-2956-4EF9-A2B1-1DE1A43DB9EB}" ShortID="944088586">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg7-004" ID="{16B0A316-FC6E-468F-9C5D-8327730E596F}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg7-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="104930744"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{3C4F1567-8D75-4FD5-B2C0-3A1CC23F5165}" ShortID="777116955">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{47F20F9F-D539-40BC-8DA9-C4F4F616F542}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg7-004" ID="{16B0A316-FC6E-468F-9C5D-8327730E596F}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_plus12-004" ID="{9A34B605-FEDC-4BBB-B699-C9F4F9DC531D}" ShortID="817839393">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_plus12-004" ID="{704E18B6-1709-4957-9FED-65903EB21D6B}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_plus12-004.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="553833947"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{7AF1E10F-D779-47C0-9E88-69FE5505AED7}" ShortID="960785758">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{0E9C189E-88DD-4EA0-A7AB-2EC4DF7CB79D}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Log2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-12</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_plus12-004" ID="{704E18B6-1709-4957-9FED-65903EB21D6B}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+										<BlendContainer Name="Normal_05" ID="{BE36CD3A-1515-4822-BB4A-2A9480F7E502}" ShortID="784087119">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="vo_normal_plus12-005" ID="{79966EFD-A867-4938-8B70-85F10F6B29DC}" ShortID="945952578">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_plus12-005" ID="{1398411A-F5DE-4664-8AB0-09D518EF98C7}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_plus12-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="436486504"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{5816BC8C-6282-4A7B-BFCF-3BD3096C31A4}" ShortID="768977131">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{041BFCA8-6D6E-4B1C-948E-AB76AE724567}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Log2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-12</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_plus12-005" ID="{1398411A-F5DE-4664-8AB0-09D518EF98C7}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg12-005" ID="{7F3E615E-9B1E-464F-90A1-1170F3C8C0C5}" ShortID="635584327">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg12-005" ID="{CECEF02E-E894-455A-97D8-38C96976B5E4}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg12-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="312602215"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{55F9C5B6-0178-4E60-BBFE-7A1D8712FEA6}" ShortID="973055055">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{E4DE2780-4825-464D-8509-01734F18EFD0}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg12-005" ID="{CECEF02E-E894-455A-97D8-38C96976B5E4}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal_neg7-005" ID="{6A3E6A97-1CB4-4F00-A649-CBE1B2909AE8}" ShortID="922469972">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal_neg7-005" ID="{77AAA42E-D454-40C2-B748-36202C438B90}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal_neg7-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="740349032"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{37CCB7AC-B6BF-4DAE-A58A-91278C743A93}" ShortID="18580499">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{8B86AD73-DEE2-44B5-8A11-BC0AAC3D7F12}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>-96</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal_neg7-005" ID="{77AAA42E-D454-40C2-B748-36202C438B90}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="vo_normal-005" ID="{6DFFA17C-1068-47D9-804A-FF166C5B7DCF}" ShortID="81497283">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B31CBC24-94A1-49BB-889A-1B9C0A642FA4}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="SFX" ID="{24A24EAA-0040-49ED-B70E-50AD067CB717}" WorkUnitID="{5A27B253-DB97-4E0E-8A0D-297744821639}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="vo_normal-005" ID="{029A6BD8-3ADB-4900-8F21-884766A01FF5}">
+															<Language>SFX</Language>
+															<AudioFile>vo_normal-005.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="553031746"/>
+															</MediaIDList>
+														</AudioFileSource>
+													</ChildrenList>
+													<ObjectLists>
+														<ObjectList Name="RTPC">
+															<Reference>
+																<Local>
+																	<RTPC Name="" ID="{616ED37F-FEA6-46DF-ACF1-FC973FA608D9}" ShortID="369638254">
+																		<PropertyList>
+																			<Property Name="PropertyName" Type="string" Value="MakeUpGain"/>
+																		</PropertyList>
+																		<ReferenceList>
+																			<Reference Name="ControlInput">
+																				<ObjectRef Name="GlobalPollutionLevel" ID="{06304129-C54F-4DB0-B533-D15A25E455A5}" WorkUnitID="{7043EB6B-BE57-41B2-B210-7AF9D87FCDED}"/>
+																			</Reference>
+																			<Reference Name="Curve">
+																				<Custom>
+																					<Curve Name="" ID="{25A0A314-B256-48F9-9D4B-FA93FAF53BC9}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>0</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																								<SegmentShape>Exp2</SegmentShape>
+																							</Point>
+																							<Point>
+																								<XPos>5</XPos>
+																								<YPos>-6</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</Custom>
+																			</Reference>
+																		</ReferenceList>
+																	</RTPC>
+																</Local>
+															</Reference>
+														</ObjectList>
+													</ObjectLists>
+													<ActiveSourceList>
+														<ActiveSource Name="vo_normal-005" ID="{029A6BD8-3ADB-4900-8F21-884766A01FF5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</BlendContainer>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<StateInfo>
 								<StateGroupList>
