@@ -3,19 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    // ÔÚ Inspector ÖĞÉèÖÃĞèÒª¼ÓÔØµÄ³¡¾°Ãû³Æ
-    [SerializeField] private string sceneName;
+    public PPTController ppt;
 
-    // µ÷ÓÃ´Ë·½·¨Ê±¼ÓÔØÖ¸¶¨µÄ³¡¾°
+    // è°ƒç”¨æ­¤æ–¹æ³•æ—¶åŠ è½½æŒ‡å®šçš„åœºæ™¯
     public void LoadScene()
     {
-        if (!string.IsNullOrEmpty(sceneName))
-        {
-            SceneManager.LoadScene(sceneName);
-        }
-        else
-        {
-            Debug.LogWarning("Scene name is not set. Please assign a scene name in the Inspector.");
-        }
+        ppt.LoadScene();
     }
 }

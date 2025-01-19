@@ -1,3 +1,4 @@
+using System;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -53,15 +54,17 @@ namespace Audio
             {
                 _instance = this;
                 DontDestroyOnLoad(gameObject);
+                Init();
             }
             else
             {
                 Destroy(gameObject);
             }
-
-            Init();
         }
 
+        private void OnDestroy()
+        {
+        }
 
         private void Init()
         {

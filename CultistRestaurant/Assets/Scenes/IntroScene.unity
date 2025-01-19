@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9ac5243a8b6274ea6419edb12c5657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: DemoScene
+  ppt: {fileID: 58966299}
 --- !u!1 &575725739
 GameObject:
   m_ObjectHideFlags: 0
