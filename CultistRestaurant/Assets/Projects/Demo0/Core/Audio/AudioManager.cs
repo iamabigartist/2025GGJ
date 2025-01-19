@@ -99,7 +99,7 @@ namespace Audio
         {
             uint eventId = AkSoundEngine.GetIDFromString(eventName);
             uint uuid = AkSoundEngine.PostEvent(eventId, go);
-            Debug.Log($"Post event complete, event name is: {eventName}, uuid is: {uuid}");
+            Debug.Log($"Audio Manager, Post event complete, event name is: {eventName}, uuid is: {uuid}");
             return uuid;
         }
         
@@ -111,6 +111,7 @@ namespace Audio
         public void SetStateValue(string group, string val)
         {
             AkSoundEngine.SetState(group, val);
+            Debug.Log($"Audio Manager, SetStateValue, group name is: {group}, val is: {val}");
         }
 
         public void SetGlobalRtpcValue(string key, float val)

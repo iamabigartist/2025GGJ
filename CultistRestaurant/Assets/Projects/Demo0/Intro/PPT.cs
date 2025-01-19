@@ -88,14 +88,19 @@ public class PPTController : SerializedMonoBehaviour
 		
 		if (currentIndex < audioEvents.Count)
 		{
-			if (currentIndex == 2)
-			{
-				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.IntroView); // 如果是第二页的话，暂停音乐
-			}
-			
 			if (currentIndex > 1)
 			{
 				AudioManager.Instance.StopPlayingID(_audioIds[currentIndex-1], 2000); // 先停止上一个声音
+			}
+			
+			if (currentIndex == 0)
+			{
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.StartView);
+			}
+			
+			if (currentIndex == 2)
+			{
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.IntroView);
 			}
 
 			if (currentIndex == maxClicks - 1)
