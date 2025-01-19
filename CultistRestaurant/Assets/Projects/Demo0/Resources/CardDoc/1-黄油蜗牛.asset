@@ -589,8 +589,8 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The shell is scorched black, and cracks reveal charred snail meat that
-        emits a pungent burnt smell. '
+      Data: 'The shell bulges slightly, and a tiny, wriggling tentacle emerges from
+        a crack, as if trying to grasp something. '
     - Name: 
       Entry: 8
       Data: 
@@ -602,7 +602,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u8717\u725B\u58F3\u8868\u9762\u7126\u9ED1\uFF0C\u88C2\u7EB9\u4E2D\u663E\u9732\u51FA\u88AB\u70E7\u7126\u7684\u8089\u5757\uFF0C\u6563\u53D1\u51FA\u4E00\u80A1\u523A\u9F3B\u7684\u70AD\u5473\u3002 "
+      Data: "\u8717\u725B\u58F3\u9690\u7EA6\u9F13\u8D77\uFF0C\u88C2\u7F1D\u4E2D\u63A2\u51FA\u4E86\u4E00\u6761\u5FAE\u5FAE\u6446\u52A8\u7684\u89E6\u624B\uFF0C\u4EFF\u4F5B\u5728\u8BD5\u56FE\u6293\u4F4F\u4EC0\u4E48\u3002 "
     - Name: 
       Entry: 8
       Data: 
@@ -694,8 +694,8 @@ MonoBehaviour:
       Data: 1
     - Name: $v
       Entry: 1
-      Data: 'The shell bulges slightly, and a tiny, wriggling tentacle emerges from
-        a crack, as if trying to grasp something. '
+      Data: 'The shell is scorched black, and cracks reveal charred snail meat that
+        emits a pungent burnt smell. '
     - Name: 
       Entry: 8
       Data: 
@@ -707,7 +707,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
-      Data: "\u8717\u725B\u58F3\u9690\u7EA6\u9F13\u8D77\uFF0C\u88C2\u7F1D\u4E2D\u63A2\u51FA\u4E86\u4E00\u6761\u5FAE\u5FAE\u6446\u52A8\u7684\u89E6\u624B\uFF0C\u4EFF\u4F5B\u5728\u8BD5\u56FE\u6293\u4F4F\u4EC0\u4E48\u3002 "
+      Data: "\u8717\u725B\u58F3\u8868\u9762\u7126\u9ED1\uFF0C\u88C2\u7EB9\u4E2D\u663E\u9732\u51FA\u88AB\u70E7\u7126\u7684\u8089\u5757\uFF0C\u6563\u53D1\u51FA\u4E00\u80A1\u523A\u9F3B\u7684\u70AD\u5473\u3002 "
     - Name: 
       Entry: 8
       Data: 
