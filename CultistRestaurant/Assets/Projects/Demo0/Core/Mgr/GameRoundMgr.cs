@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using Projects.Demo0.Core.GameGlobal;
 using Projects.Demo0.Core.Level;
 using Projects.Demo0.Core.Utils;
@@ -64,11 +65,29 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 		StopAllCoroutines();
 	}
 
+	void SetGameLevel(LevelDoc levelDoc)
+	{
+		switch (levelDoc.name)
+		{
+			case "关卡1":
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.Level01);
+				break;
+			case "关卡2":
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.Level02);
+				break;
+			case "关卡3":
+				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.Level03);
+				break;
+			default:
+				break;
+		}
+	}
 	public IEnumerator LevelCoroutine(LevelDoc levelDoc)
 	{
 		PlayerHP = gameConfig.MaxHP;
 		var deck = LevelDeckGenerator.GenerateDeck(levelDoc);
 		GetCardTotalNum += deck.Count;
+		SetGameLevel(levelDoc);
 		foreach (var card in deck)
 		{
 			card.OnStartCheck += () =>

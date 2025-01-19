@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Audio;
 using Projects.Demo0.Core.GameGlobal;
 using Projects.Demo0.Core.Utils;
 using UnityEngine;
@@ -39,6 +40,7 @@ public class CurtainUIMgr : MonoSingleton<CurtainUIMgr>
 		IsMoving = true;
 		gameObject.SetActive(true);
 		m_Anim.Play("CurtainIn");
+		AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.BlackTransition);
 		StartCoroutine(CurtainIn_Impl());
 	}
 	public IEnumerator CurtainIn_Impl()
