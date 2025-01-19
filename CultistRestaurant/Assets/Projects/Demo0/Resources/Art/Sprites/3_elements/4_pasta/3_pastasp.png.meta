@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 4_pastasp
+      name: 3_pastasp
       rect:
         serializedVersion: 2
         x: 0
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e2f97767e3bdf84e99c8d50dfac5ac9
-      internalID: -1697270712
+      spriteID: 
+      internalID: 0
       vertices: []
       indices: 
       edges: []
