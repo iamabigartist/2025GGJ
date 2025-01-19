@@ -217,6 +217,62 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 1
+      Data: ' '
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 1
+      Data: ' '
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+    - Name: Text
+      Entry: 7
+      Data: 5|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp],[System.String, mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 6|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 1
       Data: "\u4F60\u662F\u4E2A\u813E\u6C14\u66B4\u8E81\u7684\u4E3B\u53A8"
     - Name: 
       Entry: 8
@@ -244,14 +300,14 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 7|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 5|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 8|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 3
+      Data: 6
     - Name: 
       Entry: 12
       Data: 2
@@ -290,14 +346,14 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 9|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 7|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 10|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 3
+      Data: 6
     - Name: 
       Entry: 12
       Data: 2
@@ -336,14 +392,14 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 8|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
+      Data: 11|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
     - Name: Text
       Entry: 7
-      Data: 9|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
+      Data: 12|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
         Assembly-CSharp],[System.String, mscorlib]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 3
+      Data: 6
     - Name: 
       Entry: 12
       Data: 2
@@ -381,62 +437,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 10|Projects.Demo0.Core.Localization.MultiLangStr, Assembly-CSharp
-    - Name: Text
-      Entry: 7
-      Data: 11|System.Collections.Generic.Dictionary`2[[Projects.Demo0.Core.Localization.LanguageType,
-        Assembly-CSharp],[System.String, mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 12|System.Collections.Generic.EnumEqualityComparer`1[[Projects.Demo0.Core.Localization.LanguageType,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 1
-      Data: ' '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 1
-      Data: ' '
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -445,13 +445,13 @@ MonoBehaviour:
   displayImage: {fileID: 58966301}
   displayText: {fileID: 1968140419}
   images:
+  - {fileID: 21300000, guid: 44413043e61555943b256b105a74ee69, type: 3}
   - {fileID: 21300000, guid: 684bd346865b8a24abc1d22266b7a7f7, type: 3}
   - {fileID: 21300000, guid: 35b07a7954e32c4439d068d8df33724e, type: 3}
   - {fileID: 21300000, guid: 8e8c9edf35ff17744b729a0feb3ede7d, type: 3}
   - {fileID: 21300000, guid: 2d1a2af74f5c61846915a52039a164b7, type: 3}
-  - {fileID: 21300000, guid: 44413043e61555943b256b105a74ee69, type: 3}
   clickCooldown: 2
-  sceneToLoad: 
+  sceneToLoad: DemoScene
   hideThisButton: 0
   hideTextBox: 1
 --- !u!114 &58966300
@@ -731,6 +731,7 @@ GameObject:
   - component: {fileID: 326632261}
   - component: {fileID: 326632260}
   - component: {fileID: 326632259}
+  - component: {fileID: 326632262}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -812,6 +813,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326632262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326632258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &391915703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1186,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688638168}
   m_CullTransparentMesh: 1
+--- !u!1001 &1290244864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6317712793376121292, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_Name
+      value: SoundGlobal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7725977960110808730, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94abf130f3ac6cb48a8d206b285c162b, type: 3}
 --- !u!1 &1600406750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1307,3 +1409,4 @@ SceneRoots:
   - {fileID: 575725741}
   - {fileID: 1600406753}
   - {fileID: 240462677}
+  - {fileID: 1290244864}
