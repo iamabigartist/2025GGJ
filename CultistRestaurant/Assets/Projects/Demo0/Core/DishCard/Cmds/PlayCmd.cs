@@ -24,7 +24,7 @@ public class PlayCmd : Cmd
 			if (instance == null) { Debug.Log("AudioManager 未初始化"); }
 			else
 			{
-				Debug.Log($"播放音频事件 {AudioEvent} on {instance.name}");
+				Debug.Log($"播放音频事件 {AudioEvent} on {ctx.TargetGameObj.name}");
 				AudioManager.Instance.PostEvent(AudioEvent, AudioManager.Instance.globalInitializer);
 			}
 		}
