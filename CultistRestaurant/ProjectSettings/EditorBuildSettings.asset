@@ -11,6 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoScene.unity
     guid: 3b1b787df6edbd048acf8c1ec160b4f1
+  - enabled: 1
+    path: Assets/Scenes/OverScene.unity
+    guid: 7447f175a80e6244f989021a35f35036
+  - enabled: 1
+    path: Assets/Scenes/BEScene.unity
+    guid: b92ffe37ea97d8748a0d8615b889a561
+  - enabled: 1
+    path: Assets/Scenes/GEScene.unity
+    guid: 6579a20112718f94eafcaf651b15663b
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
