@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneBG
       objectReference: {fileID: 0}
+    - target: {fileID: 2314953013479259000, guid: 368938d3bebd91045a2a803f06c337af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5763198050614426291, guid: 368938d3bebd91045a2a803f06c337af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -169,6 +173,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5763198050614426291, guid: 368938d3bebd91045a2a803f06c337af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312962485184520119, guid: 368938d3bebd91045a2a803f06c337af, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

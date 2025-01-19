@@ -133,24 +133,23 @@ public class GameRoundMgr : SerMonoSingleton<GameRoundMgr>
 		// 处理结局
 		if (PlayerDead)
 		{
-			curtainUIMgr.ShowDeadEnd();
 			AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.BlackTransition);
+			SceneManager.LoadScene("OverScene");
 		}
 		else
 		{
 			if ((float)WorldPollutedNum / GetCardTotalNum <=
-			    gameConfig.GoodEnd_AcceptPolluteRatioRequired)
+				gameConfig.GoodEnd_AcceptPolluteRatioRequired)
 			{
-				curtainUIMgr.ShowGoodEnd();
 				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.FinishView);
+				SceneManager.LoadScene("GEScene");
 			}
 			else
 			{
-				curtainUIMgr.ShowBadEnd();
 				AudioManager.Instance.SetStateValue(AudioManager.StateConstants.GameLevelGrp, AudioManager.StateConstants.GameLevelVal.FinishViewBad);
+				SceneManager.LoadScene("BEScene");
 			}
 		}
-
 		Debug.Log("Wait Continue Story End");
 		ContinueSignal = false;
 		yield return new WaitUntil(() => ContinueSignal);
