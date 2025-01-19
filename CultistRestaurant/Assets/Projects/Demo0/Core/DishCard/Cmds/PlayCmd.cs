@@ -13,13 +13,15 @@ public class PlayCmd : Cmd
 		{
 			var exist = ctx.TargetGameObj.TryGetComponent<Animation>(out var animation);
 			if (exist) { animation.Play(AnimationEvent); }
-			else { Debug.LogWarning($"目标物体 {ctx.TargetGameObj.name} 没有 Animation 组件，但是有动画事件 {AnimationEvent}"); }
+			else { 
+				Debug.Log($"目标物体 {ctx.TargetGameObj.name} 没有 Animation 组件，但是有动画事件 {AnimationEvent}"); 
+			}
 		}
 
 		if (!string.IsNullOrEmpty(AudioEvent))
 		{
 			var instance = AudioManager.Instance;
-			if (instance == null) { Debug.LogWarning("AudioManager 未初始化"); }
+			if (instance == null) { Debug.Log("AudioManager 未初始化"); }
 			else { AudioManager.Instance.PostEvent(AudioEvent, AudioManager.Instance.globalInitializer); }
 		}
 	}
