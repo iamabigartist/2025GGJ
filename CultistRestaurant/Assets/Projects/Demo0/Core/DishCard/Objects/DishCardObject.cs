@@ -1,25 +1,25 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Audio;
 using Projects.Demo0.Core;
 using Projects.Demo0.Core.DishCard.Objects;
 using Projects.Demo0.Core.Level;
 using Projects.Demo0.Core.Mgr;
 using Projects.Demo0.Core.Utils.MessageBubble;
 using UnityEngine;
-using System.IO;
-using Audio;
 using Random = UnityEngine.Random;
 public class DishCardObject : MonoBehaviour
 {
-	private static Dictionary<string, Vector2> s_PositionDict;
+	static Dictionary<string, Vector2> s_PositionDict;
 
-	private static void InitializePositionData()
+	static void InitializePositionData()
 	{
 		if (s_PositionDict != null) return;
-		
-		s_PositionDict = new Dictionary<string, Vector2>();
+
+		s_PositionDict = new();
 		var posPath = "Assets/Projects/Demo0/Resources/Art/Sprites/newPos.txt";
 		if (!File.Exists(posPath)) return;
 
@@ -27,12 +27,12 @@ public class DishCardObject : MonoBehaviour
 		foreach (var line in lines)
 		{
 			var parts = line.Split(',');
-			if (parts.Length >= 3 && 
-				float.TryParse(parts[1], out float x) && 
+			if (parts.Length >= 3 &&
+				float.TryParse(parts[1], out float x) &&
 				float.TryParse(parts[2], out float y))
 			{
 				// 在读取时就应用缩放
-				s_PositionDict[parts[0].Trim()] = new Vector2(x * 0.01f, y * -0.01f);
+				s_PositionDict[parts[0].Trim()] = new(x * 0.01f, y * -0.01f);
 			}
 		}
 	}
@@ -48,11 +48,11 @@ public class DishCardObject : MonoBehaviour
 		foreach (var line in lines)
 		{
 			var parts = line.Split(',');
-			if (parts.Length >= 3 && 
-				float.TryParse(parts[1], out float x) && 
+			if (parts.Length >= 3 &&
+				float.TryParse(parts[1], out float x) &&
 				float.TryParse(parts[2], out float y))
 			{
-				positionDict[parts[0].Trim()] = new Vector2(x, y);
+				positionDict[parts[0].Trim()] = new(x, y);
 			}
 		}
 
@@ -69,10 +69,10 @@ public class DishCardObject : MonoBehaviour
 
 	public static DishCardObject Create(DishCardDoc cardDoc, LevelDoc levelDoc)
 	{
-		InitializePositionData();  // 确保位置数据已加载
-		
+		InitializePositionData(); // 确保位置数据已加载
+
 		var go = Instantiate(GameDocMgr.Instance.m_GameGlobalConfig.DishCardPrefab);
-		go.transform.localPosition = new Vector3(-3f, 0f, 0f);
+		go.transform.localPosition = new(-3f, 0f, 0f);
 		if (cardDoc.DishContainerPrefab) { Instantiate(cardDoc.DishContainerPrefab, go.transform); }
 		var curDishCardObj = go.GetComponent<DishCardObject>();
 		curDishCardObj.m_Doc = cardDoc;
@@ -80,6 +80,7 @@ public class DishCardObject : MonoBehaviour
 		var cardNeedWrong = levelDoc.ClueWrongProb >= Random.value;
 		var cardNeedPolluted = levelDoc.CluePollutedProb >= Random.value;
 		Debug.Log($"生成菜品：{cardDoc.name}，需要错误线索：{cardNeedWrong}，需要污染线索：{cardNeedPolluted}");
+		float z = -0.0001f * (cardDoc.ClueList.Count + 1);
 		foreach (var clueDoc in cardDoc.ClueList)
 		{
 			DishClueStateDoc curClueStateDoc;
@@ -104,11 +105,11 @@ public class DishCardObject : MonoBehaviour
 			// 设置父级为go的第一个子物体，如果没有则使用go本身
 			var parentTransform = go.transform.childCount > 0 ? go.transform.GetChild(0) : go.transform;
 			clueGo.transform.SetParent(parentTransform);
-			
+
 			// 应用预设位置，如果没有对应位置数据则使用默认位置
 			var spriteName = clueGo.name;
 			var lastPart = spriteName.Split('_').LastOrDefault();
-			
+
 			if (s_PositionDict != null && lastPart != null && s_PositionDict.TryGetValue(lastPart, out Vector2 pos))
 			{
 				clueGo.transform.localPosition = pos;
@@ -118,8 +119,11 @@ public class DishCardObject : MonoBehaviour
 				clueGo.transform.localPosition = Vector3.zero;
 				Debug.LogWarning($"未找到位置数据: {clueGo.name},lastPart:{lastPart}");
 			}
-			
+
+			clueGo.transform.localPosition = new(clueGo.transform.localPosition.x, clueGo.transform.localPosition.y, z);
+
 			curDishCardObj.m_ClueObjList.Add(clueObj);
+			z += 0.0001f;
 		}
 		curDishCardObj.m_SpriteList = curDishCardObj.m_ClueObjList.Where(clue => clue.gameObject.GetComponent<SpriteRenderer>()).ToList();
 		curDishCardObj.gameObject.SetActive(false);
